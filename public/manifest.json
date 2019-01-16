@@ -1,0 +1,19 @@
+{
+"short_name": "Lifer",
+"name": "Lifer App",
+"icons": [
+  {
+    "src": "/assets/logo/lifer_192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }
+],
+"orientation": "portrait-primary",
+"display": "standalone",
+"theme_color": "aliceblue",
+"permissions": [
+          "storage"
+        ],
+"start_url" : "/",
+"scope": "/"
+}

@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-notifier": "^1.6.0",
+    "worker-loader": "^2.0.0"
+  },
+  "dependencies": {
+    "exif-orientation": "^1.0.0",
+    "exifreader": "^2.5.0",
+    "fs": "0.0.1-security",
+    "i18next": "^11.5.0",
+    "moment": "^2.22.2",
+    "uuid": "^3.3.2"
+  }
+}
