@@ -37,7 +37,7 @@ export default class Main extends superViews{
 
 	showLogElements(){
 
-			let card = new Card('Card'+id, this.path);
+			let card = new Card('Card', this.path);
 	
 		    card.setStyle("borderWidth", "1px");
 		    card.setStyle("borderRadius", "3px");
@@ -48,7 +48,7 @@ export default class Main extends superViews{
 		    card.setStyle("background", bkgColor);
 
 
-			let Elt = card.setElement("Element"+id);
+			let Elt = card.setElement("Element");
 			Elt.setStyle("justifyContent","flex-start");
 
 
