@@ -16,6 +16,7 @@ export default class Router {
 		this.init();
 
 		this.NoteController = new Note();
+		this.Login();
 
 		window.addEventListener('changeRoute', (e) => this[e.detail.frame](e));
 
