@@ -25,6 +25,7 @@ export default class Main extends superViews{
 		this.setStyle("overflowY" , "scroll");
 
 
+
 		//je récupère la liste des notes
 		//j'affiche
 
@@ -55,7 +56,7 @@ export default class Main extends superViews{
 			
 			let itemUser = card.push("Text", Elt,"login_user","User");
 				
-			let itemPassword = card.push("Text", Elt,"login_user","Password");
+			let itemPassword = card.push("Text", Elt,"login_password","Password");
 
 
 
