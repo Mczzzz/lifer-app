@@ -36,7 +36,7 @@ export default class Router {
 
 
 	Login(){
-
+		console.log('IN LOGIN');
 		let login = new Login();
 
 	}
