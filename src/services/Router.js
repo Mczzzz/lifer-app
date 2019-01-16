@@ -46,7 +46,7 @@ export default class Router {
 
 	Home(){
 
-		this.cleanBody();
+		//this.cleanBody();
 		let home = new Home();
 
 	}
