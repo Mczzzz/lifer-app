@@ -2,9 +2,12 @@ var path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/app.js',
+  entry: {
+  	lifer: './src/app.js',
+  	sw: './src/workers/sw.js'
+  },
   output: {
     path: path.resolve(__dirname, 'public/dist'),
-    filename: 'lifer.bundle.js'
+    filename: '[name].js'
   }
 };
