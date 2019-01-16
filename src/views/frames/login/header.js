@@ -1,6 +1,6 @@
 import superViews from "../../common/superViews.js";
 
-import HeaderButton from "./header/headerButtons.js";
+//import HeaderButton from "./header/headerButtons.js";
 
 export default class Header extends superViews{
 	
@@ -32,7 +32,7 @@ export default class Header extends superViews{
 
 	initChilds(){
 
-		this.HeaderButton = new HeaderButton("Action",this.path);
+	//	this.HeaderButton = new HeaderButton("Action",this.path);
 
 	}
 

@@ -1,6 +1,6 @@
 import superViews from "../../common/superViews.js";
 
-import FooterButton from "./footer/footerButtons.js";
+//import FooterButton from "./footer/footerButtons.js";
 
 export default class Footer extends superViews{
 	
@@ -31,7 +31,7 @@ export default class Footer extends superViews{
 
 	initChilds(){
 
-		this.FooterButton = new FooterButton("Action",this.path);
+	//	this.FooterButton = new FooterButton("Action",this.path);
 
 	}
 
