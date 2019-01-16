@@ -1,7 +1,8 @@
 import { Lifer } from '../services/Lifer.js';
 import Home from '../controller/HomeController.js';
-import Objects from '../views/frames/objects.js';
+//import Objects from '../views/frames/objects.js';
 import Note from '../controller/NoteController.js';
+import Login from '../views/frames/login.js';
 
 export default class Router {
 
@@ -34,6 +35,11 @@ export default class Router {
 	}
 
 
+	Login(){
+
+		let login = new Login();
+
+	}
 
 
 	//CALLBACKS

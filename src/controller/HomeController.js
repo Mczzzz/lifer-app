@@ -32,8 +32,15 @@ export default class HomeController {
 
 
 		let home = new Home("Frame-Home");
+
+		//launch Login si pas connecté
+		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
+
 		
 	}
+
+
+
 
 
 }

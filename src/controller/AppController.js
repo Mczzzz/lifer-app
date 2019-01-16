@@ -36,6 +36,7 @@ export default class AppController {
 		this.router = new Router(this.path);
 		this.gotToHome();
 
+
 	}
 
 

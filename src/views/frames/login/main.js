@@ -29,44 +29,13 @@ export default class Main extends superViews{
 		//j'affiche
 
 	
-		this.showList();
+		this.showLogElements();
 	}
 
 
 
 
-	showList(){
-
-
-		this.NoteCollection = new LoaderCollection('Notes');
-		this.NoteCollection.getAllNotes(this,'addCards');
-
-
-	}
-
-	addCards(datas){
-
-
-		
-		let len = datas.rows.length, i;
-		  for (i = 0; i < len; i++) {
-
-
-		  	this.createCard(datas.rows[i]);
-
-
-		  }
-
-
-
-
-
-	}
-
-
-	createCard(datas){
-
-		let id = datas.note_id;
+	showLogElements(){
 
 			let card = new Card('Card'+id, this.path);
 	
@@ -75,7 +44,7 @@ export default class Main extends superViews{
 		    card.setStyle("margin", "5px");
 		    card.setStyle("padding", "10px");
 
-		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
+		    let bkgColor = "lightsteelblue";
 		    card.setStyle("background", bkgColor);
 
 
@@ -84,29 +53,17 @@ export default class Main extends superViews{
 
 
 			
-			let 	item = card.push("TextButton", Elt,"view_Note"+id,datas.note_title);
+			let itemUser = card.push("Text", Elt,"login_user","User");
 				
-			card.getContainer().addEventListener("click",()=>this.openNote(id));	
-
-
+			let itemPassword = card.push("Text", Elt,"login_user","Password");
 
 
 
 	}
 
+	
 
 
-	openNote(guid){
-
-	 let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Note',
-	 	                                                          'guid' : guid
-	 	                                                         }
-	 	                                             }
-	 	                            );
-     window.dispatchEvent(LinkEvent);
-
-
-	}
 
 
 
