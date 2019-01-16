@@ -22,7 +22,7 @@ let css = document.createElement("style");
 if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/ww.js').then(function(registration) {
+  navigator.serviceWorker.register('/public/workers/ww.js').then(function(registration) {
     console.log('Service worker registration succeeded:', registration);
   }, /*catch*/ function(error) {
     console.log('Service worker registration failed:', error);
@@ -53,11 +53,11 @@ window.addEventListener('beforeinstallprompt', function (e) {
 
 function showAddToHomeScreen() {
 
-  var a2hsBtn = document.querySelector(".ad2hs-prompt");
+  //var a2hsBtn = document.querySelector(".ad2hs-prompt");
 
  // a2hsBtn.style.display = "block";
 
-  a2hsBtn.addEventListener("click", addToHomeScreen);
+  //a2hsBtn.addEventListener("click", addToHomeScreen);
 
 }
 
