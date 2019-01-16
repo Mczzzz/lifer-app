@@ -37,7 +37,7 @@ export default class Router {
 
 	Login(){
 		console.log('IN LOGIN');
-		let login = new Login();
+		let login = new Login("Frame-Login",false);
 
 	}
 
