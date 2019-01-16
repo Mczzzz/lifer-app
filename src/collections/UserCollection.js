@@ -20,6 +20,15 @@ export default class UserCollection {
 
   	}
 
+  	authMe(){
+
+  		let auths = {};
+  		auths.username = "Mczzzz";
+  		auths.password = "Yasmine25051981";
+
+    	this.SvcBackEndComm.ajaxSend('POST',"/login",false,false,auths);
+
+  	}
 
 
 }

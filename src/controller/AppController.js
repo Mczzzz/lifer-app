@@ -28,12 +28,21 @@ export default class AppController {
 
 		this.BDLocal = new BDLocalCollection();
 
+		this.auth();
 		this.loadUser();
 		this.loadUnity();
 		this.loadCrypto();
 
 		this.router = new Router(this.path);
 		this.gotToHome();
+
+	}
+
+
+	auth(){
+
+		let userCollection = new LoaderCollection("User");
+		userCollection.authMe();
 
 	}
 
