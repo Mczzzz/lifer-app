@@ -45,7 +45,7 @@ export default class Main extends superViews{
 		    card.setStyle("borderRadius", "3px");
 		    card.setStyle("margin", "5px");
 		    card.setStyle("padding", "10px");
-		    card.setStyle("filter", "opacity(80%)");
+
 		    card.setStyle("justifyContent", "center");
 		    card.setStyle("display", "flex");
 		    card.setStyle("flex", 1);
@@ -54,7 +54,7 @@ export default class Main extends superViews{
 
 
 
-		    let bkgColor = "#231144";
+		    let bkgColor = "rgba(35, 17, 68, 0.80)";
 		    card.setStyle("background", bkgColor);
 
 
@@ -68,7 +68,7 @@ export default class Main extends superViews{
 			itemUser.setStyle("borderRadius", "40px");
 			itemUser.setStyle("border", "5px solid #FFEB3B");
 			itemUser.setAttribute("placeholder","Username");
-			itemUser.setStyle("filter", "opacity(100%)");
+
 
 
 
