@@ -62,7 +62,7 @@ export default class Main extends superViews{
 			EltTitle.setStyle("justifyContent","flex-start");
 
 			let itemTitle = card.push("Text", EltTitle,"login_title","Lifer");
-			itemTitle.setStyle("fontSize", "150px");
+			itemTitle.setStyle("fontSize", "20vh");
 	        itemTitle.setStyle("paddingBottom", "60px");
 	        itemTitle.setStyle("color", "white");
 			itemTitle.setStyle("fontFamily", "'Berkshire Swash', cursive");
