@@ -54,7 +54,7 @@ export default class Main extends superViews{
 
 
 
-		    let bkgColor = "rgba(35, 17, 68, 0.80)";
+		    let bkgColor = "rgba(35, 17, 68, 0.90)";
 		    card.setStyle("background", bkgColor);
 
 
