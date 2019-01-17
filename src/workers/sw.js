@@ -5,7 +5,8 @@ self.addEventListener('install', function(event) {
         '/public/dist/lifer.js',
         '/public/dist/sw.js',
         '/public/index.html',
-        '/public/manifest.json'
+        '/public/manifest.json',
+        'https://fonts.googleapis.com/css?family=Berkshire+Swash'
       ]);
     })
   );
