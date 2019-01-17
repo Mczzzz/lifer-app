@@ -68,7 +68,7 @@ export default class Main extends superViews{
 			itemUser.setStyle("padding", "20px 80px");
 			itemUser.setStyle("borderRadius", "40px");
 			itemUser.setStyle("border", "5px solid #FFEB3B");
-			itemUser.setStyle("placeholder","Username");
+			itemUser.setAttribute("placeholder","Username");
 
 
 
@@ -83,7 +83,7 @@ export default class Main extends superViews{
 			itemPassword.setStyle("padding", "20px 80px");
 			itemPassword.setStyle("borderRadius", "40px");
 			itemPassword.setStyle("border", "5px solid #FFEB3B");
-			itemPassword.setStyle("placeholder","Password");
+			itemPassword.setAttribute("placeholder","Password");
 
 
 
