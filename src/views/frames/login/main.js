@@ -94,7 +94,14 @@ export default class Main extends superViews{
 				
 			let itemLogin = card.push("Button", EltLogIn,"login_password","keyboard_arrow_right");
 
-			itemLogin.setStylePicto("fontSize","25px");
+			//itemPassword.setStyle("background", "white");
+			itemPassword.setStyle("padding", "20px 80px");
+			itemPassword.setStyle("borderRadius", "40px");
+			itemPassword.setStyle("border", "5px solid #FFEB3B");
+			itemPassword.setStyle("background", bkgColor);
+
+
+			itemLogin.setStylePicto("fontSize","40px");
 	        itemLogin.setStylePicto("margin","0px");
             itemLogin.setStylePicto("marginLeft","5px");
             itemLogin.setStylePicto("color","white");
