@@ -68,7 +68,7 @@ export default class Main extends superViews{
 			itemUser.setStyle("borderRadius", "40px");
 			itemUser.setStyle("border", "5px solid #FFEB3B");
 			itemUser.setAttribute("placeholder","Username");
-			card.setStyle("filter", "opacity(100%)");
+			itemUser.setStyle("filter", "opacity(100%)");
 
 
 
