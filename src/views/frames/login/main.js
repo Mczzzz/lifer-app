@@ -48,7 +48,7 @@ export default class Main extends superViews{
 		    card.setStyle("filter", "opacity(80%)");
 		    card.setStyle("justifyContent", "center");
 		    card.setStyle("display", "flex");
-		    card.setStyle("FLEX", 1);
+		    card.setStyle("flex", 1);
 			card.setStyle("flexDirection", "column");
 			card.setStyle("alignItems", "center");
 
