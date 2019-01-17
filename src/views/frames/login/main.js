@@ -62,11 +62,12 @@ export default class Main extends superViews{
 			let EltUser = card.setElement("ElementUser");
 			EltUser.setStyle("justifyContent","flex-start");
 
-			let itemUser = card.push("Text", EltUser,"login_user","User");
+			let itemUser = card.push("Text", EltUser,"login_user","");
 			itemUser.setStyle("background", "white");
 			itemUser.setStyle("padding", "20px 80px");
 			itemUser.setStyle("borderRadius", "40px");
 			itemUser.setStyle("border", "5px solid #FFEB3B");
+			itemUser.setStyle("placeholder","Username");
 
 
 
