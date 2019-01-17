@@ -77,13 +77,13 @@ export default class Main extends superViews{
 			let EltPass = card.setElement("ElementPass");
 			EltPass.setStyle("justifyContent","flex-start");
 				
-			let itemPassword = card.push("Text", EltPass,"login_password","Password");
+			let itemPassword = card.push("Text", EltPass,"login_password","");
 			itemPassword.setStyle("fontSize", "20px");
 			itemPassword.setStyle("background", "white");
 			itemPassword.setStyle("padding", "20px 80px");
 			itemPassword.setStyle("borderRadius", "40px");
 			itemPassword.setStyle("border", "5px solid #FFEB3B");
-			itemPassword.setStyle("placeholder","Username");
+			itemPassword.setStyle("placeholder","Password");
 
 
 
