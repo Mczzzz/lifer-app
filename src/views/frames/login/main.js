@@ -21,7 +21,7 @@ export default class Main extends superViews{
 		//this.setStyle("background" , "linear-gradient(45deg, rgb(199, 28, 28) 0%, rgb(216, 216, 216) 100%)");
 		this.setStyle("background" , "transparent");
 		this.setStyle("flex" , 1);
-		this.setStyle("alignItems" , "center");
+		this.setStyle("alignItems" , "stretch");
 		this.setStyle("overflowY" , "scroll");
 
 
@@ -51,7 +51,7 @@ export default class Main extends superViews{
 		    card.setStyle("display", "flex");
 			card.setStyle("flexDirection", "column");
 			card.setStyle("justifyContent", "center");
-			card.setStyle("alignItems", "stretch");
+			card.setStyle("alignItems", "center");
 
 
 
