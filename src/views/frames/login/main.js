@@ -55,7 +55,7 @@ export default class Main extends superViews{
 
 
 
-		    let bkgColor = "lightsteelblue";
+		    let bkgColor = "#231144";
 		    card.setStyle("background", bkgColor);
 
 
