@@ -92,7 +92,13 @@ export default class Main extends superViews{
 			let EltLogIn = card.setElement("ElementLogIn");
 			EltLogIn.setStyle("justifyContent","flex-start");
 				
-			let itemLogin = card.push("Text", EltLogIn,"login_password","Password");
+			let itemLogin = card.push("Button", EltLogIn,"login_password","keyboard_arrow_right");
+
+			itemLogin.setStylePicto("fontSize","25px");
+	        itemLogin.setStylePicto("margin","0px");
+            itemLogin.setStylePicto("marginLeft","5px");
+            itemLogin.setStylePicto("color","white");
+            itemLogin.setStylePicto("alignItems","center");
 
 
 
