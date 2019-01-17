@@ -14,6 +14,6 @@
 "permissions": [
           "storage"
         ],
-"start_url" : "https://lifer-develop.hopeful.care/public/",
+"start_url" : "/public/",
 "scope": "/"
 }
