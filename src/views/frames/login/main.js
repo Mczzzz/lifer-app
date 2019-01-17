@@ -63,6 +63,7 @@ export default class Main extends superViews{
 			EltUser.setStyle("justifyContent","flex-start");
 
 			let itemUser = card.push("Text", EltUser,"login_user","");
+			itemUser.setStyle("fontSize", "20px");
 			itemUser.setStyle("background", "white");
 			itemUser.setStyle("padding", "20px 80px");
 			itemUser.setStyle("borderRadius", "40px");
