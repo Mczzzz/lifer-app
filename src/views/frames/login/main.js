@@ -63,6 +63,7 @@ export default class Main extends superViews{
 
 			let itemTitle = card.push("Text", EltTitle,"login_user","Lifer");
 			itemTitle.setStyle("fontSize", "60px");
+			itemTitle.setStyle("fontFamily", "'Berkshire Swash', cursive");
 
 
 
