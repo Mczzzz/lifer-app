@@ -51,7 +51,7 @@ export default class Main extends superViews{
 		    card.setStyle("display", "flex");
 			card.setStyle("flexDirection", "column");
 			card.setStyle("justifyContent", "center");
-			card.setStyle("alignItems", "center");
+			card.setStyle("alignItems", "stretch");
 
 
 
