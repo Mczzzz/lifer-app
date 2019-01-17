@@ -62,7 +62,7 @@ export default class Main extends superViews{
 			let EltLogIn = card.setElement("ElementLogIn");
 			EltLogIn.setStyle("justifyContent","flex-start");
 				
-			let itemPassword = card.push("Text", EltLogIn,"login_password","Password");
+			let itemLogin = card.push("Text", EltLogIn,"login_password","Password");
 
 
 
