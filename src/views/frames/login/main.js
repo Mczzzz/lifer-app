@@ -58,6 +58,18 @@ export default class Main extends superViews{
 		    card.setStyle("background", bkgColor);
 
 
+			let EltTitle = card.setElement("ElementTitle");
+			EltTitle.setStyle("justifyContent","flex-start");
+
+			let itemTitle = card.push("Text", EltTitle,"login_user","Lifer");
+			itemTitle.setStyle("fontSize", "60px");
+
+
+
+
+
+
+
 			let EltUser = card.setElement("ElementUser");
 			EltUser.setStyle("justifyContent","flex-start");
 
