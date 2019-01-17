@@ -89,12 +89,12 @@ export default class Main extends superViews{
 
 
 			let EltLogIn = card.setElement("ElementLogIn");
-			EltLogIn.setStyle("justifyContent","flex-start");
+			EltLogIn.setStyle("paddingTop","10px");
 				
 			let itemLogin = card.push("Button", EltLogIn,"login_password","keyboard_arrow_right");
 
 			//itemPassword.setStyle("background", "white");
-			itemLogin.setStyle("padding", "20px 80px");
+			itemLogin.setStyle("padding", "10px 100px");
 			itemLogin.setStyle("borderRadius", "40px");
 			itemLogin.setStyle("border", "5px solid #FFEB3B");
 			itemLogin.setStyle("background", bkgColor);
