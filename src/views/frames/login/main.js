@@ -23,6 +23,7 @@ export default class Main extends superViews{
 		this.setStyle("flex" , 1);
 		this.setStyle("alignItems" , "stretch");
 		this.setStyle("overflowY" , "scroll");
+		this.setStyle("display" , "flex");
 
 
 
@@ -50,7 +51,6 @@ export default class Main extends superViews{
 
 		    card.setStyle("display", "flex");
 			card.setStyle("flexDirection", "column");
-			card.setStyle("justifyContent", "center");
 			card.setStyle("alignItems", "center");
 
 
