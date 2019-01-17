@@ -49,14 +49,20 @@ export default class Main extends superViews{
 		    card.setStyle("background", bkgColor);
 
 
-			let Elt = card.setElement("Element");
-			Elt.setStyle("justifyContent","flex-start");
+			let EltUser = card.setElement("ElementUser");
+			EltUser.setStyle("justifyContent","flex-start");
 
+			let itemUser = card.push("Text", EltUser,"login_user","User");
 
-			
-			let itemUser = card.push("Text", Elt,"login_user","User");
+			let EltPass = card.setElement("ElementPass");
+			EltPass.setStyle("justifyContent","flex-start");
 				
-			let itemPassword = card.push("Text", Elt,"login_password","Password");
+			let itemPassword = card.push("Text", EltPass,"login_password","Password");
+
+			let EltLogIn = card.setElement("ElementLogIn");
+			EltLogIn.setStyle("justifyContent","flex-start");
+				
+			let itemPassword = card.push("Text", EltLogIn,"login_password","Password");
 
 
 
