@@ -39,11 +39,20 @@ export default class Main extends superViews{
 	showLogElements(){
 
 			let card = new Card('Card', this.path);
-	
+			
+			card.setStyle("height", "100%");
+
 		    card.setStyle("borderWidth", "1px");
 		    card.setStyle("borderRadius", "3px");
 		    card.setStyle("margin", "5px");
 		    card.setStyle("padding", "10px");
+
+		    card.setStyle("display", "flex");
+			card.setStyle("flexDirection", "column");
+			card.setStyle("justifyContent", "center");
+			card.setStyle("alignItems:", "center");
+
+
 
 		    let bkgColor = "lightsteelblue";
 		    card.setStyle("background", bkgColor);
