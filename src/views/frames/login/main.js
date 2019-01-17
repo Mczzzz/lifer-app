@@ -46,6 +46,7 @@ export default class Main extends superViews{
 		    card.setStyle("borderRadius", "3px");
 		    card.setStyle("margin", "5px");
 		    card.setStyle("padding", "10px");
+		    card.setStyle("filter", "opacity(80%)");
 
 		    card.setStyle("display", "flex");
 			card.setStyle("flexDirection", "column");

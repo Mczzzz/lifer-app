@@ -17,7 +17,7 @@ export default class Header extends superViews{
 	init(){
 
 
-		this.setStyle("background" , "linear-gradient(45deg, rgb(234, 234, 234) 0%, rgb(216, 216, 216) 100%)");
+		//this.setStyle("background" , "linear-gradient(45deg, rgb(234, 234, 234) 0%, rgb(216, 216, 216) 100%)");
 		this.setStyle("alignItems" , "center");
 		this.setStyle("color" , "");
 
