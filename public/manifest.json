@@ -19,6 +19,6 @@
 "permissions": [
           "storage"
         ],
-"start_url" : "/public",
+"start_url" : "/",
 "scope": "/"
 }
