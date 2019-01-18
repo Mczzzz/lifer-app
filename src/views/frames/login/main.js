@@ -83,10 +83,12 @@ export default class Main extends superViews{
 			let itemUser = card.push("Text", EltUser,"login_user","");
 			itemUser.setStyle("fontSize", "20px");
 			itemUser.setStyle("background", "white");
-			itemUser.setStyle("padding", "30px 80px");
+			itemUser.setStyle("padding", "25px 80px");
 			itemUser.setStyle("borderRadius", "40px");
-			itemUser.setStyle("border", "5px solid #FFEB3B");
+			itemUser.setStyle("border", "3px solid rgb(59, 255, 219)");
 			itemUser.setStyle("lineHeight", 0);
+			itemUser.setStyle("backgroundImage", "linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%)");
+			itemUser.setStyle("color", "rgb(107, 12, 12)");
 			itemUser.setAttribute("placeholder","Username");
 
 
@@ -100,10 +102,12 @@ export default class Main extends superViews{
 			let itemPassword = card.push("Text", EltPass,"login_password","");
 			itemPassword.setStyle("fontSize", "20px");
 			itemPassword.setStyle("background", "white");
-			itemPassword.setStyle("padding", "30px 80px");
+			itemPassword.setStyle("padding", "25px 80px");
 			itemPassword.setStyle("borderRadius", "40px");
 			itemPassword.setStyle("lineHeight", 0);
-			itemPassword.setStyle("border", "5px solid #FFEB3B");
+			itemPassword.setStyle("backgroundImage", "linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%)");
+			itemPassword.setStyle("color", "rgb(107, 12, 12)");
+			itemPassword.setStyle("border", "3px solid rgb(59, 255, 219)");
 			itemPassword.setAttribute("placeholder","Password");
 
 
