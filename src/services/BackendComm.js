@@ -8,10 +8,12 @@ export default class BackendComm {
 	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
 //		console.log("on passe bien dans ajaxSend");		
 
+			let host = "https://lifer-develop.hopeful.care";
+
 			let params = this._BuildParams(VERB,dataSend);
 
 
-			fetch(url, params).then(function(response) {
+			fetch(host+url, params).then(function(response) {
 
 
 				console.log(response.status);
