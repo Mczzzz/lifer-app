@@ -13,6 +13,8 @@ export default class BackendComm {
 
 			fetch(url, params).then(function(response) {
 
+
+				console.log(response.status);
 				let contentType = response.headers.get("content-type");
 
 				if(contentType && contentType.indexOf("application/json") !== -1) {
