@@ -20,13 +20,13 @@ export default class UserCollection {
 
   	}
 
-  	authMe(user, password){
+  	authMe(user, password,callBackObj = false,callBackMethod = false){
 
   		let auths = {};
   		auths.username = user;
   		auths.password = password;
 
-    	this.SvcBackEndComm.ajaxSend('POST',"/login",false,false,auths);
+    	this.SvcBackEndComm.ajaxSend('POST',"/login",callBackObj,callBackMethod,auths);
 
   	}
 

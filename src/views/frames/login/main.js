@@ -153,16 +153,13 @@ export default class Main extends superViews{
 
 	authMe(itemUser, itemPassword){
 
-
-		console.log(itemUser);
-		console.log(itemPassword);
-				let user = itemUser.getText();
+		let user = itemUser.getText();
 		let password = itemPassword.getText();
-		//user ou password vide : petit message t'as oublié  un truc
+//TODO : user ou password vide : petit message t'as oublié  un truc
 
 		//je lance l'authentification
 		let UserCollection = new LoaderCollection("User");
-		UserCollection.authMe(user, password);
+		UserCollection.authMe(user, password, this, "authOK");
 		//si pas bon petit message
 
 
