@@ -122,7 +122,7 @@ export default class Main extends superViews{
 			//itemPassword.setStyle("background", "white");
 			itemLogin.setStyle("padding", "10px 100px");
 			itemLogin.setStyle("borderRadius", "40px");
-			itemLogin.setStyle("border", "5px solid #FFEB3B");
+			itemLogin.setStyle("border", "1px solid rgba(255, 254, 250, 0.4)");
 			itemLogin.setStyle("background", bkgColor);
 
 
