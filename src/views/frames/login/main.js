@@ -155,7 +155,7 @@ export default class Main extends superViews{
 
 
 		console.log(itemUser);
-		console.log(itemLogin);
+		console.log(itemPassword);
 				let user = itemUser.getText();
 		let password = itemPassword.getText();
 		//user ou password vide : petit message t'as oublié  un truc
