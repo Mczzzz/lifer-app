@@ -143,7 +143,7 @@ export default class Main extends superViews{
             itemLogin.setStylePicto("color","white");
             itemLogin.setStylePicto("alignItems","center");
 
-            itemLogin.getContainer().addEventListener('click',() => this.parentThis.destroyMe());
+            itemLogin.getContainer().addEventListener('click',() => this.authMe());
 
 
 
@@ -151,8 +151,26 @@ export default class Main extends superViews{
 
 	
 
+	authMe(){
+
+		let user = "Mczzzz";
+		let password = "Yasmine25051981";
+		//user ou password vide : petit message t'as oublié  un truc
+
+		//je lance l'authentification
+		let UserCollection = new LoaderCollection("User");
+		UserCollection.authMe(user, password);
+		//si pas bon petit message
 
 
+	}
+
+
+	authOK(){
+
+		this.parentThis.destroyMe();
+
+	}
 
 
 

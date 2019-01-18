@@ -20,11 +20,11 @@ export default class UserCollection {
 
   	}
 
-  	authMe(){
+  	authMe(user, password){
 
   		let auths = {};
-  		auths.username = "Mczzzz";
-  		auths.password = "Yasmine25051981";
+  		auths.username = user;
+  		auths.password = password;
 
     	this.SvcBackEndComm.ajaxSend('POST',"/login",false,false,auths);
 
