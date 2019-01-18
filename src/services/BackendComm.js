@@ -74,6 +74,7 @@ export default class BackendComm {
 		let params = {};
 			params.method = VERB;
 			params.credentials = "same-origin";
+			params.mode = 'no cors';
 
 			if(VERB != "GET"){
 	//			console.log(dataSend);
