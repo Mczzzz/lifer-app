@@ -29,10 +29,6 @@ self.addEventListener('fetch', event => {
 
       // TODO 4 - Add fetched files to the cache
 
-    }).catch(error => {
-
-      // TODO 6 - Respond with custom offline page
-
     })
   );
 });
