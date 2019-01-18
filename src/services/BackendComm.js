@@ -15,6 +15,21 @@ export default class BackendComm {
 
 
 				console.log(response.status);
+
+				if(response.status === 401) {
+
+
+					//il faut te logger monsieur
+					let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
+					window.dispatchEvent(LinkEvent);
+
+					//informé l'envoyeur que sa requete n'a pas été faite (donc retentative à prevoir)
+
+
+				}
+
+
+
 				let contentType = response.headers.get("content-type");
 
 				if(contentType && contentType.indexOf("application/json") !== -1) {
