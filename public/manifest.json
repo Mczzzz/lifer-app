@@ -20,5 +20,5 @@
           "storage"
         ],
 "start_url" : "/public",
-"scope": "/"
+"scope": "/public"
 }
