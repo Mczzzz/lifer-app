@@ -66,6 +66,10 @@ export default class Main extends superViews{
 	        itemTitle.setStyle("paddingBottom", "60px");
 	        itemTitle.setStyle("color", "white");
 			itemTitle.setStyle("fontFamily", "'Berkshire Swash', cursive");
+			itemTitle.setStyle("textShadow", `0px 0px 10px rgba(255,255,255,0.6),
+				                              0px 0px 30px rgba(255,255,255,0.4),
+				                              0px 0px 50px rgba(255,255,255,0.3),
+				                              0px 0px 180px rgba(255,255,255,0.3`);
 
 
 
