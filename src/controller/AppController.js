@@ -28,7 +28,7 @@ export default class AppController {
 
 		this.BDLocal = new BDLocalCollection();
 
-		this.auth();
+		//this.auth();
 		this.loadUser();
 		this.loadUnity();
 		this.loadCrypto();
