@@ -3,12 +3,12 @@
 "name": "Lifer App",
 "icons": [
   {
-    "src": "/assets/logo/lifer_192x192.png",
+    "src": "/logo/lifer_192x192.png",
     "type": "image/png",
     "sizes": "192x192"
   },
     {
-    "src": "/assets/logo/lifer_512x512.png",
+    "src": "/logo/lifer_512x512.png",
     "type": "image/png",
     "sizes": "512x512"
   }
