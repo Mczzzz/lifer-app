@@ -98,7 +98,7 @@ export default class Main extends superViews{
 			itemPassword.setStyle("background", "white");
 			itemPassword.setStyle("padding", "30px 80px");
 			itemPassword.setStyle("borderRadius", "40px");
-			itemUser.setStyle("lineHeight", 0);
+			itemPassword.setStyle("lineHeight", 0);
 			itemPassword.setStyle("border", "5px solid #FFEB3B");
 			itemPassword.setAttribute("placeholder","Password");
 
