@@ -73,6 +73,17 @@ export default class Main extends superViews{
 
 
 
+/*.animate([
+		  // keyframes
+		  { transform: 'translateX(0px)' }, 
+		  { transform: 'translateX('+DeviceWidth+'px)' }
+		], { 
+		  // timing options
+		  duration: time+100,
+		  easing : 'ease-in-out',
+		  iterations: 1
+		});*/
+
 
 
 
@@ -85,7 +96,7 @@ export default class Main extends superViews{
 			itemUser.setStyle("background", "white");
 			itemUser.setStyle("padding", "25px 80px");
 			itemUser.setStyle("borderRadius", "40px");
-			itemUser.setStyle("border", "3px solid rgb(59, 255, 219)");
+			itemUser.setStyle("border", "1px solid rgb(59, 255, 219)");
 			itemUser.setStyle("lineHeight", 0);
 			itemUser.setStyle("backgroundImage", "linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%)");
 			itemUser.setStyle("color", "rgb(107, 12, 12)");
@@ -107,7 +118,7 @@ export default class Main extends superViews{
 			itemPassword.setStyle("lineHeight", 0);
 			itemPassword.setStyle("backgroundImage", "linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%)");
 			itemPassword.setStyle("color", "rgb(107, 12, 12)");
-			itemPassword.setStyle("border", "3px solid rgb(59, 255, 219)");
+			itemPassword.setStyle("border", "1px solid rgb(59, 255, 219)");
 			itemPassword.setAttribute("placeholder","Password");
 
 
