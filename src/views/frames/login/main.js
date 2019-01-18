@@ -143,6 +143,8 @@ export default class Main extends superViews{
             itemLogin.setStylePicto("color","white");
             itemLogin.setStylePicto("alignItems","center");
 
+            itemLogin.addEventListener('click',() => this.parent.destroyMe());
+
 
 
 	}
