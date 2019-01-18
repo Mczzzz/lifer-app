@@ -23,14 +23,12 @@ export default class FooterButtons extends superViews{
 		 console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
 		//  this.showAddToHomeScreen();
 
-		//setTimeout(()=>this.prompt(), 1000);
+		setTimeout(()=>this.prompt(), 1000);
 
 
 
 		});
 
-
-		setTimeout(()=>this.prompt(), 1000);
  
 
 /*
