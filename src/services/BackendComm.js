@@ -12,6 +12,7 @@ export default class BackendComm {
 
 			let params = this._BuildParams(VERB,dataSend);
 
+			console.log('JUST BEFORE SEND FETCH');
 
 			fetch(host+url, params).then(function(response) {
 
