@@ -79,9 +79,10 @@ export default class Main extends superViews{
 			let itemUser = card.push("Text", EltUser,"login_user","");
 			itemUser.setStyle("fontSize", "20px");
 			itemUser.setStyle("background", "white");
-			itemUser.setStyle("padding", "20px 80px");
+			itemUser.setStyle("padding", "30px 80px");
 			itemUser.setStyle("borderRadius", "40px");
 			itemUser.setStyle("border", "5px solid #FFEB3B");
+			itemUser.setStyle("lineHeight", 0);
 			itemUser.setAttribute("placeholder","Username");
 
 
@@ -95,8 +96,9 @@ export default class Main extends superViews{
 			let itemPassword = card.push("Text", EltPass,"login_password","");
 			itemPassword.setStyle("fontSize", "20px");
 			itemPassword.setStyle("background", "white");
-			itemPassword.setStyle("padding", "20px 80px");
+			itemPassword.setStyle("padding", "30px 80px");
 			itemPassword.setStyle("borderRadius", "40px");
+			itemUser.setStyle("lineHeight", 0);
 			itemPassword.setStyle("border", "5px solid #FFEB3B");
 			itemPassword.setAttribute("placeholder","Password");
 
