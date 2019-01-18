@@ -46,7 +46,6 @@ export default class Router {
 	//CALLBACKS
 
 	Home(){
-
 		//this.cleanBody();
 		let home = new Home();
 
