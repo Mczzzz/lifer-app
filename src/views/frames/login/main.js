@@ -151,7 +151,7 @@ export default class Main extends superViews{
 
 	
 
-	authMe(itemLogin, itemPassword){
+	authMe(itemUser, itemPassword){
 
 
 		console.log(itemUser);
