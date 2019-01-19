@@ -24,7 +24,10 @@ self.addEventListener('fetch', event => {
       if (response) {
         console.log('Found ', event.request.url, ' in cache');
         return response;
+      }else{
+        console.log('not found in cache');
       }
+
 
       console.log('Network request for ', event.request.url);
         // IMPORTANT: Clone the request. A request is a stream and
@@ -35,6 +38,8 @@ self.addEventListener('fetch', event => {
 
         return fetch(fetchRequest).then(
           function(response) {
+            console.log('in return fetch');
+            console.log(response);
             // Check if we received a valid response
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;
