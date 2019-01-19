@@ -19,7 +19,7 @@ export default class BackendComm {
 				console.log('in my fetch app :');
 				console.log(response);
 
-				if(response.status === 0) {
+				if(response.status === 401) {
 
 
 					//il faut te logger monsieur
