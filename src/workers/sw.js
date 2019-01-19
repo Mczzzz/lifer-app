@@ -26,6 +26,7 @@ self.addEventListener('fetch', event => {
         return response;
       }else{
         console.log('not found in cache');
+        console.log(response);
       }
 
 
