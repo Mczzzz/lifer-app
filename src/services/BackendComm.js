@@ -75,7 +75,7 @@ export default class BackendComm {
 		let params = {};
 			params.method = VERB;
 			params.credentials = "include";
-			params.mode = 'cors';
+			params.mode = 'no-cors';
 
 			if(VERB != "GET"){
 	//			console.log(dataSend);
