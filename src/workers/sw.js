@@ -51,7 +51,7 @@ self.addEventListener('fetch', event => {
             // to clone it so we have 2 stream.
             var responseToCache = response.clone();
 
-            caches.open(CACHE_NAME)
+            caches.open('v1')
               .then(function(cache) {
                 cache.put(event.request, responseToCache);
               });
