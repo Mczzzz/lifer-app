@@ -19,7 +19,7 @@ export default class BackendComm {
 
 				console.log(response.status);
 
-				if(response.status === 401) {
+				if(response.status === 0) {
 
 
 					//il faut te logger monsieur
