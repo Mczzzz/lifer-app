@@ -3,7 +3,8 @@ self.addEventListener('install', function(event) {
     caches.open('v1').then(function(cache) {
       return cache.addAll([
         '/lifer.js',
-        '/index.html'
+        '/index.html',
+        '/'
       ]);
     })
   );
