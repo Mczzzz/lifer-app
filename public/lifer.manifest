@@ -1,0 +1,16 @@
+CACHE MANIFEST
+ 
+# Version 0.1
+
+CACHE:
+/lifer.js
+/index.html
+https://fonts.googleapis.com/icon?family=Material+Icons
+https://use.fontawesome.com/releases/v5.3.1/css/all.css
+https://fonts.googleapis.com/css?family=Berkshire+Swash
+
+FALLBACK:
+/ /index.html
+
+NETWORK:
+*
