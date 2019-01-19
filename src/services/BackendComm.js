@@ -16,8 +16,8 @@ export default class BackendComm {
 
 			fetch(host+url, params).then(function(response) {
 
-
-				console.log(response.status);
+				console.log('in my fetch app :');
+				console.log(response);
 
 				if(response.status === 0) {
 
