@@ -8,7 +8,7 @@ export default class BackendComm {
 	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
 //		console.log("on passe bien dans ajaxSend");		
 
-			let host = "https://lifer-develop.hopeful.care";
+			let host = "https://lifer-develop.hopeful.care/web";
 
 			let params = this._BuildParams(VERB,dataSend);
 
@@ -74,8 +74,8 @@ export default class BackendComm {
 
 		let params = {};
 			params.method = VERB;
-			params.credentials = "include";
-			params.mode = 'no-cors';
+			params.credentials = "same-origin";
+			//params.mode = 'cors';
 
 			if(VERB != "GET"){
 	//			console.log(dataSend);
