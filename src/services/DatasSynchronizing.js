@@ -46,7 +46,7 @@ class DatasSynchronizing {
 
 	startService(){
 
-		this.service = setInterval(()=> this.checkConnect() , 1000 );
+		this.service = setInterval(()=> this.checkConnect() , 30000 );
 
 		this.active = true;
 
