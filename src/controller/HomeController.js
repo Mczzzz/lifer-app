@@ -36,6 +36,7 @@ export default class HomeController {
 
 		let home = new Home("Frame-Home");
 
+		console.log('in HOME INIT VIEW');
 		//launch Login si pas connecté
 		this.UserCollection.isAuth(this,'_launchLogin');
 

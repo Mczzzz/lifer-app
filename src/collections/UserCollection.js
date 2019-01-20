@@ -40,6 +40,8 @@ export default class UserCollection {
 
     isAuth(callBackObj,callBackMethod){
 
+      console.log('IN IS AUTH');
+
       this.callBackObj    = callBackObj;
       this.callBackMethod = callBackMethod;
 
