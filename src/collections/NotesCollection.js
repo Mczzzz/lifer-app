@@ -591,7 +591,7 @@ export default class NotesCollection {
 			}
 
  	
-
+//TODO: A REFAIRE PROPRE CAR  CODE SPECIFIC DANS DU COMMON
 
 
 
