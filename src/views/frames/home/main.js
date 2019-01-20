@@ -29,7 +29,7 @@ export default class Main extends superViews{
 		//j'affiche
 	//	this.service = setInterval(()=> this.showList() , 10000 );
 	
-		//this.showList();
+		this.showList();
 	}
 
 
