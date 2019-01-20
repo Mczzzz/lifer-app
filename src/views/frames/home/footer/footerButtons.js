@@ -19,8 +19,8 @@ export default class FooterButtons extends superViews{
 		  // Prevent Chrome 67 and earlier from automatically showing the prompt
 		  e.preventDefault();
 		  // Stash the event so it can be triggered later.
-		 this.deferredPrompt = e;
-		 console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
+		 //this.deferredPrompt = e;
+		 //console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
 		//  this.showAddToHomeScreen();
 
 		
