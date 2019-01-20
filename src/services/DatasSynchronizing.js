@@ -69,7 +69,7 @@ class DatasSynchronizing {
 	fillQueue(isConnect){
 
 		console.log('in fill queue');
-		console.log(datas);
+		console.log(isConnect);
 
 		if(isConnect){
 
