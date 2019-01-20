@@ -53,7 +53,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
 	prompt(){
 
 		console.log('in prompt');
-		this.deferredPrompt.prompt();
+		//this.deferredPrompt.prompt();
 
 	}
 
