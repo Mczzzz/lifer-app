@@ -1,6 +1,6 @@
 import { Lifer } from '../services/Lifer.js';
 
-import LoaderCollection from '../serivces/LoaderCollection.js';
+import LoaderCollection from '../services/LoaderCollection.js';
 
 import Home from '../views/frames/home.js';
 
