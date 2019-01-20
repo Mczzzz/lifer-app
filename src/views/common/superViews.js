@@ -7,7 +7,7 @@ import 'moment/locale/fr';
 export default class views {
 	
 
-	constructor(MyClass,path,prepend = false){
+	constructor(MyClass,path,prepend = false,unique = true){
 
 
 
@@ -17,6 +17,7 @@ Moment.locale('fr');
 
 		this.Moment = Moment;		
 
+		this.unique = unique;
 
 		this.MyClass = MyClass;
 
@@ -41,11 +42,19 @@ Moment.locale('fr');
 	superInit(prepend){
 
 
-		if(document.getElementsByClassName(this.path)[0] !== undefined){
+		if(document.getElementsByClassName(this.path)[0] !== undefined && !this.unique){
 
 			this.container = document.getElementsByClassName(this.path)[0];
 
+
 		}else{
+
+
+			if(document.getElementsByClassName(this.path)[0] !== undefined && this.unique){
+				this.destroyMe();
+			}
+
+
 
 			this.container = document.createElement("div");
 			this.container.className = this.path;
