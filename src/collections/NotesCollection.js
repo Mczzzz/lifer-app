@@ -598,6 +598,8 @@ export default class NotesCollection {
 		}
 
 
+
+
 		if(NotesValues.length > 0){
 
 			 this.webSQL.playQuery('cacheData',
@@ -650,8 +652,9 @@ export default class NotesCollection {
 			                                      )
 			                   values `+ItemValues);
 
-		 }
+		}
 		 
+
 
 
 	}
