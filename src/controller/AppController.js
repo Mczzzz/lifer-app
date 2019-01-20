@@ -29,7 +29,7 @@ export default class AppController {
 		this.BDLocal = new BDLocalCollection();
 
 		this.loadUnity();
-		this.loadCrypto();
+	//	this.loadCrypto();
 
 		this.router = new Router(this.path);
 		this.gotToHome();
@@ -81,7 +81,7 @@ export default class AppController {
 	}
 
 
-	loadCrypto(){
+/*	loadCrypto(){
 
 		let cryptoTypeCollection = new LoaderCollection("Crypto");
 		Lifer.addMe("Extra-Crypto");
@@ -92,7 +92,7 @@ export default class AppController {
 		//unityTypeCollection.GetUnits(dispatchResponseTo);
 		
 
-	}
+	}*/
 
 
 
