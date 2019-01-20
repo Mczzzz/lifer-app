@@ -28,8 +28,6 @@ Moment.locale('fr');
 		this.path = (this.parentThis)? this.parentThis.path+"-"+this.MyClass : this.MyClass;
 
 
-		this.container = false;
-
 		this.Lifer.addMe(this.path);
 
 		this.superInit(prepend);
@@ -52,7 +50,7 @@ Moment.locale('fr');
 		}else{
 
 
-			if(document.getElementsByClassName(this.path)[0] !== undefined && this.unique && this.container !== false){
+			if(document.getElementsByClassName(this.path)[0] !== undefined && this.unique){
 				this.destroyMe();
 			}
 
@@ -180,6 +178,7 @@ Moment.locale('fr');
     destroyMe(){
 
     	this.Lifer.destroy(this.path);
+    	console.log(this.container);
     	this.container.remove();
     	
 
