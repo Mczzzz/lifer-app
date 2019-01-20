@@ -27,7 +27,7 @@ export default class Main extends superViews{
 
 		//je récupère la liste des notes
 		//j'affiche
-		this.service = setInterval(()=> this.showList() , 10000 );
+	//	this.service = setInterval(()=> this.showList() , 10000 );
 	
 		//this.showList();
 	}
