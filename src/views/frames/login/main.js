@@ -176,10 +176,21 @@ export default class Main extends superViews{
 		console.log('IN  AUTH OK');
 		console.log(datas);
 
-		this.parentThis.destroyMe();
-//TODO : je set en base comme quoi je suis loggé
-/*		let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
-		this.webSQL.playQuery('cacheData',qry);*/
+		if(datas.error == "Invalid credentials."){
+
+//Mauvaise authentification
+
+		}else{
+
+			this.parentThis.destroyMe();
+			//TODO : je set en base comme quoi je suis loggé
+		let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', true)";
+		this.webSQL.playQuery('cacheData',qry);
+
+
+		}
+		
+
 
 	}
 
