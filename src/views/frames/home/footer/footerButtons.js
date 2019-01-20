@@ -97,14 +97,14 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 
 
-
+/*
 				let FooterObjectButton = this.card.push("Button", Elt,"toObjects", "widgets");
 
 					FooterObjectButton.setStylePicto("fontSize","25px");
 					FooterObjectButton.setStylePicto("color","green");
 					FooterObjectButton.setStylePicto("alignItems","center");
 
-					FooterObjectButton.getContainer().addEventListener("click",()=>this.addToHomeScreen());
+					FooterObjectButton.getContainer().addEventListener("click",()=>this.addToHomeScreen());*/
 
 
 	}
@@ -118,12 +118,12 @@ window.addEventListener("beforeinstallprompt", function(e) {
 	}
 
 
-	goToObject(){
+/*	goToObject(){
 
 		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Objects'}});
 		window.dispatchEvent(LinkEvent);
 
-	}
+	}*/
 
 
 
