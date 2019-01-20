@@ -60,7 +60,7 @@ export default class UserCollection {
       console.log(datas.rows.length);
       if(datas.rows.length)  console.log(datas.rows[0].is_auth);
 
-      if(datas.rows && datas.rows.length == 1 && datas.rows[0].is_auth){
+      if(datas.rows && datas.rows.length == 1 && datas.rows[0].name == 'is_auth' && datas.rows[0].value == 1){
 
 
           result = true;
