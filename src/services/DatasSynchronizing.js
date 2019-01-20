@@ -81,10 +81,15 @@ class DatasSynchronizing {
 			this.NotesCollection.synchroToServer();
 
 
+		}else{
+
+			// on lance la page de login
+					//il faut te logger monsieur
+					let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
+					window.dispatchEvent(LinkEvent);
+
+
 		}
-
-
-
 
 	}
 
