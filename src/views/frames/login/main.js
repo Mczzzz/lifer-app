@@ -4,6 +4,8 @@ import Card from "../../common/ui/card.js";
 
 import LoaderCollection from '../../../services/LoaderCollection.js';
 
+import { DatasSynchronizing } from '../../../services/DatasSynchronizing.js';
+
 import webSQL from '../../../services/webSQL.js';
 
 
@@ -184,8 +186,11 @@ export default class Main extends superViews{
 
 			this.parentThis.destroyMe();
 			//TODO : je set en base comme quoi je suis loggé
-		let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', true)";
-		this.webSQL.playQuery('cacheData',qry);
+			let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', true)";
+			this.webSQL.playQuery('cacheData',qry);
+
+			//je redemarre la synchro
+			DatasSynchronizing.startService();
 
 
 		}
