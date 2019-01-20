@@ -24,12 +24,13 @@ export default class Main extends superViews{
 		this.setStyle("alignItems" , "center");
 		this.setStyle("overflowY" , "scroll");
 
-
+		this.NoteCollection = new LoaderCollection('Notes');
 		//je récupère la liste des notes
 		//j'affiche
-	//	this.service = setInterval(()=> this.showList() , 10000 );
-	
 		this.showList();
+		this.service = setInterval(()=> this.showList() , 10000 );
+	
+		
 	}
 
 
@@ -38,7 +39,6 @@ export default class Main extends superViews{
 	showList(){
 
 
-		this.NoteCollection = new LoaderCollection('Notes');
 		this.NoteCollection.getAllNotes(this,'addCards');
 
 
