@@ -1,6 +1,8 @@
 import Moment from 'moment';
 import 'moment/locale/fr';
 
+import webSQL from './webSQL.js';
+
 import LoaderCollection from './LoaderCollection.js';
 
 
@@ -10,6 +12,8 @@ class DatasSynchronizing {
 	constructor(){
 
 		this.active = false;
+
+		this.webSQL = new webSQL();
 
 		this.init();
 	
@@ -40,15 +44,47 @@ class DatasSynchronizing {
 
 	startService(){
 
-		this.service = setInterval(()=> this.fillQueue() , 10000 );
+		this.service = setInterval(()=> this.checkConnect() , 10000 );
+
+	}
+
+	stopService(){
+
+		clearInterval(this.service);
 
 	}
 
 
-	fillQueue(){
 
-		////le service fill queue doit référencer l'ensemble des collection et c'est  lui qui se charge de la synchro montante vers le serveur
-		this.NotesCollection.synchroToServer();
+	checkConnect(){
+
+
+		let qry = "SELECT * FROM Params WHERE name = 'is_auth'";
+		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
+		this.webSQL.playQuery('cacheData',qry,this,'fillQueue');
+
+//TODO : requete sur le param de connection et a renvoyé vers fillqueue		
+
+
+	}
+
+
+
+	fillQueue(datas){
+
+		console.log('in fill queue');
+		console.log(datas);
+
+		if(datas.data.length == 1 && datas.data[0].is_auth){
+
+			////le service fill queue doit référencer l'ensemble des collection et c'est  lui qui se charge de la synchro montante vers le serveur
+			this.NotesCollection.synchroToServer();
+
+
+		}
+
+
+
 
 	}
 

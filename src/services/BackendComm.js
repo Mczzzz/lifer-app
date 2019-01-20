@@ -1,5 +1,7 @@
 import { Lifer } from './Lifer.js';
 
+import webSQL from './webSQL.js';
+
 export default class BackendComm {
 
 
@@ -12,7 +14,11 @@ export default class BackendComm {
 
 			let params = this._BuildParams(VERB,dataSend);
 
+			let webSQL = new webSQL();
+
 			console.log('JUST BEFORE SEND FETCH');
+//TODO on verifie qu'on est considéré comme loggé
+
 
 			fetch(host+url, params).then(function(response) {
 
@@ -21,6 +27,9 @@ export default class BackendComm {
 
 				if(response.status === 401) {
 
+				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
+				webSQL.playQuery('cacheData',qry);
+//TODO : il faut flagger por dire que la seule requete qui passera sera celle de login
 
 					//il faut te logger monsieur
 					let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
