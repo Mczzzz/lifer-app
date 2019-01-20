@@ -56,7 +56,10 @@ export default class UserCollection {
       let result = false;
       console.log('_dispatchAuthResponse');
       console.log(datas);
-
+      console.log(datas.rows);
+      console.log(datas.rows.length);
+      console.log(datas.rows[0].is_auth;
+      
       if(datas.rows && datas.rows.length == 1 && datas.rows[0].is_auth){
 
 
