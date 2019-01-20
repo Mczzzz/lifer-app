@@ -4,12 +4,17 @@ import Card from "../../common/ui/card.js";
 
 import LoaderCollection from '../../../services/LoaderCollection.js';
 
+import webSQL from '../../../services/webSQL.js';
+
+
 export default class Main extends superViews{
 	
 
 	constructor(MyClass , path){
 
 		super( MyClass , path)
+
+		this.webSQL = new webSQL();
 
 		this.init();
 		
@@ -166,9 +171,15 @@ export default class Main extends superViews{
 	}
 
 
-	authOK(){
+	authOK(datas){
+
+		console.log('IN  AUTH OK');
+		console.log(datas);
 
 		this.parentThis.destroyMe();
+//TODO : je set en base comme quoi je suis loggé
+/*		let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
+		this.webSQL.playQuery('cacheData',qry);*/
 
 	}
 
