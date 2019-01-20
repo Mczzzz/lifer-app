@@ -23,7 +23,7 @@ export default class FooterButtons extends superViews{
 		 console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
 		//  this.showAddToHomeScreen();
 
-		setTimeout(()=>this.prompt(), 1000);
+		
 
 
 
@@ -31,17 +31,7 @@ export default class FooterButtons extends superViews{
 
  
 
-/*
-window.addEventListener("beforeinstallprompt", function(e) { 
-  // log the platforms provided as options in an install prompt 
-  console.log(e.platforms); // e.g., ["web", "android", "windows"] 
-  e.userChoice.then(function(outcome) { 
-    console.log(outcome); // either "accepted" or "dismissed"
-  }, handleError); 
-});
 
-
-*/
 
 		this.init();
 
@@ -50,12 +40,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
 	}
 
 
-	prompt(){
 
-		console.log('in prompt');
-		//this.deferredPrompt.prompt();
-
-	}
 
 
 	init(){
@@ -96,17 +81,6 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 
 
-
-/*
-				let FooterObjectButton = this.card.push("Button", Elt,"toObjects", "widgets");
-
-					FooterObjectButton.setStylePicto("fontSize","25px");
-					FooterObjectButton.setStylePicto("color","green");
-					FooterObjectButton.setStylePicto("alignItems","center");
-
-					FooterObjectButton.getContainer().addEventListener("click",()=>this.addToHomeScreen());*/
-
-
 	}
 
 
@@ -117,49 +91,6 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 	}
 
-
-/*	goToObject(){
-
-		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Objects'}});
-		window.dispatchEvent(LinkEvent);
-
-	}*/
-
-
-
-
-
-
-
-/*	showAddToHomeScreen() {
-
-	  let a2hsBtn = document.querySelector(".ad2hs-prompt");
-
-	  a2hsBtn.style.display = "block";
-
-	  a2hsBtn.addEventListener("click", addToHomeScreen);
-
-	}*/
-
-
-
-
-	addToHomeScreen() { 
-//	var a2hsBtn = document.querySelector(".ad2hs-prompt");  // hide our user interface that shows our A2HS button
-//  a2hsBtn.style.display = 'none';  // Show the prompt
-  this.deferredPrompt.prompt();  // Wait for the user to respond to the prompt
-  this.deferredPrompt.userChoice
-    .then(function(choiceResult){
-
-  if (choiceResult.outcome === 'accepted') {
-    console.log('User accepted the A2HS prompt');
-  } else {
-    console.log('User dismissed the A2HS prompt');
-  }
-
-  this.deferredPrompt = null;
-
-});}
 
 
 
