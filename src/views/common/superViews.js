@@ -51,9 +51,10 @@ Moment.locale('fr');
 
 
 			if(document.getElementsByClassName(this.path)[0] !== undefined && this.unique){
-				console.log(document.getElementsByClassName(this.path)[0]);
-				console.log(this.path);
-				this.destroyMe();
+/*				console.log(document.getElementsByClassName(this.path)[0]);
+				console.log(this.path);*/
+				document.getElementsByClassName(this.path)[0].remove();
+			
 			}
 
 
