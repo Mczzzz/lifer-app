@@ -29,6 +29,7 @@ class DatasSynchronizing {
 
 
 		this.NotesCollection = new LoaderCollection('Notes');
+		this.UserCollection = new LoaderCollection('User');
 		this.NotesCollection.init();
 
 
@@ -59,23 +60,18 @@ class DatasSynchronizing {
 	checkConnect(){
 
 
-		let qry = "SELECT * FROM Params WHERE name = 'is_auth'";
-		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
-		this.webSQL.playQuery('cacheData',qry,this,'fillQueue');
-
-//TODO : requete sur le param de connection et a renvoyé vers fillqueue		
-
+		this.UserCollection.isAuth(this,'fillQueue');
 
 	}
 
 
 
-	fillQueue(datas){
+	fillQueue(isConnect){
 
 		console.log('in fill queue');
 		console.log(datas);
 
-		if(datas.data && datas.data.length == 1 && datas.data[0].is_auth){
+		if(isConnect){
 
 			////le service fill queue doit référencer l'ensemble des collection et c'est  lui qui se charge de la synchro montante vers le serveur
 			this.NotesCollection.synchroToServer();

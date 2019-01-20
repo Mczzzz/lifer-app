@@ -28,8 +28,6 @@ export default class AppController {
 
 		this.BDLocal = new BDLocalCollection();
 
-		//this.auth();
-		this.loadUser();
 		this.loadUnity();
 		this.loadCrypto();
 
@@ -40,26 +38,11 @@ export default class AppController {
 	}
 
 
-	auth(){
-
-		let userCollection = new LoaderCollection("User");
-		userCollection.authMe();
-
-	}
 
 
 
-	loadUser(){
-
-		let userCollection = new LoaderCollection("User");
-		Lifer.addMe("User");
-
-		let dispatchResponseTo  = [{ "This" : "Lifer" , "method" : "addData", "path" : "User"}];
-
-		userCollection.Get(dispatchResponseTo);
 
 
-	}
 
 
 	loadDeviceInfos(){
