@@ -37,7 +37,8 @@ class DatasSynchronizing {
 
 
 
-		this.startService();
+		this.UserCollection.isAuth(this,'startService');
+
 
 
 	}
@@ -45,13 +46,17 @@ class DatasSynchronizing {
 
 	startService(){
 
-		this.service = setInterval(()=> this.checkConnect() , 10000 );
+		this.service = setInterval(()=> this.checkConnect() , 1000 );
+
+		this.active = true;
 
 	}
 
 	stopService(){
 
 		clearInterval(this.service);
+
+		this.active = false;
 
 	}
 
@@ -84,6 +89,7 @@ class DatasSynchronizing {
 					let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
 					window.dispatchEvent(LinkEvent);
 
+					this.stopService();
 
 		}
 
