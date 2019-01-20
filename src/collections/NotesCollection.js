@@ -257,7 +257,7 @@ export default class NotesCollection {
 		TblParams.db = "cacheData";
 		TblParams.create = `CREATE TABLE IF NOT EXISTS `+TblParams.name+` (name,
 																	       value,																   
-						    										   UNIQUE (name) ON CONFLICT IGNORE
+						    										   UNIQUE (name) ON CONFLICT REPLACE
 																	   );
 																	   `;
 
@@ -522,10 +522,12 @@ export default class NotesCollection {
 //TODO: a revoir ca il peu y avoir des trous dans la raquete je pense
 		if(datas.data.length > 0){
 
-			let qry = `UPDATE Params
+/*			let qry = `UPDATE Params
 			           SET value = strftime('%Y-%m-%d %H:%M:%f', 'now')
 			           WHERE name = 'last_synchro'
 			           `;
+			this.webSQL.playQuery('cacheData',qry);*/
+			let qry = "INSERT INTO Params (name, value) VALUES ('last_synchro',strftime('%Y-%m-%d %H:%M:%f', 'now'))";
 			this.webSQL.playQuery('cacheData',qry);
 			
 		}
