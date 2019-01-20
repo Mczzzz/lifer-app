@@ -75,7 +75,7 @@ class DatasSynchronizing {
 		console.log('in fill queue');
 		console.log(datas);
 
-		if(datas.data.length == 1 && datas.data[0].is_auth){
+		if(datas.data && datas.data.length == 1 && datas.data[0].is_auth){
 
 			////le service fill queue doit référencer l'ensemble des collection et c'est  lui qui se charge de la synchro montante vers le serveur
 			this.NotesCollection.synchroToServer();
