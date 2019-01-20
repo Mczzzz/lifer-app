@@ -11,53 +11,12 @@ export default class FooterButtons extends superViews{
 
 
 
-
-
-//		this.deferredPrompt;
-
-		window.addEventListener('beforeinstallprompt', function (e) {
-		  // Prevent Chrome 67 and earlier from automatically showing the prompt
-		  e.preventDefault();
-		  // Stash the event so it can be triggered later.
-		 this.deferredPrompt = e;
-		 console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
-		//  this.showAddToHomeScreen();
-
-		setTimeout(()=>this.prompt(), 1000);
-
-
-
-		});
-
-
-
- 
-
-/*
-window.addEventListener("beforeinstallprompt", function(e) { 
-  // log the platforms provided as options in an install prompt 
-  console.log(e.platforms); // e.g., ["web", "android", "windows"] 
-  e.userChoice.then(function(outcome) { 
-    console.log(outcome); // either "accepted" or "dismissed"
-  }, handleError); 
-});
-
-
-*/
-
 		this.init();
 
 
 		
 	}
 
-
-	prompt(){
-
-		console.log('in prompt');
-		this.deferredPrompt.prompt();
-
-	}
 
 
 	init(){
@@ -126,43 +85,6 @@ window.addEventListener("beforeinstallprompt", function(e) {
 		window.dispatchEvent(LinkEvent);
 
 	}
-
-
-
-
-
-
-
-/*	showAddToHomeScreen() {
-
-	  let a2hsBtn = document.querySelector(".ad2hs-prompt");
-
-	  a2hsBtn.style.display = "block";
-
-	  a2hsBtn.addEventListener("click", addToHomeScreen);
-
-	}*/
-
-
-
-
-	addToHomeScreen() { 
-//	var a2hsBtn = document.querySelector(".ad2hs-prompt");  // hide our user interface that shows our A2HS button
-//  a2hsBtn.style.display = 'none';  // Show the prompt
-  this.deferredPrompt.prompt();  // Wait for the user to respond to the prompt
-  this.deferredPrompt.userChoice
-    .then(function(choiceResult){
-
-  if (choiceResult.outcome === 'accepted') {
-    console.log('User accepted the A2HS prompt');
-  } else {
-    console.log('User dismissed the A2HS prompt');
-  }
-
-  this.deferredPrompt = null;
-
-});}
-
 
 
 
