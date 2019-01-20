@@ -49,7 +49,8 @@ export default class HomeController {
 
 	_launchLogin(isConnect){
 
-
+		console.log('in _launchConnect');
+		console.log(isConnect);
 		if(!isConnect){
 
 			let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
