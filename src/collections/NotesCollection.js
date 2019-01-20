@@ -67,7 +67,7 @@ export default class NotesCollection {
 	getPictureFromServer(completeName,callBackObject,callBackMethod){
 
 		console.log("in getPictureFromServer");
-		this.SvcBackEndComm.ajaxSend('GET',"api_v1/pict/" + completeName,callBackObject,callBackMethod);
+		this.SvcBackEndComm.ajaxSend('GET',"/api_v1/pict/" + completeName,callBackObject,callBackMethod);
 
 	}
 
@@ -591,7 +591,7 @@ export default class NotesCollection {
 			}
 
  	
-//TODO: A REFAIRE PROPRE CAR  CODE SPECIFIC DANS DU COMMON
+		//TODO: A REFAIRE PROPRE CAR  CODE SPECIFIC DANS DU COMMON
 
 
 
