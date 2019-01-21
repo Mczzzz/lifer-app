@@ -81,6 +81,19 @@ export default class Main extends superViews{
 		    card.getContainer().addEventListener("click",()=>this.openNote(id));	
 
 
+			let Elt2 = card.setElement("Element2"+id);
+			Elt2.setStyle("justifyContent","flex-end");
+
+
+
+			let date = this.Moment(datas.timestamp).fromNow();
+			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,date);
+			itemDate.setStyle('font-size', '10px');
+			itemDate.setStyle("padding", "3px");
+			itemDate.setStyle("alignItems", "baseline");
+
+
+
 
 			let Elt = card.setElement("Element"+id);
 			Elt.setStyle("justifyContent","flex-start");
@@ -93,17 +106,7 @@ export default class Main extends superViews{
 
 
 
-			let Elt2 = card.setElement("Element2"+id);
-			Elt2.setStyle("justifyContent","flex-end");
-
-
-
-			let date = this.Moment(datas.timestamp).fromNow();
-			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,date);
-			itemDate.setStyle('font-size', '10px');
-			itemDate.setStyle("padding", "3px");
-			itemDate.setStyle("alignItems", "baseline");
-
+		
 
 
 	}
