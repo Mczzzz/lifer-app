@@ -90,7 +90,8 @@ export default class Main extends superViews{
 			card.getContainer().addEventListener("click",()=>this.openNote(id));	
 
 
-			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,datas.timestamp);
+			let date = this.Moment(datas.timestamp).startOf('day').fromNow();
+			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,date);
 			itemDate.setStyle('font-size', '10px');
 			itemDate.setStyle("padding", "3px");
 			itemDate.setStyle("alignItems", "baseline");
