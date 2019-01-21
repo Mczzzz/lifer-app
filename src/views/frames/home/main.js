@@ -73,7 +73,7 @@ export default class Main extends superViews{
 		    card.setStyle("borderWidth", "1px");
 		    card.setStyle("borderRadius", "3px");
 		    card.setStyle("margin", "5px");
-		    card.setStyle("padding", "10px");
+
 
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
