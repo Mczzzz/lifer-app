@@ -93,6 +93,7 @@ export default class Main extends superViews{
 			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,datas.timestamp);
 			itemDate.setStyle('font-size', '10px');
 			itemDate.setStyle("padding", "3px");
+			itemDate.setStyle("alignItems", "baseline");
 
 
 
