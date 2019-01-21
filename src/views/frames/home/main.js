@@ -101,7 +101,7 @@ export default class Main extends superViews{
 
 			
 			let 	item = card.push("TextButton", Elt,"view_Note"+id,datas.note_title);
-			item.setStyle("padding", "10px");
+			item.setStyle("padding", "2px 0px 10px 10px");
 				
 
 
