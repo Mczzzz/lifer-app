@@ -80,16 +80,19 @@ export default class Main extends superViews{
 
 
 			let Elt = card.setElement("Element"+id);
-			Elt.setStyle("justifyContent","flex-start");
+			Elt.setStyle("justifyContent","space-between");
 
 
 			
 			let 	item = card.push("TextButton", Elt,"view_Note"+id,datas.note_title);
+			item.setStyle("padding", "10px");
 				
 			card.getContainer().addEventListener("click",()=>this.openNote(id));	
 
 
 			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,datas.timestamp);
+			itemDate.setStyle('font-size', '10px');
+			itemDate.setStyle("padding", "3px");
 
 
 
