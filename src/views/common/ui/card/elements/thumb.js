@@ -96,9 +96,9 @@ export default class Thumb extends superViews{
 
 
 
-     setDataByName(name,item_id){
+     setDataByName(name,item_id,MyThumb){
 
-          let MyLoadData = new LoaderDatas(name,item_id, this.img);
+          let MyLoadData = new LoaderDatas(name,item_id, MyThumb);
 
 
 

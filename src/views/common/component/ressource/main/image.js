@@ -152,7 +152,7 @@ export default class Image extends superViews{
     	console.log(data);
     	//je pouse ma data dans mon thumb, 
     	//this.ImageElt.setData(data);
-		this.ImageElt.setDataByName(data, this.container.id);
+		this.ImageElt.setDataByName(data, this.container.id,this.ImageElt);
 		this.ImageElt.getContainer().addEventListener("click",()=>this.ImageViewer(data));
 
 		if(this.ExtcallBack){
