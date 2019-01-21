@@ -78,20 +78,28 @@ export default class Main extends superViews{
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
 
+		    card.getContainer().addEventListener("click",()=>this.openNote(id));	
+
+
 
 			let Elt = card.setElement("Element"+id);
-			Elt.setStyle("justifyContent","space-between");
+			Elt.setStyle("justifyContent","flex-start");
 
 
 			
 			let 	item = card.push("TextButton", Elt,"view_Note"+id,datas.note_title);
 			item.setStyle("padding", "10px");
 				
-			card.getContainer().addEventListener("click",()=>this.openNote(id));	
+
+
+
+			let Elt2= card.setElement("Element2"+id);
+			Elt2setStyle("justifyContent","flex-end");
+
 
 
 			let date = this.Moment(datas.timestamp).fromNow();
-			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,date);
+			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,date);
 			itemDate.setStyle('font-size', '10px');
 			itemDate.setStyle("padding", "3px");
 			itemDate.setStyle("alignItems", "baseline");
