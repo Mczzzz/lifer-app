@@ -213,12 +213,12 @@ Start(type){
 }
 
 
-startNewRessource(){
+/*startNewRessource(){
 
 	this.Empty.addRessource();
 
 }
-
+*/
 /*StartNumber(type){
 
 //il faut changer le type de empty
@@ -239,7 +239,7 @@ startNewRessource(){
 
 
 
-
+/*
 	StartCamera(type,capture = false){
 
 
@@ -258,7 +258,7 @@ startNewRessource(){
 		this.camLauncher.addEventListener("change", ()=>this.ServImgLoader.importPict(this.camLauncher.files[0]));
 
 
-	}
+	}*/
 
 
 

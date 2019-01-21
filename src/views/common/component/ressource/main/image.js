@@ -159,7 +159,12 @@ export default class Image extends superViews{
 			console.log('in add thumb');
 			console.log(data.data);
 //TODO : a mon avis ca doit entrainer un dub mais à voir			
-if(data.data) this.response.path = data.data.ObjImg.PersistName;
+			if(data.data){
+				this.response.path = data.data.ObjImg.PersistName;
+			}else{
+
+				this.response.path = data;
+			} 
 			this.response.text = this.getTextElement().getText();
 
 			let objectToCallBack = this.getObjectThisfromPath(this.ExtcallBack.path);
