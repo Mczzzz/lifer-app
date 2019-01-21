@@ -31,7 +31,11 @@ export default class NotesCollection {
 
 	getAllNotes(callBackObj,callBackMethod){
 
-		let qry = "SELECT * FROM Notes GROUP BY note_id";
+		let qry = `SELECT * 
+		           FROM Notes 
+		           GROUP BY note_id, note_tmpId
+		           ORDER BY timestamp DESC
+		           `;
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
 		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);
 
