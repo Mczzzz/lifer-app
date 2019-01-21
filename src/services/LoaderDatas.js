@@ -66,6 +66,9 @@ export default class LoaderDatas {
 
 		let objectURL = URL.createObjectURL(datas);
 
+		console.log('in synchro app');
+		console.log(this.elt);
+
 		this.elt.setData(objectURL);
 		//console.log(datas);
 
