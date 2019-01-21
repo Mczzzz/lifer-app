@@ -93,8 +93,8 @@ export default class Main extends superViews{
 
 
 
-			let Elt2= card.setElement("Element2"+id);
-			Elt2setStyle("justifyContent","flex-end");
+			let Elt2 = card.setElement("Element2"+id);
+			Elt2.setStyle("justifyContent","flex-end");
 
 
 
