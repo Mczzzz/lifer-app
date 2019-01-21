@@ -89,6 +89,7 @@ export default class Main extends superViews{
 			card.getContainer().addEventListener("click",()=>this.openNote(id));	
 
 
+			let 	itemDate = card.push("TextButton", Elt,"date_Note"+id,datas.timestamp);
 
 
 
