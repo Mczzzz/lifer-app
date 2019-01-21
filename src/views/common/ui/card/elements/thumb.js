@@ -25,7 +25,7 @@ export default class Thumb extends superViews{
           this.setStyle("background" , "transparent");
 
           this.img = document.createElement("img");
-          this.container.append(img);
+          this.container.append(this.img);
 
 
      }
