@@ -151,12 +151,14 @@ export default class Image extends superViews{
     	console.log('in addthumb');
     	console.log(data);
     	//je pouse ma data dans mon thumb, 
-    	this.ImageElt.setData(data);
+    	//this.ImageElt.setData(data);
+		this.ImageElt.setDataByName(data, this.container.id);
 		this.ImageElt.getContainer().addEventListener("click",()=>this.ImageViewer(data));
 
 		if(this.ExtcallBack){
 			console.log('in add thumb');
 			console.log(data.data);
+//TODO : a mon avis ca doit entrainer un dub mais à voir			
 if(data.data) this.response.path = data.data.ObjImg.PersistName;
 			this.response.text = this.getTextElement().getText();
 

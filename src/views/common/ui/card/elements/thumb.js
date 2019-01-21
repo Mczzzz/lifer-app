@@ -1,4 +1,5 @@
 import superViews from "../../../superViews.js";
+import LoaderDatas      from '../../../../../services/LoaderDatas.js';
 
 export default class Thumb extends superViews{ 
      
@@ -23,6 +24,9 @@ export default class Thumb extends superViews{
           this.setStyle("outline" , "none");
           this.setStyle("background" , "transparent");
 
+          this.img = document.createElement("img");
+          this.container.append(img);
+
 
      }
 
@@ -34,8 +38,7 @@ export default class Thumb extends superViews{
           
 
 
-          let img = document.createElement("img");
-          this.container.append(img);
+          let img =  this.img;
  
           console.log(data)
           if(!data.capture){
@@ -91,6 +94,15 @@ export default class Thumb extends superViews{
 
      }
 
+
+
+     setDataByName(name,item_id){
+
+          let MyLoadData = new LoaderDatas(name,item_id, this.img);
+
+
+
+     }
 
 
 
