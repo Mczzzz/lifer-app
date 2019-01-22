@@ -71,7 +71,7 @@ export default class FileManager {
 			
  		}else{
 
- 			let dropZone = document.createElement("div");
+ 			dropZone = document.createElement("div");
  			dropZone.className = "dropZone";
  			document.body.append(dropZone);
  			dropZone.style.display = "none";
