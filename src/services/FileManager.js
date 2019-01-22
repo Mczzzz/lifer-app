@@ -29,6 +29,8 @@ export default class FileManager {
 		this.TemporaryLocalStore = new LocalStorage('TEMPORARY');
 		this.PersistentLocalStore = new LocalStorage();
 
+		this.NotesCollection = new LoaderCollection("Notes");
+
 		this.callBack = false;
 		this.element = false;
 
@@ -176,6 +178,12 @@ export default class FileManager {
 
 
 	_loadInPersist(datas){
+
+		console.log("_loadInPersist");
+		console.log(datas);
+		console.log(datas.name);
+		console.log(datas.code);
+		console.log(datas.message);
 
 
 		if(datas.name == "TypeMismatchError"){
