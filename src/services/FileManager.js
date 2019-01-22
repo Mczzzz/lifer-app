@@ -33,24 +33,29 @@ export default class FileManager {
 
 		this.callBack = false;
 		this.element = false;
+		this.name = false;
 
 	}
 
 
 	showFile(name){
 
+		this.name = name;
+
 		console.log('FILEMANAGER SHOWFILE');
 
-		this._getInTemporary(name);
+		this._getInTemporary();
 
 	}
 
 
 	getFile(name){
 
+		this.name = name;
+
 		console.log('FILEMANAGER GETFILE');
 
-		this._getInTemporary(name);
+		this._getInTemporary();
 
 	}
 
@@ -116,14 +121,14 @@ export default class FileManager {
 	_loadPict(pict){
 
 
-		let name = Lifer.newTmpId()+".jpg";
+		this.name = Lifer.newTmpId()+".jpg";
 
 
-        this.PersistentLocalStore.push(name,pict);
+        this.PersistentLocalStore.push(this.name,pict);
 
-		this.TemporaryLocalStore.push(name,pict);
+		this.TemporaryLocalStore.push(this.name,pict);
 
-		this._returnResult(pict, name);
+		this._returnResult(pict, this.name);
 		
 	}
 
@@ -136,11 +141,11 @@ export default class FileManager {
 
 
 
-	_getInTemporary(name){
+	_getInTemporary(){
 
 		console.log('IN TEMPORARY GET');
 
-		this.TemporaryLocalStore.get(name,this,'_loadInTmp');
+		this.TemporaryLocalStore.get(this.name,this,'_loadInTmp');
 
 	}
 
@@ -156,7 +161,7 @@ export default class FileManager {
 
 		if(datas.code == 8){
 
-			this._getInPersistent(name);
+			this._getInPersistent();
 
 		}else{
 
@@ -169,10 +174,10 @@ export default class FileManager {
 
 
 
-	_getInPersistent(name){
+	_getInPersistent(){
 
 		console.log('IN PERSISTENT GET');
-		this.PersistentLocalStore.get(name,this,'_loadInPersist');
+		this.PersistentLocalStore.get(this.name,this,'_loadInPersist');
 
 	}
 
@@ -188,7 +193,7 @@ export default class FileManager {
 
 		if(datas.name == "TypeMismatchError"){
 
-			this._getFromServer(name);
+			this._getFromServer(this.name);
 
 		}else{
 
@@ -199,19 +204,19 @@ export default class FileManager {
 	}
 
 
-	_getFromServer(name){
+	_getFromServer(){
 
-		this.NotesCollection.getPictureFromServer(name,this,'_returnResult');
+		this.NotesCollection.getPictureFromServer(this.name,this,'_returnResult');
 
 	}
 
 
-	_returnResult(datas, name = false){
+	_returnResult(datas){
 
 
 		if(this.element) this.element.setData(datas);
 		
-		if(this.callBack) this.callBack.object[this.callBack.method](datas,name);
+		if(this.callBack) this.callBack.object[this.callBack.method](datas,this.name);
 
 	}
 
