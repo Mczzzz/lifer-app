@@ -122,7 +122,7 @@ export default class Image extends superViews{
 	}
 
 
-	showImage(res, name = false){
+	showImage(name, res = false){
 
 		this.addThumb(res,name);
 
