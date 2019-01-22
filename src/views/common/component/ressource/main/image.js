@@ -150,11 +150,16 @@ export default class Image extends superViews{
     	this.data.pict = data;
     	console.log('in addthumb');
     	console.log(data);
+    	
+    	//pour savoir si je remonte l'infos ou pas de l'image
+    	let sendCallBack = false;
+
     	//je pouse ma data dans mon thumb, 
     	//this.ImageElt.setData(data);
     	if(data.data){
 
     		this.ImageElt.setData(data);
+    		sendCallBack = true;
 
     	}else{
 
@@ -164,7 +169,7 @@ export default class Image extends superViews{
 		
 		this.ImageElt.getContainer().addEventListener("click",()=>this.ImageViewer(data));
 
-		if(this.ExtcallBack){
+		if(this.ExtcallBack && sendCallBack){
 			console.log('in add thumb');
 			console.log(data.data);
 //TODO : a mon avis ca doit entrainer un dub mais à voir			
@@ -175,6 +180,7 @@ export default class Image extends superViews{
 				this.response.path = data;
 			} 
 			this.response.text = this.getTextElement().getText();
+
 
 			let objectToCallBack = this.getObjectThisfromPath(this.ExtcallBack.path);
            	objectToCallBack[this.ExtcallBack.method]("",this.response);
