@@ -182,13 +182,10 @@ export default class FileManager {
 
 	_returnResult(datas, name = false){
 
-		console.log(datas);
 
-		let objectURL = datas;
-
-		if(this.element) this.element.setData(objectURL);
+		if(this.element) this.element.setData(datas);
 		
-		if(this.callBack) this.callBack.object[this.callBack.method](objectURL,name);
+		if(this.callBack) this.callBack.object[this.callBack.method](datas,name);
 
 	}
 

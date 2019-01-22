@@ -122,15 +122,15 @@ export default class Image extends superViews{
 	}
 
 
-	showImage(res){
+	showImage(res, name = false){
 
-		this.addThumb(res);
+		this.addThumb(res,name);
 
 	}
 
 
 
-    addThumb(data){
+    addThumb(data, name = false){
     	this.data = {};
     	this.data.pict = data;
     	console.log('in addthumb');
@@ -140,15 +140,14 @@ export default class Image extends superViews{
     	let sendCallBack = false;
 
     	//je pouse ma data dans mon thumb, 
-    	//this.ImageElt.setData(data);
-    	if(data.data){
+    	if(data){
 
     		this.ImageElt.setData(data);
     		sendCallBack = true;
 
     	}else{
 
-    		this.ImageElt.setDataByName(data, this.container.id,this.ImageElt);
+    		this.ImageElt.setDataByName(name, this.container.id,this.ImageElt);
 
     	}
 		
