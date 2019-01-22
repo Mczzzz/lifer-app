@@ -73,8 +73,8 @@ class DatasSynchronizing {
 
 	fillQueue(isConnect){
 
-		console.log('in fill queue');
-		console.log(isConnect);
+		/*console.log('in fill queue');
+		console.log(isConnect);*/
 
 		if(isConnect){
 
@@ -179,7 +179,7 @@ class DatasSynchronizing {
 
 	add(dispatchResponseTo,to,datas,purchaseOrder,needTmpId=false){
 
-		console.log(to);
+	//	console.log(to);
 		let MaCommande = {};
 		MaCommande.to = to;
 		MaCommande.dispatchResponseTo  = dispatchResponseTo ;

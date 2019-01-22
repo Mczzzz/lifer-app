@@ -356,7 +356,8 @@ export default class Story extends superViews{
 				MyThumb.setStyle("marginRight" , "10px");
 				MyThumb.setStyle("display" , "flex");
 				MyThumb.setStyle("alignItems" , "center");
-
+				console.log("datas.item_path");
+				console.log(datas.item_path);
 				MyThumb.setDataByName(datas.item_path);
 
 				//this.updateImagePict(MyThumb,elt,ressourceTmpId,itemTmpId)

@@ -16,14 +16,14 @@ export default class BackendComm {
 
 			let webSQLCon = new webSQL();
 
-			console.log('JUST BEFORE SEND FETCH');
+//			console.log('JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
 
 
 			fetch(host+url, params).then(function(response) {
 
-				console.log('in my fetch app :');
-				console.log(response);
+	/*			console.log('in my fetch app :');
+				console.log(response);*/
 
 				if(response.status === 401) {
 

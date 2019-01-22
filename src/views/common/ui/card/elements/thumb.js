@@ -36,7 +36,8 @@ export default class Thumb extends superViews{
 
           //si elle exite déja on remplace l'image
 
-          
+          console.log("IN SET DATA DU THHHHHUMB !!!!");
+          console.log(data);
 
 
           let img =  this.img;
