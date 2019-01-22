@@ -94,7 +94,7 @@ export default class Image extends superViews{
 
 		let Fm = new FileManager();
 		Fm.setCallBack(this,"showImage");
-		Fm.uploader("camera");
+		Fm.uploader("camera",this.container.id);
 
 
 	}
@@ -146,7 +146,7 @@ export default class Image extends superViews{
 
     	}else{
 
-    		this.ImageElt.setDataByName(name, this.container.id,this.ImageElt);
+    		this.ImageElt.setDataByName(name, this.container.id);
 
     	}
 		

@@ -97,12 +97,12 @@ export default class Thumb extends superViews{
 
 
 
-     setDataByName(name,item_id = false,MyThumb = false){
+     setDataByName(name,item_id){
           console.log("in SET DATA BY NAMMMEEEEEEE  !!!");
 
           let Fm = new FileManager();
           Fm.setElement(this);
-          Fm.showFile(name);
+          Fm.showFile(item_id+"_"+name);
 
 
      }

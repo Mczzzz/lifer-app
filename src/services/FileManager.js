@@ -75,7 +75,10 @@ export default class FileManager {
 
 
 	//type : camera | ""
-	uploader(type){
+	uploader(type,item_id){
+
+
+		this.name = item_id+"_"+Lifer.newTmpId()+".jpg";
 
 		let dropZone = false;
 		//je regarde si ma zone d'upload est active ou non
@@ -119,9 +122,6 @@ export default class FileManager {
 
 
 	_loadPict(pict){
-
-
-		this.name = Lifer.newTmpId()+".jpg";
 
 
         this.PersistentLocalStore.push(this.name,pict);
