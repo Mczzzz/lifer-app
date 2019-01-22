@@ -130,11 +130,10 @@ export default class Image extends superViews{
 
 
 
-    addThumb(data, name = false){
-    	this.data = {};
-    	this.data.pict = data;
+    addThumb(name, data = false){
+
     	console.log('in addthumb');
-    	console.log(data);
+
     	
     	//pour savoir si je remonte l'infos ou pas de l'image
     	let sendCallBack = false;
@@ -153,18 +152,11 @@ export default class Image extends superViews{
 		
 		this.ImageElt.getContainer().addEventListener("click",()=>this.ImageViewer(data));
 
+
 		if(this.ExtcallBack && sendCallBack){
-			console.log('in add thumb');
-			console.log(data.data);
-//TODO : a mon avis ca doit entrainer un dub mais à voir			
-			if(data.data){
-				this.response.path = data.data.ObjImg.PersistName;
-			}else{
-
-				this.response.path = data;
-			} 
+		
+			this.response.path = name;
 			this.response.text = this.getTextElement().getText();
-
 
 			let objectToCallBack = this.getObjectThisfromPath(this.ExtcallBack.path);
            	objectToCallBack[this.ExtcallBack.method]("",this.response);
