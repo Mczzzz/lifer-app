@@ -35,10 +35,8 @@ export default class FileManager {
 	}
 
 
-	showFile(name,element){
+	showFile(name){
 
-
-		this.element = element;
 
 		this._getInTemporary(name);
 
