@@ -158,12 +158,14 @@ export default class FileManager {
 
 	_getInPersistent(name){
 
+		console.log('IN PERSISTENT GET');
 		this.PersistentLocalStore.get(name,this,'_loadInPersist');
 
 	}
 
 
 	_loadInPersist(datas){
+
 
 		if(datas.name == "TypeMismatchError"){
 
