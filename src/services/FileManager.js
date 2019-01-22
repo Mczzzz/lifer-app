@@ -147,6 +147,10 @@ export default class FileManager {
 
 		console.log("_loadInTmp");
 		console.log(datas);
+		console.log(datas.name);
+		console.log(datas.code);
+		console.log(datas.message);
+
 
 		if(datas.name == "TypeMismatchError"){
 
