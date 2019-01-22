@@ -2,7 +2,9 @@ import superViews from "../../../superViews.js";
 
 import Card from "../../../ui/card.js";
 
-import { LoaderImage } from '../../../../../services/LoaderImage.js';
+//import { LoaderImage } from '../../../../../services/LoaderImage.js';
+
+import FileManager from '../../../../../services/FileManager.js'
 
 export default class Image extends superViews{
 	
@@ -90,27 +92,10 @@ export default class Image extends superViews{
 
 		console.log('in launch cam');
 
-		this.camLauncher = document.createElement("input");
-		this.camLauncher.type = "file";
-		this.camLauncher.accept = "image/*";
+		let Fm = new FileManager();
+		Fm.setCallBack(this,"showImage");
+		Fm.uploader("camera");
 
-		//if(capture){
-		this.camLauncher.capture = "camera";	
-		//}
-
-		this.camLauncher.style.display = "none";
-		this.container.append(this.camLauncher);
-		//console.log("click sur image");
-	    //setTimeout( ()=>, 2000);
-	    this.camLauncher.click();
-//		console.log("this.camLauncher.click()");
-
-		this.target = {};
-		this.target.Object = this;
-		this.target.Method = "showImage";
-
-
-		this.camLauncher.addEventListener("change", ()=>LoaderImage.importPict(this.camLauncher.files[0],this.target));
 
 	}
 
