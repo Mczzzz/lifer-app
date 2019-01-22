@@ -37,6 +37,7 @@ export default class FileManager {
 
 	showFile(name){
 
+		console.log('FILEMANAGER SHOWFILE');
 
 		this._getInTemporary(name);
 
@@ -45,6 +46,7 @@ export default class FileManager {
 
 	getFile(name){
 
+		console.log('FILEMANAGER GETFILE');
 
 		this._getInTemporary(name);
 
@@ -133,6 +135,8 @@ export default class FileManager {
 
 
 	_getInTemporary(name){
+
+		console.log('IN TEMPORARY GET');
 
 		this.TemporaryLocalStore.get(name,this,'_loadInTmp');
 
