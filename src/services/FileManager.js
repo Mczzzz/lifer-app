@@ -71,10 +71,10 @@ export default class FileManager {
 			
  		}else{
 
- 			let newDropZone = document.createElement("div");
- 			newDropZone.className = "dropZone";
- 			document.body.append(newDropZone);
- 			newDropZone.style.display = "none";
+ 			let dropZone = document.createElement("div");
+ 			dropZone.className = "dropZone";
+ 			document.body.append(dropZone);
+ 			dropZone.style.display = "none";
 
  		}
 
@@ -84,7 +84,7 @@ export default class FileManager {
  		inputDrop.accept = "image/*";
  		inputDrop.capture = type;
 
- 		newDropZone.append(inputDrop);
+ 		dropZone.append(inputDrop);
 
  		inputDrop.click();
 
