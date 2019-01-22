@@ -357,8 +357,7 @@ export default class Story extends superViews{
 				MyThumb.setStyle("display" , "flex");
 				MyThumb.setStyle("alignItems" , "center");
 
-
-				let MyLoadData = new LoaderDatas(datas.item_path,datas.item_id, MyThumb);
+				MyThumb.setDataByName(datas.item_path);
 
 				//this.updateImagePict(MyThumb,elt,ressourceTmpId,itemTmpId)
 

@@ -29,6 +29,7 @@ export default class Image extends superViews{
 
      setData(data){
 
+          console.log("IN SET DATA IMAGE.js");
           let img = document.createElement("img");
           this.container.append(img);
  
@@ -73,8 +74,6 @@ export default class Image extends superViews{
 
           }
           
-                    //pas le bon endroit mais toujours mieux que rien 
-         // screen.orientation.lock("portrait-primary");
 
      }
 
