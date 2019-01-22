@@ -152,7 +152,7 @@ export default class FileManager {
 		console.log(datas.message);
 
 
-		if(datas.name == "TypeMismatchError"){
+		if(datas.code == 8){
 
 			this._getInPersistent(name);
 
