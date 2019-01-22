@@ -1,5 +1,6 @@
 import superViews from "../../../superViews.js";
-import LoaderDatas      from '../../../../../services/LoaderDatas.js';
+//import LoaderDatas      from '../../../../../services/LoaderDatas.js';
+import FileManager      from '../../../../../services/FileManager.js';
 
 export default class Thumb extends superViews{ 
      
@@ -40,7 +41,6 @@ export default class Thumb extends superViews{
 
           let img =  this.img;
  
-          console.log(data)
           if(!data.capture){
 
 //TODO: A REFAIRE O PROPRE QUAND MEME
@@ -96,10 +96,11 @@ export default class Thumb extends superViews{
 
 
 
-     setDataByName(name,item_id,MyThumb){
+     setDataByName(name,item_id = false,MyThumb = false){
 
-          let MyLoadData = new LoaderDatas(name,item_id, MyThumb);
-
+          let Fm = new FileManager();
+          Fm.setElement(this);
+          Fm.get(name);
 
 
      }

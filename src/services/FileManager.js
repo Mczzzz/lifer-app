@@ -60,6 +60,13 @@ export default class FileManager {
 
 	}
 
+	setElement(element){
+
+		this.element = element;
+
+	}
+
+
 	//type : camera | ""
 	uploader(type){
 
