@@ -145,6 +145,9 @@ export default class FileManager {
 
 	_loadInTmp(datas){
 
+		console.log("_loadInTmp");
+		console.log(datas);
+
 		if(datas.name == "TypeMismatchError"){
 
 			this._getInPersistent(name);
