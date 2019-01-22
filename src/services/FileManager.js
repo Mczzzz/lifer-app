@@ -184,7 +184,7 @@ export default class FileManager {
 
 		console.log(datas);
 
-		let objectURL = URL.createObjectURL(datas);
+		let objectURL = datas;
 
 		if(this.element) this.element.setData(objectURL);
 		
