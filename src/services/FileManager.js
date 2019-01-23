@@ -216,6 +216,11 @@ export default class FileManager {
 	_returnResult(datas){
 
 
+		//'data:image/bmp;base64,'+Base64.encode(blob)
+
+		console.log("_returnResult");
+		console.log(datas);
+
 		if(this.element) this.element.setData(datas);
 		
 		if(this.callBack) this.callBack.object[this.callBack.method](datas,this.name);
