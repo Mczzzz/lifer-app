@@ -52,7 +52,7 @@ self.addEventListener('fetch', event => {
             // to clone it so we have 2 stream.
             console.log('Request method IS :  '+event.request.method);
 
-            if(event.request.method != "POST"){
+            if(event.request.method == "GET"){
               var responseToCache = response.clone();
 
               caches.open('v1')
