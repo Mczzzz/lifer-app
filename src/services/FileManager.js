@@ -121,7 +121,7 @@ export default class FileManager {
 
 
 	_loadPict(pict){
-
+		console.log("_loadPict!!!!!!!!!!!!!!!!!!!!");
 		console.log(this.name);
         this.PersistentLocalStore.push(this.name,pict);
 
