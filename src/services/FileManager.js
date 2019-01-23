@@ -221,6 +221,12 @@ export default class FileManager {
 		console.log("_returnResult");
 		console.log(datas);
 		console.log(typeof datas);
+		if(typeof datas == "object"){
+
+		datas = 'data:image/bmp;base64,'+Base64.encode(datas);
+
+		}
+
 
 		if(this.element) this.element.setData(datas);
 		
