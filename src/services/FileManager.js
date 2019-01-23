@@ -220,6 +220,7 @@ export default class FileManager {
 
 		console.log("_returnResult");
 		console.log(datas);
+		console.log(typeof datas);
 
 		if(this.element) this.element.setData(datas);
 		
