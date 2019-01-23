@@ -50,6 +50,8 @@ self.addEventListener('fetch', event => {
             // and because we want the browser to consume the response
             // as well as the cache consuming the response, we need
             // to clone it so we have 2 stream.
+            console.log('Request method IS :  '+event.request.method);
+
             var responseToCache = response.clone();
 
             caches.open('v1')
