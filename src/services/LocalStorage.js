@@ -24,7 +24,12 @@ export default class LocalStorage {
 		this.name = name;*/
 		
 
-		navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.pushAction(grantedBytes, name, Myfile), (e) => this.consoleSizeError(e) );
+		if(this.type == "PERSISTENT"){
+			navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.pushAction(grantedBytes, name, Myfile), (e) => this.consoleSizeError(e) );
+		}else if(this.type == "TEMPORARY"){
+			navigator.webkitTemporaryStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.pushAction(grantedBytes, name, Myfile), (e) => this.consoleSizeError(e) );
+		}
+		
 
 
 	}
@@ -40,16 +45,26 @@ export default class LocalStorage {
 
 		}
 
+		if(this.type == "PERSISTENT"){
+			navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.getAction(grantedBytes, name), (e) => this.consoleSizeError(e) );
+		}else if(this.type == "TEMPORARY"){
+			navigator.webkitTemporaryStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.getAction(grantedBytes, name), (e) => this.consoleSizeError(e) );
+		}
 		
 
-		navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.getAction(grantedBytes, name), (e) => this.consoleSizeError(e) );	
+			
 
 	}
 
 
 	remove(name){
 
-		navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.removeAction(grantedBytes, name), (e) => this.consoleSizeError(e) );	
+		if(this.type == "PERSISTENT"){
+			navigator.webkitPersistentStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.removeAction(grantedBytes, name), (e) => this.consoleSizeError(e) );	
+		}else if(this.type == "TEMPORARY"){
+			navigator.webkitTemporaryStorage.requestQuota ( this.grantedBytes, (grantedBytes) => this.removeAction(grantedBytes, name), (e) => this.consoleSizeError(e) );	
+		}
+
 
 	}
 
@@ -231,7 +246,14 @@ export default class LocalStorage {
 
 
 	getSize(){
-		navigator.webkitPersistentStorage.queryUsageAndQuota ( (usedBytes, grantedBytes) => this.consoleSize(usedBytes, grantedBytes), (e) => this.consoleSizeError(e) );
+
+		if(this.type == "PERSISTENT"){
+			navigator.webkitPersistentStorage.queryUsageAndQuota ( (usedBytes, grantedBytes) => this.consoleSize(usedBytes, grantedBytes), (e) => this.consoleSizeError(e) );
+		}else if(this.type == "TEMPORARY"){
+			navigator.webkitTemporaryStorage.requestQuota ( (usedBytes, grantedBytes) => this.consoleSize(usedBytes, grantedBytes), (e) => this.consoleSizeError(e) );	
+		}
+
+
 	}
 
 
