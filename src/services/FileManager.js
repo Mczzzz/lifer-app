@@ -223,7 +223,8 @@ export default class FileManager {
 		console.log(typeof datas);
 		if(typeof datas == "object"){
 
-		datas = 'data:image/bmp;base64,'+Base64.encode(datas);
+			datas = window.URL.createObjectURL(datas);
+		//datas = 'data:image/bmp;base64,'+Base64.encode(datas);
 
 		}
 
