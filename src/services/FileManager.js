@@ -26,7 +26,7 @@ export default class FileManager {
 
 	constructor(){
 
-		this.TemporaryLocalStore = new LocalStorage('TEMPORARY');
+		//this.TemporaryLocalStore = new LocalStorage('TEMPORARY');
 		this.PersistentLocalStore = new LocalStorage();
 
 		this.NotesCollection = new LoaderCollection("Notes");
@@ -44,7 +44,8 @@ export default class FileManager {
 
 		console.log('FILEMANAGER SHOWFILE');
 
-		this._getInTemporary();
+		//this._getInTemporary();
+		this._getInPersistent();
 
 	}
 
@@ -55,7 +56,8 @@ export default class FileManager {
 
 		console.log('FILEMANAGER GETFILE');
 
-		this._getInTemporary();
+		//this._getInTemporary();
+		this._getInPersistent();
 
 	}
 
@@ -125,7 +127,7 @@ export default class FileManager {
 		console.log(this.name);
         this.PersistentLocalStore.push(this.name,pict);
 
-		this.TemporaryLocalStore.push(this.name,pict);
+		//this.TemporaryLocalStore.push(this.name,pict);
 
 		this._returnResult(pict, this.name);
 		
