@@ -52,12 +52,14 @@ self.addEventListener('fetch', event => {
             // to clone it so we have 2 stream.
             console.log('Request method IS :  '+event.request.method);
 
-            var responseToCache = response.clone();
+            if(event.request.method != "POST"){
+              var responseToCache = response.clone();
 
-            caches.open('v1')
-              .then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
+              caches.open('v1')
+                .then(function(cache) {
+                  cache.put(event.request, responseToCache);
+                });
+            }
 
             return response;
           }
