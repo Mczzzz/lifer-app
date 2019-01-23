@@ -78,7 +78,9 @@ export default class FileManager {
 	uploader(type,item_id){
 
 
-		this.name = item_id+"_"+Lifer.newTmpId()+".jpg";
+		this.naturalName = Lifer.newTmpId()+".jpg";
+		this.name        = item_id+"_"+this.naturalName;
+		
 
 		let dropZone = false;
 		//je regarde si ma zone d'upload est active ou non
@@ -126,9 +128,9 @@ export default class FileManager {
 		console.log(this.name);
         this.PersistentLocalStore.push(this.name,pict);
 
-		this.TemporaryLocalStore.push(this.name,pict);
+		this.TemporaryLocalStore.push(this.naturalName,pict);
 
-		this._returnResult(pict, this.name);
+		this._returnResult(pict, this.naturalName);
 		
 	}
 
