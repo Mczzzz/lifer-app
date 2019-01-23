@@ -123,7 +123,7 @@ export default class FileManager {
 
 	_loadPict(pict){
 
-
+		console.log(this.name);
         this.PersistentLocalStore.push(this.name,pict);
 
 		this.TemporaryLocalStore.push(this.name,pict);

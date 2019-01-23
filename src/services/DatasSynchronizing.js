@@ -111,25 +111,25 @@ class DatasSynchronizing {
 
 
 
-	sendCommand(purchases){
+	/*sendCommand(purchases){
 //		console.log('in send command');
 
 		for(let cmd of Array.from(purchases.rows)){
-/*
+
 			console.log(cmd);
 			console.log(JSON.parse(cmd.collection));
-*/
+
 			this.add(JSON.parse(cmd.dispatch_to),JSON.parse(cmd.collection),false,cmd.id,false);
 
 
 		}
 
-	}
+	}*/
 
 
 
 
-	playQuery(query,callback = false){
+/*	playQuery(query,callback = false){
 		this.syncData.transaction((db)=>this.execQuery(db,query,false,callback));
 	}
 
@@ -141,11 +141,11 @@ class DatasSynchronizing {
 	}
 
 
-	webSQLsucess(tx,results,callback = false){
+	webSQLsucess(tx,results,callback = false){*/
 
 /*		console.log("webSQLsuccess");
 		console.log(tx);
-		console.log(results);*/
+		console.log(results);
 		if(callback){
 			this[callback](results);
 		}
@@ -159,12 +159,12 @@ class DatasSynchronizing {
 		console.log(tx);
 		console.log(errors);
 
-	}
+	}*/
 
 
 
 
-	purchaseOrder(){
+/*	purchaseOrder(){
 
 		let stackId = Moment().format('x') + "-" + Math.floor(Math.random() * Math.floor(100000));
 
@@ -173,11 +173,11 @@ class DatasSynchronizing {
 
 		return stackId;
 
-	}
+	}*/
 
 
 
-	add(dispatchResponseTo,to,datas,purchaseOrder,needTmpId=false){
+/*	add(dispatchResponseTo,to,datas,purchaseOrder,needTmpId=false){
 
 	//	console.log(to);
 		let MaCommande = {};
@@ -192,12 +192,12 @@ class DatasSynchronizing {
 
 
 	}
+*/
 
 
 
 
-
-	receipt(orderNumber){
+	/*receipt(orderNumber){
 		//suppresion de la commande de la stack 
 
 
@@ -212,7 +212,7 @@ class DatasSynchronizing {
 		return false;
 		
 
-	}
+	}*/
 
 
 
