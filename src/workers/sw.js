@@ -42,6 +42,7 @@ function precache() {
 
 
 function fromNetwork(request, timeout) {
+  console.log('fromNetworkFirst');
   return new Promise(function (fulfill, reject) {
     console.log('fromNetwork');
     console.log(request);
