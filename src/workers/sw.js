@@ -1,70 +1,67 @@
 self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/lifer.js',
-        '/index.html',
-        '/'
-      ]);
-    })
-  );
+  event.waitUntil(precache());
 });
 
-/*self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-  );
-});*/
 
 self.addEventListener('fetch', event => {
-  console.log('Fetch event for '+event.request.url);
-  event.respondWith(
-    caches.match(event.request)
-    .then(response => {
-      if (response) {
-        console.log('Found ', event.request.url, ' in cache');
-        return response;
-      }else{
-        console.log('not found in cache');
-        console.log(response);
-      }
-
-
-      console.log('Network request for ', event.request.url);
-        // IMPORTANT: Clone the request. A request is a stream and
-        // can only be consumed once. Since we are consuming this
-        // once by cache and once by the browser for fetch, we need
-        // to clone the response
-       let fetchRequest = event.request.clone();
-
-        return fetch(fetchRequest).then(
-          function(response) {
-            console.log('in return fetch');
-            console.log(response);
-            // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // IMPORTANT: Clone the response. A response is a stream
-            // and because we want the browser to consume the response
-            // as well as the cache consuming the response, we need
-            // to clone it so we have 2 stream.
-            console.log('Request method IS :  '+event.request.method);
-
-            if(event.request.method == "GET"){
-              var responseToCache = response.clone();
-
-              caches.open('v1')
-                .then(function(cache) {
-                  cache.put(event.request, responseToCache);
-                });
-            }
-
-            return response;
-          }
-        );
-
-    })
-  );
+   event.respondWith(fromCache(event.request).catch(function () {
+    return fromNetwork(evt.request,400);
 });
+
+
+
+function fromCache(request) {
+  return caches.open('v1').then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      return matching || Promise.reject('no-match');
+    });
+  });
+}
+
+
+function precache() {
+  return caches.open('v1').then(function (cache) {
+    return cache.addAll([
+      '/lifer.js',
+      '/index.html',
+      '/'
+    ]);
+  });
+}
+
+
+
+function fromNetwork(request, timeout) {
+
+  return new Promise(function (fulfill, reject) {
+ 
+    let timeoutId = setTimeout(reject, timeout);
+ 
+    fetch(request).then(function (response) {
+      clearTimeout(timeoutId);
+ 
+
+    }.then( function(response) {
+
+      if(request.method == "GET"){
+      
+        let responseToCache = response.clone();
+
+        caches.open('v1')
+          .then(function(cache) {
+            cache.put(event.request, responseToCache);
+          });
+
+        }
+
+        fulfill(response);
+
+      })
+
+
+
+
+    , reject);
+  });
+}
+
