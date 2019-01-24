@@ -4,9 +4,10 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', event => {
-   event.respondWith(fromCache(event.request).catch(function () {
-    return fromNetwork(evt.request,400);
-  });
+   event.respondWith(fromCache(event.request)
+    .catch(function () {
+      return fromNetwork(evt.request,400);
+    }));
 });
 
 
