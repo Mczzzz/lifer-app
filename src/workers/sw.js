@@ -15,11 +15,16 @@ self.addEventListener('fetch', event => {
 
 
 function fromCache(request) {
-  return caches.open('v1').then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      return matching || Promise.reject('no-match');
+  if(request.method == "GET"){
+    return caches.open('v1').then(function (cache) {
+      return cache.match(request).then(function (matching) {
+        return matching || Promise.reject('no-match');
+      });
     });
-  });
+  }else{
+
+    return Promise.reject('no-match');
+  }
 }
 
 
