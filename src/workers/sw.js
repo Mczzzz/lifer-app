@@ -43,10 +43,13 @@ function precache() {
 
 function fromNetwork(request, timeout) {
   return new Promise(function (fulfill, reject) {
-
-    var timeoutId = setTimeout(reject, timeout);
- 
+    console.log('fromNetwork');
+    console.log(request);
+    console.log(timeout);
+    let timeoutId = setTimeout(reject, timeout);
+    
     fetch(request).then(function (response) {
+      console.log('in fetch');
       clearTimeout(timeoutId);
       fulfill(response);
  
