@@ -42,20 +42,26 @@ function precache() {
 
 
 function fromNetwork(request, timeout) {
-  console.log('fromNetworkFirst');
-  return new Promise(function (fulfill, reject) {
-    console.log('fromNetwork');
+
+//  console.log('fromNetworkFirst');
+    return new Promise(function (fulfill, reject) {
+/*    console.log('fromNetwork');
     console.log(request);
-    console.log(timeout);
+    console.log(timeout);*/
     let timeoutId = setTimeout(reject, timeout);
     
     fetch(request).then(function (response) {
-      console.log('in fetch');
-      clearTimeout(timeoutId);
-      fulfill(response);
+     // console.log('in fetch');
+        clearTimeout(timeoutId);
+        fulfill(response);
  
-    }, reject);
+    }).catch(function () {
+       console.log('in fecth catch');
+      return reject(response);
+    })
+
   });
+
 }
   
 
