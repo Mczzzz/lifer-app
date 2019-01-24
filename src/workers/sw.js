@@ -37,25 +37,29 @@ function fromNetwork(request, timeout) {
 
   return new Promise(function (fulfill, reject) {
  
+    console.log('fromNetwork');
+    console.log(request.method);
     let timeoutId = setTimeout(reject, timeout);
  
     fetch(request).then(function (response) {
       clearTimeout(timeoutId);
- 
+      console.log('fetch in fromNetwork');
 
     }.then( function(response) {
 
+      console.log('then fetch in fromNetwork');
       if(request.method == "GET"){
-      
+        console.log('if get then fetch in fromNetwork');
         let responseToCache = response.clone();
 
         caches.open('v1')
           .then(function(cache) {
-            cache.put(event.request, responseToCache);
+            cache.put(request, responseToCache);
           });
 
         }
 
+        console.log('before fulfill then fetch in fromNetwork');
         fulfill(response);
 
       })
