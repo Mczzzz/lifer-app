@@ -43,15 +43,15 @@ function precache() {
 
 function fromNetwork(request, timeout) {
 
-//  console.log('fromNetworkFirst');
+  console.log('fromNetworkFirst');
     return new Promise(function (fulfill, reject) {
-/*    console.log('fromNetwork');
+   console.log('fromNetwork');
     console.log(request);
-    console.log(timeout);*/
+    console.log(timeout);
     let timeoutId = setTimeout(reject, timeout);
     
     fetch(request).then(function (response) {
-     // console.log('in fetch');
+      console.log('in fetch');
         clearTimeout(timeoutId);
         fulfill(response);
  
