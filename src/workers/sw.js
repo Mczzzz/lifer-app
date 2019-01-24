@@ -36,18 +36,21 @@ function precache() {
 
 
 function fromNetwork(request, timeout) {
-
   return new Promise(function (fulfill, reject) {
- 
-    console.log('fromNetwork');
-    console.log(request.method);
-    let timeoutId = setTimeout(reject, timeout);
+
+    var timeoutId = setTimeout(reject, timeout);
  
     fetch(request).then(function (response) {
       clearTimeout(timeoutId);
-      console.log('fetch in fromNetwork');
+      fulfill(response);
+ 
+    }, reject);
+  });
+}
+  
 
-    }).then( function(response) {
+
+/*).then( function(response) {
 
         console.log('then fetch in fromNetwork');
         if(request.method == "GET"){
@@ -62,14 +65,6 @@ function fromNetwork(request, timeout) {
          }
 
           console.log('before fulfill then fetch in fromNetwork');
-          fulfill(response);
+          
 
-      })
-
-
-
-  }
-    , reject);
-  }
-
-
+      })*/
