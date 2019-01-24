@@ -57,6 +57,19 @@ function fromNetwork(request, timeout) {
     fetch(request).then(function (response) {
       console.log('in fetch');
         clearTimeout(timeoutId);
+
+        if(request.method == "GET"){
+
+          let responseToCache = response.clone();
+
+          caches.open('v1')
+            .then(function(cache) {
+              cache.put(request, responseToCache);
+            });
+
+
+        }
+
         fulfill(response);
  
     }).catch(function () {
