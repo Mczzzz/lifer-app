@@ -64,13 +64,13 @@ function fromNetwork(request, timeout) {
 
           caches.open('v1')
             .then(function(cache) {
-              cache.put(request, responseToCache);
+               return cache.put(request, responseToCache);
             });
 
 
         }
 
-        fulfill(response);
+        return fulfill(response);
  
     }).catch(function () {
        console.log('in fecth catch');
@@ -82,22 +82,3 @@ function fromNetwork(request, timeout) {
 }
   
 
-
-/*).then( function(response) {
-
-        console.log('then fetch in fromNetwork');
-        if(request.method == "GET"){
-          console.log('if get then fetch in fromNetwork');
-          let responseToCache = response.clone();
-
-          caches.open('v1')
-            .then(function(cache) {
-              cache.put(request, responseToCache);
-            });
-
-         }
-
-          console.log('before fulfill then fetch in fromNetwork');
-          
-
-      })*/
