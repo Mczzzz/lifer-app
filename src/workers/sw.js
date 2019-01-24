@@ -8,12 +8,13 @@ self.addEventListener('fetch', event => {
    event.respondWith(fromCache(event.request)
     .catch(function () {
        console.log('nothing in cache to to network');
-      return fromNetwork(event.request,400).catch(function(){
+      return fromNetwork(event.request,400).catch(function(response){
         console.log('aiiiiieeeee');
         throw Error('response status ' + response.status);
       });
     }));
 });
+
 
 
 
