@@ -47,29 +47,29 @@ function fromNetwork(request, timeout) {
       clearTimeout(timeoutId);
       console.log('fetch in fromNetwork');
 
-    }.then( function(response) {
+    }).then( function(response) {
 
-      console.log('then fetch in fromNetwork');
-      if(request.method == "GET"){
-        console.log('if get then fetch in fromNetwork');
-        let responseToCache = response.clone();
+        console.log('then fetch in fromNetwork');
+        if(request.method == "GET"){
+          console.log('if get then fetch in fromNetwork');
+          let responseToCache = response.clone();
 
-        caches.open('v1')
-          .then(function(cache) {
-            cache.put(request, responseToCache);
-          });
+          caches.open('v1')
+            .then(function(cache) {
+              cache.put(request, responseToCache);
+            });
 
-        }
+         }
 
-        console.log('before fulfill then fetch in fromNetwork');
-        fulfill(response);
+          console.log('before fulfill then fetch in fromNetwork');
+          fulfill(response);
 
       })
 
 
 
-
+  }
     , reject);
-  });
-}
+  }
+
 
