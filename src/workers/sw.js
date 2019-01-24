@@ -8,7 +8,7 @@ self.addEventListener('fetch', event => {
    event.respondWith(fromCache(event.request)
     .catch(function () {
        console.log('nothing in cache to to network');
-      return fromNetwork(event.request,400).catch(function(response){
+      return fromNetwork(event.request,800).catch(function(response){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
       });
