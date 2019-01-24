@@ -15,6 +15,7 @@ self.addEventListener('fetch', event => {
 
 
 function fromCache(request) {
+  console.log(request.method);
   if(request.method == "GET"){
     return caches.open('v1').then(function (cache) {
       return cache.match(request).then(function (matching) {
@@ -22,7 +23,7 @@ function fromCache(request) {
       });
     });
   }else{
-
+    console.log("in else rejet no get from cache");
     return Promise.reject('no-match');
   }
 }
