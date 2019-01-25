@@ -156,6 +156,10 @@ export default class LocalStorage {
 
 	toCallBack(MyFile){
 		
+		console.log("IN CALLBACK LOCALSTORAGE");
+		console.log(this.type);
+		console.log(MyFile);
+
 		if(this.callback){
 
 			this.callback.obj[this.callback.method](MyFile);
