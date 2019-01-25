@@ -73,7 +73,11 @@ export default class LocalStorage {
 	getAction(grantedBytes,name){
 
 
+		console.log(this.type);
+
 		let that = this;
+
+		console.log(that.type);
 
 		function onInitFs(fs) {
 
@@ -106,6 +110,10 @@ export default class LocalStorage {
 	        fs.root.getFile(name , {}, fileEntry , errorHandler);
 
 		}
+
+		console.log(this.type);
+		console.log(that.type);
+		
 
 		 window.webkitRequestFileSystem(this.type, grantedBytes, onInitFs, this.errorHandler);
 
