@@ -148,6 +148,7 @@ export default class Story extends superViews{
 		HeaderElement.setStyle("justifyContent", "stretch");
 		HeaderElement.setStyle("borderRadius", "10px 10px 0px 0px");
 		HeaderElement.setStyle("minHeight", "42px");
+		HeaderElement.setStyle("background","#6d006d");
 
 		let editRessource = this.RessourceList[RessourcePathId].Card.push("Button", HeaderElement,"edit", "editc");
 		editRessource.setStylePicto("fontSize","20px");
@@ -164,7 +165,7 @@ export default class Story extends superViews{
 		this.RessourceList[RessourcePathId].TitleElt.removeAttribute("contentEditable");
 
 		//HeaderElement.setStyle("height","50px");
-		HeaderElement.setStyle("background","purple");
+		
 
 
 
@@ -321,7 +322,7 @@ export default class Story extends superViews{
 		this.ChildItemId++;
 		ItemElement.setId(datas.item_id);
 		//ItemElement.setStyle("height","50px");
-		ItemElement.setStyle("background","yellow");
+		ItemElement.setStyle("background","#f3f3f3");
 		ItemElement.setStyle("justifyContent","flex-start");
 
 		this.RessourceList[RessourcePathId].Items[ItemPathId] = {};
