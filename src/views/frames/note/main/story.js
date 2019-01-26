@@ -35,6 +35,7 @@ export default class Story extends superViews{
 		this.setStyle("overflowX", "hidden");
 		this.setStyle("overscrollBehavior","none");
 		this.setStyle("flex","1");
+		this.setStyle("background","#222222");
 
 		//
 		
@@ -143,6 +144,7 @@ export default class Story extends superViews{
 
 		let HeaderElement = this.RessourceList[RessourcePathId].Card.setElement("header");
 		HeaderElement.setStyle("justifyContent", "stretch");
+		HeaderElement.setStyle("borderRadius", "10px 10px 0px 0px");
 
 		let editRessource = this.RessourceList[RessourcePathId].Card.push("Button", HeaderElement,"edit", "editc");
 		editRessource.setStylePicto("fontSize","20px");
