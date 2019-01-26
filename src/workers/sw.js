@@ -1,3 +1,5 @@
+let iterator = 0;
+
 self.addEventListener('install', function(event) {
   event.waitUntil(precache());
 });
@@ -20,7 +22,9 @@ self.addEventListener('fetch', event => {
 
 function fromCache(request) {
   console.log(request.method);
+  console.log("iterator: "+ iterator);
   if(request.method == "GET"){
+
     return caches.open('v1').then(function (cache) {
       return cache.match(request).then(function (matching) {
         return matching || Promise.reject('no-match');
@@ -30,6 +34,7 @@ function fromCache(request) {
     console.log("in else rejet no get from cache");
     return Promise.reject('no-match');
   }
+  iterator++;
 }
 
 
