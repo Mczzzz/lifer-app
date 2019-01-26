@@ -370,6 +370,8 @@ export default class Story extends superViews{
 				let MyThumb= this.RessourceList[RessourcePathId].Card.push("Thumb",ItemElement,"pict",false);
 				MyThumb.setStyle("marginLeft" , "5px");
 				MyThumb.setStyle("marginRight" , "5px");
+				MyThumb.setStyle("marginBottom" , "5px");
+				if(last)  MyThumb.setStyle("borderRadius","0px 0px 0px 5px");
 				MyThumb.setStyle("display" , "flex");
 				MyThumb.setStyle("alignItems" , "center");
 				console.log("datas.item_path");
