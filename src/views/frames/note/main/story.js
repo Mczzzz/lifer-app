@@ -325,6 +325,7 @@ export default class Story extends superViews{
 		//ItemElement.setStyle("height","50px");
 		ItemElement.setStyle("background","#f3f3f3");
 		ItemElement.setStyle("justifyContent","flex-start");
+		if(last) ItemElement.setStyle("borderRadius","0px 0px 0px 5px");
 
 		this.RessourceList[RessourcePathId].Items[ItemPathId] = {};
 
@@ -341,7 +342,7 @@ export default class Story extends superViews{
 				MyText.setStyle("lineHeight","1.5");
 				MyText.removeAttribute("contentEditable");
 				
-				if(last) MyText.setStyle("borderRadius","0px 0px 0px 5px");
+
 
 				this.RessourceList[RessourcePathId].Items[ItemPathId].object = MyText;
 
