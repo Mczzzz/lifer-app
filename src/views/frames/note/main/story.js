@@ -154,7 +154,7 @@ export default class Story extends superViews{
 		let editRessource = this.RessourceList[RessourcePathId].Card.push("Button", HeaderElement,"edit", "editc");
 		editRessource.setStylePicto("fontSize","20px");
 		editRessource.setStylePicto("margin","0px");
-		editRessource.setStylePicto("marginLeft","5px");
+		editRessource.setStylePicto("marginLeft","10px");
 		editRessource.setStylePicto("color","white");
 		editRessource.setStylePicto("alignItems","center");
 
