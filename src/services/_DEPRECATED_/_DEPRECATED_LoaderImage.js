@@ -1,4 +1,4 @@
-import EXIF             from 'exif-orientation';
+/*import EXIF             from 'exif-orientation';
 
 import { Lifer } from './Lifer.js';
 import LocalStorage from './LocalStorage.js';
@@ -112,3 +112,4 @@ class LoaderImage {
 
 const instance = new LoaderImage();
 export { instance as LoaderImage };
+*/

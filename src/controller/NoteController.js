@@ -2,7 +2,7 @@ import { Lifer } from '../services/Lifer.js';
 
 import { DatasSynchronizing } from '../services/DatasSynchronizing.js';
 
-import LoaderCollection  from '../services/LoaderCollection.js';
+import LoaderCollection  from '../services/Loader/LoaderCollection.js';
 
 import Note           from '../views/frames/note.js';
 

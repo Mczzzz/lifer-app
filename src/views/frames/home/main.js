@@ -2,7 +2,7 @@ import superViews from "../../common/superViews.js";
 
 import Card from "../../common/ui/card.js";
 
-import LoaderCollection from '../../../services/LoaderCollection.js';
+import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 
 export default class Main extends superViews{
 	

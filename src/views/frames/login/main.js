@@ -2,11 +2,11 @@ import superViews from "../../common/superViews.js";
 
 import Card from "../../common/ui/card.js";
 
-import LoaderCollection from '../../../services/LoaderCollection.js';
+import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 
 import { DatasSynchronizing } from '../../../services/DatasSynchronizing.js';
 
-import webSQL from '../../../services/webSQL.js';
+import webSQL from '../../../services/IO/webSQL.js';
 
 
 export default class Main extends superViews{

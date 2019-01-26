@@ -1,6 +1,6 @@
-import SvcBackEndComm from '../services/BackendComm.js';
+import SvcBackEndComm from '../services/IO/BackendComm.js';
 
-import webSQL from '../services/webSQL.js';
+import webSQL from '../services/IO/webSQL.js';
 
 export default class UserCollection {
 

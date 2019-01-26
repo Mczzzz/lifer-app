@@ -1,7 +1,7 @@
-import SvcBackEndComm from '../services/BackendComm.js';
+import SvcBackEndComm from '../services/IO/BackendComm.js';
 
-import webSQL from '../services/webSQL.js';
-import LocalStorage from '../services/LocalStorage.js';
+import webSQL from '../services/IO/webSQL.js';
+import LocalStorage from '../services/IO/LocalStorage.js';
 
 export default class NotesCollection {
 

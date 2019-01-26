@@ -1,9 +1,9 @@
-import EXIF             from 'exif-orientation';
+/*import EXIF             from 'exif-orientation';
 
 import { Lifer } from './Lifer.js';
 import LocalStorage from './LocalStorage.js';
 
-import LoaderCollection from './LoaderCollection.js';
+import LoaderCollection from './Loader/LoaderCollection.js';
 
 export default class LoaderDatas {
 	
@@ -24,7 +24,7 @@ export default class LoaderDatas {
 	init(){
 
 		//je tente de lire le temporary pour voir
-		let TemporaryLocalStore = new LocalStorage('TEMPORARY');
+		let TemporaryLocalStore = new LocalStorage();
 		TemporaryLocalStore.get(name,this,'loadIn');
 
 
@@ -78,3 +78,4 @@ export default class LoaderDatas {
 
 }
 
+*/

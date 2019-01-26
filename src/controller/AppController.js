@@ -1,7 +1,7 @@
 import { Lifer } from '../services/Lifer.js';
 
 import BDLocalCollection from '../collections/DBLocalCollection.js';
-import LoaderCollection  from '../services/LoaderCollection.js';
+import LoaderCollection  from '../services/Loader/LoaderCollection.js';
 
 import Router from '../services/Router.js';
 

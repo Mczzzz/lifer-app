@@ -1,4 +1,4 @@
-import LoaderCollection from '../../services/LoaderCollection.js';
+import LoaderCollection from '../../services/Loader/LoaderCollection.js';
 
 import { DatasSynchronizing } from '../../services/DatasSynchronizing.js';
 

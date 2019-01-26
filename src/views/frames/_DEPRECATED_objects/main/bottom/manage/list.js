@@ -1,4 +1,4 @@
-import LoaderCollection from '../../../../../../services/LoaderCollection.js';
+import LoaderCollection from '../../../../../../services/Loader/LoaderCollection.js';
 import superViews from "../../../../../common/superViews.js";
 
 import Card from "../../../../../common/ui/card.js";

@@ -2,7 +2,7 @@ import superViews from "../../../common/superViews.js";
 
 import Card from "../../../common/ui/card.js";
 
-import { LoaderImage } from '../../../../services/LoaderImage.js';
+//import { LoaderImage } from '../../../../services/LoaderImage.js';
 
 export default class ActionButtons extends superViews{
 	
@@ -11,7 +11,7 @@ export default class ActionButtons extends superViews{
 
 		super( MyClass , path);
 
-		this.ServImgLoader = LoaderImage;
+	//	this.ServImgLoader = LoaderImage;
 
 		this.init();
 

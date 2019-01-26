@@ -1,4 +1,4 @@
-import LoaderCollection from '../../../services/LoaderCollection.js';
+import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 //import jstree from 'jstree';
 
 export default class jsTreeContainer {

@@ -1,6 +1,6 @@
 import superViews from "../../../common/superViews.js";
 
-import LoaderCollection from '../../../../services/LoaderCollection.js';
+import LoaderCollection from '../../../../services/Loader/LoaderCollection.js';
 
 import Ressource from "../../../common/component/ressource.js";
 

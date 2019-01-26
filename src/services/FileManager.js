@@ -1,9 +1,9 @@
 import EXIF             from 'exif-orientation';
 
 import { Lifer } from './Lifer.js';
-import LocalStorage from './LocalStorage.js';
+import LocalStorage from './IO/LocalStorage.js';
 
-import LoaderCollection from './LoaderCollection.js';
+import LoaderCollection from './Loader/LoaderCollection.js';
 
 export default class FileManager {
 	

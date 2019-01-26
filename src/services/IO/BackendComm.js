@@ -1,6 +1,6 @@
 import { Lifer } from './Lifer.js';
 
-import webSQL from './webSQL.js';
+import webSQL from './IO/webSQL.js';
 
 export default class BackendComm {
 

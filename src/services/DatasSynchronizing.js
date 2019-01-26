@@ -1,9 +1,9 @@
 import Moment from 'moment';
 import 'moment/locale/fr';
 
-import webSQL from './webSQL.js';
+import webSQL from './IO/webSQL.js';
 
-import LoaderCollection from './LoaderCollection.js';
+import LoaderCollection from './Loader/LoaderCollection.js';
 
 
 class DatasSynchronizing {

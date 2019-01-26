@@ -1,7 +1,7 @@
 import uuid from "uuid/v1"
 
-import LoaderCollection from '../../../../services/LoaderCollection.js';
-import LoaderDatas      from '../../../../services/LoaderDatas.js';
+import LoaderCollection from '../../../../services/Loader/LoaderCollection.js';
+//import LoaderDatas      from '../../../../services/LoaderDatas.js';
 
 import superViews from "../../../common/superViews.js";
 
