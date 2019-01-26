@@ -1,4 +1,4 @@
-import DBLocalCollection from '../collections/DBLocalCollection.js';
+import DBLocalCollection from '../../collections/DBLocalCollection.js';
 
 export default class webSQL{
 	

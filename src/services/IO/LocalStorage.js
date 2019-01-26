@@ -1,4 +1,4 @@
-import { Lifer } from '../services/Lifer.js';
+import { Lifer } from '../../services/Lifer.js';
 
 export default class LocalStorage {
 
