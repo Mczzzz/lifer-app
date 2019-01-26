@@ -336,7 +336,8 @@ export default class Story extends superViews{
 				this.RessourceList[RessourcePathId].Items[ItemPathId].type = datas.item_type;
 				let MyText = this.RessourceList[RessourcePathId].Card.push("Text",ItemElement,"text",datas.item_text);
 				MyText.setStyle("color","black");
-				MyText.setStyle("fontSize","14px");
+				MyText.setStyle("fontSize","16px");
+				MyText.setStyle("lineHeight","1.5");
 				MyText.removeAttribute("contentEditable");
 				this.RessourceList[RessourcePathId].Items[ItemPathId].object = MyText;
 
