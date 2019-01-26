@@ -147,6 +147,7 @@ export default class Story extends superViews{
 		let HeaderElement = this.RessourceList[RessourcePathId].Card.setElement("header");
 		HeaderElement.setStyle("justifyContent", "stretch");
 		HeaderElement.setStyle("borderRadius", "10px 10px 0px 0px");
+		HeaderElement.setStyle("minHeight", "42px");
 
 		let editRessource = this.RessourceList[RessourcePathId].Card.push("Button", HeaderElement,"edit", "editc");
 		editRessource.setStylePicto("fontSize","20px");
