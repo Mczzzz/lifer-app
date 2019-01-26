@@ -141,6 +141,8 @@ export default class Story extends superViews{
 
 		this.RessourceList[RessourcePathId].Card = new Card('Card_'+this.ChildId, this.path);
 		this.RessourceList[RessourcePathId].Card.setId(data.ressource_id);
+		this.RessourceList[RessourcePathId].Card.setStyle("margin", "10px 5px");
+
 
 		let HeaderElement = this.RessourceList[RessourcePathId].Card.setElement("header");
 		HeaderElement.setStyle("justifyContent", "stretch");
