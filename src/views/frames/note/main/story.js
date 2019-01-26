@@ -398,7 +398,7 @@ export default class Story extends superViews{
 				MyLegend.removeAttribute("contentEditable");
 				MyLegend.setStyle("margin","5px 0px 0px 5px");
 				MyLegend.setStyle("borderLeft","1px solid black");
-				//MyLegend.setStyle("","");
+				MyLegend.setStyle("padding","0px 0px 5px 10px");
 				this.RessourceList[RessourcePathId].Items[ItemPathId].object = MyLegend;
 
 /*				let MyLegendconfig = { attributes: true, characterData: true, childList: true, subtree: true};
