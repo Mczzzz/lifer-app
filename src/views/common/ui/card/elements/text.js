@@ -33,7 +33,9 @@ export default class Text extends superViews{
           this.setStyle("background" , "transparent");
           this.setStyle("color"      , "black");
           this.setStyle("lineHeight" , 1);
-          this.setStyle("fontFamily" , "'Titillium Web',sans-serif,Arial,sans-serif");
+          //this.setStyle("fontFamily" , "'Titillium Web',sans-serif,Arial,sans-serif");
+          this.setStyle("fontFamily" , "'Cabin', sans-serif");
+
 
           this.changeColor();
 
