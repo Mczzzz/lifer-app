@@ -95,10 +95,11 @@ export default class Story extends superViews{
 		console.log(datas);
 
 		let len = datas.rows.length, i;
-		
+		let last = false;
 		for (i = 0; i < len; i++) {
 
-			this.addItem(datas.rows[i]);
+			if(i == len -1) last = true;
+			this.addItem(datas.rows[i], last);
 
 		}
 
@@ -309,7 +310,7 @@ export default class Story extends superViews{
 
 
 
-	addItem(datas){
+	addItem(datas, last){
 
 		console.log("IN STORY ADD ITEM");
 		console.log(datas);
@@ -339,7 +340,12 @@ export default class Story extends superViews{
 				MyText.setStyle("fontSize","16px");
 				MyText.setStyle("lineHeight","1.5");
 				MyText.removeAttribute("contentEditable");
+				
+				if(last) MyText.setStyle("borderRadius","0px 0px 0px 5px");
+
 				this.RessourceList[RessourcePathId].Items[ItemPathId].object = MyText;
+
+
 
 			//	this.setObserver(elt,ressourceTmpId,itemTmpId);
 
