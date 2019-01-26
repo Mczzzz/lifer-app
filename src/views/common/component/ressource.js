@@ -61,6 +61,8 @@ export default class Ressource extends superViews{
 
      callBackDataTo(path,data=false){
 
+      console.log("callBackDataTo - Ressources");
+      console.log(data);
 
       if(!data) data = {};
 

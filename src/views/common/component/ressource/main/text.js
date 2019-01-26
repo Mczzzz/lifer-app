@@ -17,8 +17,6 @@ export default class Text extends superViews{
 
            }
 
-
-
 		this.ExtcallBack = callback;
 
 		this.init();
@@ -26,7 +24,7 @@ export default class Text extends superViews{
 
 	init(){
 
-		let res = this.form();
+		this.form();
 
 		this.eltCollapser;
 

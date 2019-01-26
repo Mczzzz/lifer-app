@@ -90,7 +90,7 @@ export default class Text extends superViews{
           }
 
 
-         this.changeColor();          
+      //   this.changeColor();          
      }
 
 
