@@ -1,6 +1,6 @@
 import superViews from "../../superViews.js";
 
-import loaderComponent from "../../../../services/LoaderComponent.js";
+import loaderComponent from "../../../../services/Loader/LoaderComponent.js";
 
 export default class Elements extends superViews{ 
      
