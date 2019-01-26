@@ -25,14 +25,14 @@ export default class Text extends superViews{
 
           this.placeHodelColor = "#e0e0e0";
 
-          this.setStyle("fontSize"   , "10px");
+          this.setStyle("fontSize"   , "16px");
           this.setStyle("margin"     , "10px");
           this.setStyle("fontWeight" , "normal");
           this.setStyle("border"     , "none");
           this.setStyle("outline"    , "none");
           this.setStyle("background" , "transparent");
           this.setStyle("color"      , "black");
-          this.setStyle("lineHeight" , 1);
+          this.setStyle("lineHeight" , 1.5);
           //this.setStyle("fontFamily" , "'Titillium Web',sans-serif,Arial,sans-serif");
           this.setStyle("fontFamily" , "'Cabin', sans-serif");
 
