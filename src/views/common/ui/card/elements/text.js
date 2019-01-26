@@ -37,7 +37,7 @@ export default class Text extends superViews{
 
           this.changeColor();
 
-           this.container.addEventListener("keyup", (e)=>this.dispatchEvents(e));
+           this.container.addEventListener("change", (e)=>this.dispatchEvents(e));
 
      }
 
