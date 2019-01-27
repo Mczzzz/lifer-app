@@ -477,9 +477,7 @@ export default class NotesCollection {
 		this.webSQL.playQuery('syncUP',qry3,this,'_createRequestToServer');
 		// j'envoi en auserveru et attedns un retour positif
 
-		let qry4 = `SELECT * FROM Params
-		            WHERE name = "last_synchro"`;
-		this.webSQL.playQuery('cacheData',qry4,this,'_syncOthers');
+
 
 
 
@@ -1495,6 +1493,12 @@ export default class NotesCollection {
 
 
 			}
+
+
+					let qry4 = `SELECT * FROM Params
+		            WHERE name = "last_synchro"`;
+					this.webSQL.playQuery('cacheData',qry4,this,'_syncOthers');
+
 
 		}
 
