@@ -455,7 +455,7 @@ export default class NotesCollection {
 
 		this._syncEntities();
 
-		this._syncData();
+		//this._syncData();
 		
 
 	}
