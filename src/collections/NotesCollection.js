@@ -73,6 +73,15 @@ export default class NotesCollection {
 
 
 
+	syncFromServer(){
+
+		let qry4 = `SELECT * FROM Params
+		            WHERE name = "last_synchro"`;
+					this.webSQL.playQuery('cacheData',qry4,this,'_syncOthers');
+
+		
+	}
+
 
 
 
@@ -1495,9 +1504,6 @@ export default class NotesCollection {
 			}
 
 
-					let qry4 = `SELECT * FROM Params
-		            WHERE name = "last_synchro"`;
-					this.webSQL.playQuery('cacheData',qry4,this,'_syncOthers');
 
 
 		}

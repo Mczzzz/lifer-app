@@ -30,7 +30,8 @@ export default class AppController {
 
 		this.loadUnity();
 	//	this.loadCrypto();
-
+		this.syncInitFromServers();
+		
 		this.router = new Router(this.path);
 		this.gotToHome();
 
@@ -79,6 +80,13 @@ export default class AppController {
 		
 
 	}
+
+	syncInitFromServers(){
+
+		let NoteCollection = new LoaderCollection("Notes");
+		NoteCollection.syncFromServer();
+	}
+
 
 
 /*	loadCrypto(){
