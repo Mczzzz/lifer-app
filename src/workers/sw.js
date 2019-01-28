@@ -87,7 +87,7 @@ function fromNetwork(request, timeout) {
         }
         console.log("je retourne un truc");
 //        console.log(response);
-        return fullfill(responseToCache);
+        return fulfill(responseToCache);
  
       })
       .catch(function (e) {
