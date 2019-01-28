@@ -24,7 +24,7 @@ self.addEventListener('fetch', event => {
 
 function fromCache(request) {
   console.log(request.method);
-  console.log("iterator: "+ iterator);
+ 
   if(request.method == "GET"){
 
     return caches.open('v1').then(function (cache) {
@@ -36,7 +36,7 @@ function fromCache(request) {
     console.log("in else rejet no get from cache");
     return Promise.reject('no-match');
   }
-  iterator++;
+ 
 }
 
 
@@ -54,7 +54,7 @@ function precache() {
 
 function fromNetwork(request, timeout) {
 
-/*  console.log('fromNetworkFirst');*/
+  console.log('fromNetworkFirst');
     //let newPromise = new Promise(function (fulfill, reject) {
 /*   console.log('fromNetwork');
     console.log(request);
