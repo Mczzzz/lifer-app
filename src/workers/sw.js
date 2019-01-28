@@ -14,6 +14,8 @@ self.addEventListener('fetch', event => {
       fromNetwork(event.request,800)
         .then(function(response){
 
+          console.log("in then of fromNetwork");
+          console.log(response);
           return response;
 
         })
