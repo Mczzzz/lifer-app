@@ -11,16 +11,16 @@ self.addEventListener('fetch', event => {
     .catch(function () {
        console.log('nothing in cache to to network');
 
-      return fromNetwork(event.request,800)
-        .then(function(response){
+      return fromNetwork(event.request,800);
+   /*     .then( response => {
           console.log(response);
           return response;
 
         })
-        .catch(function(reject){
+        .catch(reject => {
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
-      });
+      });*/
     }));
 });
 
