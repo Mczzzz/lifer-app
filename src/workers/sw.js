@@ -12,9 +12,9 @@ self.addEventListener('fetch', event => {
        console.log('nothing in cache to to network');
 
       fromNetwork(event.request,800)
-        .then(function(response)){
+        .then(function(response){
           return response;
-        }
+        })
         .catch(function(reject){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
