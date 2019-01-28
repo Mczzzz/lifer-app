@@ -57,7 +57,7 @@ export default class BackendComm {
 								callBackObj[callBackMethod](jsonResp);
 
 							} 
-
+							return jsonResp;
 						});
 					  
 					}else{
@@ -71,7 +71,7 @@ export default class BackendComm {
 
 							} 
 
-
+							return blobResp;
 					  
 						});
 
