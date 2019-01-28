@@ -18,9 +18,9 @@ export default class BackendComm {
 
 //			console.log('JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-
-
-			fetch(host+url, params).then(function(response) {
+			let fetcher = fetch(host+url, params);
+ 
+			fetcher.then(function(response) {
 
 	/*			console.log('in my fetch app :');
 				console.log(response);*/
@@ -65,12 +65,14 @@ export default class BackendComm {
 				} 
 				
 				
-			}, function(error) {
+			});
 
-			  error.message //=> String
 
-			})
+			fetcher.catch(function(reject){
 
+				console.log("in catch of fectch");
+
+			});
 
 
 

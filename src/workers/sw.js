@@ -77,9 +77,9 @@ function fromNetwork(request, timeout) {
 
         return fulfill(response);
  
-    }).catch(function () {
+    }).catch(function (e) {
   //     console.log('in fecth catch');
-      return reject(response);
+      return reject(e);
     })
 
   });
