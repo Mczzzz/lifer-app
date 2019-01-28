@@ -10,7 +10,7 @@ self.addEventListener('fetch', event => {
    event.respondWith(fromCache(event.request)
     .catch(function () {
        console.log('nothing in cache to to network');
-       let FN
+
       return fromNetwork(event.request,800).catch(function(response){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
@@ -58,11 +58,11 @@ function fromNetwork(request, timeout) {
    console.log('fromNetwork');
     console.log(request);
     console.log(timeout);
-    let timeoutId = setTimeout(reject, timeout);
+ //   let timeoutId = setTimeout(reject, timeout);
     
     fetch(request).then(function (response) {
       console.log('in fetch');
-        clearTimeout(timeoutId);
+   //     clearTimeout(timeoutId);
 
         if(request.method == "GET" && response.status != 404){
 

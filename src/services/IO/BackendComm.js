@@ -11,7 +11,7 @@ export default class BackendComm {
 //		console.log("on passe bien dans ajaxSend");		
 			let MyResponse = false;
 
-			 let timeoutId = setTimeout(function(){ return false;}, 800);
+			// let timeoutId = setTimeout(function(){ return false;}, 800);
 
 			let host = "https://applifer-develop.hopeful.care/web";
 
