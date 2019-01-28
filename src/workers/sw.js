@@ -71,7 +71,7 @@ function fromNetwork(request, timeout) {
         console.log('in fetch');
      //     clearTimeout(timeoutId);
 
-        if(request.method == "GET" && response.status != 404){
+/*        if(request.method == "GET" && response.status != 404){
 
           let responseToCache = response.clone();
           console.log("on cache le reponse")
@@ -84,7 +84,7 @@ function fromNetwork(request, timeout) {
         }else{
           console.log("on cache pas la réponse")
 
-        }
+        }*/
         console.log("je retourne un truc");
 //        console.log(response);
         return fulfill(responseToCache);
