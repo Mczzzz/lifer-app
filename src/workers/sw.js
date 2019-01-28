@@ -12,13 +12,6 @@ self.addEventListener('fetch', event => {
        console.log('nothing in cache to to network');
 
       fromNetwork(event.request,800)
-        .then(function(response){
-
-          console.log("in then of fromNetwork");
-          console.log(response);
-          return response;
-
-        })
         .catch(function(reject){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
