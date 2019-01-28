@@ -15,7 +15,7 @@
 ],
 "orientation": "portrait-primary",
 "display": "standalone",
-"theme_color": "aliceblue",
+"theme_color": "#65008a",
 "permissions": [
           "storage"
         ],
