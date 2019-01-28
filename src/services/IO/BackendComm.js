@@ -52,6 +52,8 @@ export default class BackendComm {
 							console.log('in responpose json');
 							console.log(jsonResp);
 							if(callBackObj !== false && callBackMethod !== false){
+								console.log(callBackObj);
+								console.log(callBackMethod);
 								callBackObj[callBackMethod](jsonResp);
 
 							} 
