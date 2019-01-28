@@ -7,7 +7,7 @@ export default class BackendComm {
 
 
 //	ajaxSend(VERB,url,dispatchResponseTo=false,dataCallback = false,dataSend = false){
-	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
+	static async ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
 //		console.log("on passe bien dans ajaxSend");		
 
 			let host = "https://applifer-develop.hopeful.care/web";
