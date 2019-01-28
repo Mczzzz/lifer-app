@@ -75,11 +75,11 @@ function fromNetwork(request, timeout) {
 
 
         }else{
-          console.log("on cache pas le réponses")
+          console.log("on cache pas la réponse")
 
         }
         console.log("je retourne un truc");
-        console.log(response);
+//        console.log(response);
         return fulfill(response);
  
     }).catch(function (e) {
