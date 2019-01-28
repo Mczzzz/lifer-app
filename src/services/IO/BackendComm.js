@@ -24,9 +24,9 @@ export default class BackendComm {
 			fetch(host+url, params)
 			  .then(function(response) {
 
-			  	MyResponse = response.clone(); 
+			  	//MyResponse = response.clone(); 
 				console.log('in my fetch app :');
-
+				console.log(response);
 				if(response.status === 401) {
 
 				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
@@ -41,11 +41,12 @@ export default class BackendComm {
 					//return false;
 
 				}else{
-
+					console.log(response);
 
 					let contentType = response.headers.get("content-type");
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
+						console.log(response);
 
 						MyResponse = response.json();
 
@@ -59,9 +60,11 @@ export default class BackendComm {
 						console.log(MyResponse);
 						console.log(MyResponse.json());
 						console.log(MyResponse.PromiseValue);
+						console.log(response);
 						return MyResponse.json();
 					  
 					}else{
+						console.log(response);
 					  
 					  	MyResponse = response.blob();
 					  
@@ -75,6 +78,7 @@ export default class BackendComm {
 						console.log(MyResponse);
 						console.log(MyResponse.blob());
 						console.log(MyResponse.PromiseValue);
+						console.log(response);
 						return MyResponse.blob();
 					  
 					}
