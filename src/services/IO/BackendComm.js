@@ -27,9 +27,9 @@ export default class BackendComm {
 			  	//MyResponse = response.clone(); 
 				console.log('in my fetch app :');
 			//	console.log(response.pro)
-
+			console.log(a);
 				if(response.status === 401) {
-
+					console.log(response.status);
 				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
 				webSQLCon.playQuery('cacheData',qry);
 //TODO : il faut flagger por dire que la seule requete qui passera sera celle de login
@@ -49,7 +49,7 @@ export default class BackendComm {
 					if(contentType && contentType.indexOf("application/json") !== -1) {
 
 						response.json().then(function(jsonResp){
-
+							console.log('in responpose json');
 							if(callBackObj !== false && callBackMethod !== false){
 								callBackObj[callBackMethod](jsonResp);
 
@@ -61,7 +61,7 @@ export default class BackendComm {
 
 					  
 						response.blob().then(function(blobResp){
-
+							console.log('in responpose blob');
 							if(callBackObj !== false && callBackMethod !== false){
 
 								callBackObj[callBackMethod](blobResp);
