@@ -42,11 +42,7 @@ export default class BackendComm {
 				}else{
 
 
-					if(callBackObj !== false && callBackMethod !== false){
-
-						callBackObj[callBackMethod](datas);
-
-					} 
+					
 
 
 				}
@@ -55,18 +51,39 @@ export default class BackendComm {
 
 				if(contentType && contentType.indexOf("application/json") !== -1) {
 
+					if(callBackObj !== false && callBackMethod !== false){
+
+						callBackObj[callBackMethod](response.json());
+
+					} 
+
+
 					return response.json();
 				  
 				}else{
 				  
+				  
+					if(callBackObj !== false && callBackMethod !== false){
+
+						callBackObj[callBackMethod](response.blob());
+
+					} 
+
+
 					return response.blob();
 				  
 				}
 
+/*				if(callBackObj !== false && callBackMethod !== false){
+
+						callBackObj[callBackMethod](datas);
+
+					} */
+
 
 			}).catch(function(error){
 
-				console.log("in catch of fectch"+error);
+				console.log("in catch of fectch "+error);
 
 			});
 
