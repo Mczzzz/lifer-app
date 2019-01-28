@@ -8,10 +8,14 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', event => {
   console.log('in fetch listener');
    event.respondWith(fromCache(event.request)
-    .catch(function () {
+    .catch(reject => {
        console.log('nothing in cache to to network');
 
-      return fromNetwork(event.request,800);
+      return fromNetwork(event.request,800)
+        .catch(reject => {
+  //      console.log('aiiiiieeeee');
+        throw Error('ca a merdé ');
+      });
    /*     .then( response => {
           console.log(response);
           return response;
@@ -58,20 +62,22 @@ function precache() {
 
 
 function fromNetwork(request, timeout) {
+  return new Promise(function (fulfill, reject) {
 
-  console.log('fromNetworkFirst');
-  let newPromise = new Promise(function (fulfill, reject) {
-/*   console.log('fromNetwork');
-    console.log(request);
-    console.log(timeout);*/
- //   let timeoutId = setTimeout(reject, timeout);
-    
-     fetch(request)
-       .then(function (response) {
-        console.log('in fetch');
-     //     clearTimeout(timeoutId);
+    var timeoutId = setTimeout(reject, timeout);
 
-/*        if(request.method == "GET" && response.status != 404){
+ 
+    fetch(request).then(function (response) {
+      clearTimeout(timeoutId);
+      fulfill(response);
+
+ 
+    }, reject);
+  });
+}
+  
+
+/*   if(request.method == "GET" && response.status != 404){
 
           let responseToCache = response.clone();
           console.log("on cache le reponse")
@@ -85,21 +91,3 @@ function fromNetwork(request, timeout) {
           console.log("on cache pas la réponse")
 
         }*/
-        console.log("je retourne un truc");
-//        console.log(response);
-        return fulfill(responseToCache);
- 
-      })
-      .catch(function (e) {
-
-        console.log("je retourne l'event d'erreur");
-    //     console.log('in fecth catch');
-        return reject(e);
-
-    });
-
-  });
-
-}
-  
-
