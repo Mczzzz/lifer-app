@@ -24,7 +24,6 @@ export default class BackendComm {
 			  .then(function(response) {
 
 				console.log('in my fetch app :');
-				console.log(response);
 
 				if(response.status === 401) {
 
@@ -46,26 +45,29 @@ export default class BackendComm {
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
 
+						let MyResponse = response.json();
+
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](response.json());
+							callBackObj[callBackMethod](MyResponse);
 
 						} 
 
 
-						return response.json();
+						return MyResponse;
 					  
 					}else{
 					  
+					  	let MyResponse = response.blob();
 					  
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](response.blob());
+							callBackObj[callBackMethod](MyResponse);
 
 						} 
 
 
-						return response.blob();
+						return MyResponse;
 					  
 					}
 
