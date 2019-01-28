@@ -20,9 +20,8 @@ export default class BackendComm {
 
 //			console.log('JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			let fetcher = fetch(host+url, params);
- 
-			fetcher.then(function(response) {
+			fetch(host+url, params)
+			  .then(function(response) {
 
 	/*			console.log('in my fetch app :');
 				console.log(response);*/
@@ -57,20 +56,17 @@ export default class BackendComm {
 				}
 
 
-			}).then(function(datas){
 
-				
 				if(callBackObj !== false && callBackMethod !== false){
 
 					callBackObj[callBackMethod](datas);
 
 				} 
-				
-				
-			});
 
 
-			fetcher.catch(function(reject){
+
+
+			}).catch(function(reject){
 
 				console.log("in catch of fectch");
 
