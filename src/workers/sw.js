@@ -12,6 +12,10 @@ self.addEventListener('fetch', event => {
        console.log('nothing in cache to to network');
 
       return fromNetwork(event.request,800)
+        .then(function(response){
+
+
+        })
         .catch(function(reject){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
@@ -61,9 +65,10 @@ function fromNetwork(request, timeout) {
     console.log(timeout);*/
  //   let timeoutId = setTimeout(reject, timeout);
     
-     return fetch(request).then(function (response) {
-      console.log('in fetch');
-   //     clearTimeout(timeoutId);
+     return fetch(request)
+      .then(function (response) {
+        console.log('in fetch');
+     //     clearTimeout(timeoutId);
 
         if(request.method == "GET" && response.status != 404){
 
@@ -81,13 +86,15 @@ function fromNetwork(request, timeout) {
         }
         console.log("je retourne un truc");
 //        console.log(response);
-        return fulfill(responseToCache);
+        return responseToCache;
  
-    }).catch(function (e) {
+      })
+      .catch(function (e) {
 
-      console.log("je retourne l'event d'erreur");
-  //     console.log('in fecth catch');
-      return reject(e);
+        console.log("je retourne l'event d'erreur");
+    //     console.log('in fecth catch');
+        return reject(e);
+
     });
 
 //  });
