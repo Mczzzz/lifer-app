@@ -11,7 +11,7 @@ self.addEventListener('fetch', event => {
     .catch(function () {
        console.log('nothing in cache to to network');
 
-      return await fromNetwork(event.request,800)
+      return fromNetwork(event.request,800)
         .then(function(response){
           console.log(response);
           return response;
@@ -59,7 +59,7 @@ function precache() {
 function fromNetwork(request, timeout) {
 
 /*  console.log('fromNetworkFirst');*/
-    return new Promise(function (fulfill, reject) {
+    let newPromise = new Promise(function (fulfill, reject) {
 /*   console.log('fromNetwork');
     console.log(request);
     console.log(timeout);*/
