@@ -78,6 +78,7 @@ function fromNetwork(request, timeout) {
 
         }
         console.log("je retourne un truc");
+        console.log(response);
         return fulfill(response);
  
     }).catch(function (e) {
