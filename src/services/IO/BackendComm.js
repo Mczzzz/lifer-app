@@ -10,6 +10,8 @@ export default class BackendComm {
 	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
 //		console.log("on passe bien dans ajaxSend");		
 
+			 let timeoutId = setTimeout(function(){ return false;}, 800);
+
 			let host = "https://applifer-develop.hopeful.care/web";
 
 			let params = this._BuildParams(VERB,dataSend);
