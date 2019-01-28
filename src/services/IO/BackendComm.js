@@ -26,6 +26,7 @@ export default class BackendComm {
 
 			  	//MyResponse = response.clone(); 
 				console.log('in my fetch app :');
+			//	console.log(response.pro)
 
 				if(response.status === 401) {
 
