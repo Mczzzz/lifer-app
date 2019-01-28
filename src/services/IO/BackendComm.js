@@ -56,6 +56,7 @@ export default class BackendComm {
 
 						console.log("My response json:");
 						console.log(MyResponse);
+						console.log(MyResponse.PromiseValue);
 						return MyResponse;
 					  
 					}else{
@@ -70,6 +71,7 @@ export default class BackendComm {
 
 						console.log("My response blob:");
 						console.log(MyResponse);
+						console.log(MyResponse.PromiseValue);
 						return MyResponse;
 					  
 					}
