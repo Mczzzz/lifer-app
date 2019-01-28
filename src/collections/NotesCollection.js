@@ -79,7 +79,7 @@ export default class NotesCollection {
 		            WHERE name = "last_synchro"`;
 					this.webSQL.playQuery('cacheData',qry4,this,'_syncOthers');
 
-		
+
 	}
 
 
@@ -523,7 +523,8 @@ export default class NotesCollection {
 	_updateSynchroRequest(datas){
 
 		console.log(datas);
-
+		// je me tape le blog sur la réponse 401 en text html c'est moche ??
+		if(!datas.data) return false;
 		let len = datas.data.length, i;
 
 //TODO: a revoir ca il peu y avoir des trous dans la raquete je pense
