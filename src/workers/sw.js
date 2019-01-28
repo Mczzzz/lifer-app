@@ -66,7 +66,7 @@ function fromNetwork(request, timeout) {
  //   let timeoutId = setTimeout(reject, timeout);
     
      fetch(request)
-      .then(function (response) {
+/*      .then(function (response) {
         console.log('in fetch');
      //     clearTimeout(timeoutId);
 
@@ -88,7 +88,7 @@ function fromNetwork(request, timeout) {
 //        console.log(response);
         return responseToCache;
  
-      })
+      })*/
       .catch(function (e) {
 
         console.log("je retourne l'event d'erreur");
