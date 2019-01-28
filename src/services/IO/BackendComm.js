@@ -26,7 +26,7 @@ export default class BackendComm {
 
 			  	//MyResponse = response.clone(); 
 				console.log('in my fetch app :');
-				console.log(response);
+
 				if(response.status === 401) {
 
 				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
@@ -41,45 +41,45 @@ export default class BackendComm {
 					//return false;
 
 				}else{
-					console.log(response);
+					//console.log(response);
 
 					let contentType = response.headers.get("content-type");
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
-						console.log(response);
+						//console.log(response);
 
-						MyResponse = response.json();
+					//	MyResponse = response.json();
 
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](MyResponse.json());
+							callBackObj[callBackMethod](response.json());
 
 						} 
 
-						console.log("My response json:");
+/*						console.log("My response json:");
 						console.log(MyResponse);
 						console.log(MyResponse.json());
 						console.log(MyResponse.PromiseValue);
-						console.log(response);
-						return MyResponse.json();
+						console.log(response);*/
+						return response.json();
 					  
 					}else{
-						console.log(response);
+					//	console.log(response);
 					  
-					  	MyResponse = response.blob();
+					  //	MyResponse = response.blob();
 					  
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](MyResponse.blob());
+							callBackObj[callBackMethod](response.blob());
 
 						} 
 
-						console.log("My response blob:");
+/*						console.log("My response blob:");
 						console.log(MyResponse);
 						console.log(MyResponse.blob());
 						console.log(MyResponse.PromiseValue);
-						console.log(response);
-						return MyResponse.blob();
+						console.log(response);*/
+						return response.blob();
 					  
 					}
 
