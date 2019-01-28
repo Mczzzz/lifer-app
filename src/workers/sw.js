@@ -61,7 +61,7 @@ function fromNetwork(request, timeout) {
     console.log(timeout);*/
  //   let timeoutId = setTimeout(reject, timeout);
     
-    fetch(request).then(function (response) {
+     return fetch(request).then(function (response) {
       console.log('in fetch');
    //     clearTimeout(timeoutId);
 
