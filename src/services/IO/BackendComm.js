@@ -47,62 +47,38 @@ export default class BackendComm {
 					let contentType = response.headers.get("content-type");
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
-						//console.log(response);
 
-					//	MyResponse = response.json();
-
-
-
-/*						console.log("My response json:");
-						console.log(MyResponse);
-						console.log(MyResponse.json());
-						console.log(MyResponse.PromiseValue);
-						console.log(response);*/
 						response.json().then(function(jsonResp){
 
 							if(callBackObj !== false && callBackMethod !== false){
+								callBackObj[callBackMethod](jsonResp);
 
-							callBackObj[callBackMethod](jsonResp);
-
-						} 
+							} 
 
 						});
 					  
 					}else{
-					//	console.log(response);
-					  
-					  //	MyResponse = response.blob();
+
 					  
 						response.blob().then(function(blobResp){
 
 							if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](blobResp);
+								callBackObj[callBackMethod](blobResp);
 
-						} 
+							} 
 
-/*						console.log("My response blob:");
-						console.log(MyResponse);
-						console.log(MyResponse.blob());
-						console.log(MyResponse.PromiseValue);
-						console.log(response);*/
-				//		return response.blob();
+
 					  
-					}
+						});
 
 
 					
 
 
+					}
+
 				}
-
-
-
-/*				if(callBackObj !== false && callBackMethod !== false){
-
-						callBackObj[callBackMethod](datas);
-
-					} */
 
 
 			}).catch(function(error){
