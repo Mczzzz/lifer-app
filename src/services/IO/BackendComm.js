@@ -37,7 +37,7 @@ export default class BackendComm {
 					window.dispatchEvent(LinkEvent);
 
 					//informé l'envoyeur que sa requete n'a pas été faite (donc retentative à prevoir)
-
+					return false;
 
 				}
 
