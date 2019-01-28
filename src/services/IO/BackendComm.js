@@ -51,27 +51,33 @@ export default class BackendComm {
 
 					//	MyResponse = response.json();
 
-						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](response.json());
-
-						} 
 
 /*						console.log("My response json:");
 						console.log(MyResponse);
 						console.log(MyResponse.json());
 						console.log(MyResponse.PromiseValue);
 						console.log(response);*/
-						return response.json();
+						response.json().then(function(jsonResp){
+
+							if(callBackObj !== false && callBackMethod !== false){
+
+							callBackObj[callBackMethod](jsonResp);
+
+						} 
+
+						});
 					  
 					}else{
 					//	console.log(response);
 					  
 					  //	MyResponse = response.blob();
 					  
-						if(callBackObj !== false && callBackMethod !== false){
+						response.blob().then(function(blobResp){
 
-							callBackObj[callBackMethod](response.blob());
+							if(callBackObj !== false && callBackMethod !== false){
+
+							callBackObj[callBackMethod](blobResp);
 
 						} 
 
@@ -80,7 +86,7 @@ export default class BackendComm {
 						console.log(MyResponse.blob());
 						console.log(MyResponse.PromiseValue);
 						console.log(response);*/
-						return response.blob();
+				//		return response.blob();
 					  
 					}
 
