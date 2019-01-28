@@ -60,13 +60,13 @@ function precache() {
 function fromNetwork(request, timeout) {
 
   console.log('fromNetworkFirst');
-    //let newPromise = new Promise(function (fulfill, reject) {
+  let newPromise = new Promise(function (fulfill, reject) {
 /*   console.log('fromNetwork');
     console.log(request);
     console.log(timeout);*/
  //   let timeoutId = setTimeout(reject, timeout);
     
-     return fetch(request)
+     fetch(request)
        .then(function (response) {
         console.log('in fetch');
      //     clearTimeout(timeoutId);
@@ -87,7 +87,7 @@ function fromNetwork(request, timeout) {
         }
         console.log("je retourne un truc");
 //        console.log(response);
-        return responseToCache;
+        return fullfill(responseToCache);
  
       })
       .catch(function (e) {
@@ -98,7 +98,7 @@ function fromNetwork(request, timeout) {
 
     });
 
-//  });
+  });
 
 }
   
