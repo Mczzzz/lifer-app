@@ -24,6 +24,7 @@ export default class BackendComm {
 			fetch(host+url, params)
 			  .then(function(response) {
 
+			  	MyResponse = response.clone(); 
 				console.log('in my fetch app :');
 
 				if(response.status === 401) {
@@ -50,7 +51,7 @@ export default class BackendComm {
 
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](MyResponse);
+							callBackObj[callBackMethod](MyResponse.json());
 
 						} 
 
@@ -58,7 +59,7 @@ export default class BackendComm {
 						console.log(MyResponse);
 						console.log(MyResponse.json());
 						console.log(MyResponse.PromiseValue);
-						return MyResponse;
+						return MyResponse.json();
 					  
 					}else{
 					  
@@ -66,7 +67,7 @@ export default class BackendComm {
 					  
 						if(callBackObj !== false && callBackMethod !== false){
 
-							callBackObj[callBackMethod](MyResponse);
+							callBackObj[callBackMethod](MyResponse.blob());
 
 						} 
 
@@ -74,7 +75,7 @@ export default class BackendComm {
 						console.log(MyResponse);
 						console.log(MyResponse.blob());
 						console.log(MyResponse.PromiseValue);
-						return MyResponse;
+						return MyResponse.blob();
 					  
 					}
 
