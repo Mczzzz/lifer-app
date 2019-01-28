@@ -11,15 +11,11 @@ self.addEventListener('fetch', event => {
     .catch(function () {
        console.log('nothing in cache to to network');
 
-      return fromNetwork(event.request,800);
-/*        .then(function(response){
-          console.log(response);
-          return response;
-        })
+      return fromNetwork(event.request,800)
         .catch(function(reject){
   //      console.log('aiiiiieeeee');
         throw Error('ca a merdé ');
-      });*/
+      });
     }));
 });
 
@@ -59,7 +55,7 @@ function precache() {
 function fromNetwork(request, timeout) {
 
 /*  console.log('fromNetworkFirst');*/
-    let newPromise = new Promise(function (fulfill, reject) {
+    //let newPromise = new Promise(function (fulfill, reject) {
 /*   console.log('fromNetwork');
     console.log(request);
     console.log(timeout);*/
@@ -92,9 +88,9 @@ function fromNetwork(request, timeout) {
       console.log("je retourne l'event d'erreur");
   //     console.log('in fecth catch');
       return reject(e);
-    })
+    });
 
-  });
+//  });
 
 }
   
