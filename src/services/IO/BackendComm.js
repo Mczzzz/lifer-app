@@ -9,6 +9,7 @@ export default class BackendComm {
 //	ajaxSend(VERB,url,dispatchResponseTo=false,dataCallback = false,dataSend = false){
 	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
 //		console.log("on passe bien dans ajaxSend");		
+			let MyResponse = false;
 
 			 let timeoutId = setTimeout(function(){ return false;}, 800);
 
@@ -45,7 +46,7 @@ export default class BackendComm {
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
 
-						let MyResponse = response.json();
+						MyResponse = response.json();
 
 						if(callBackObj !== false && callBackMethod !== false){
 
@@ -58,7 +59,7 @@ export default class BackendComm {
 					  
 					}else{
 					  
-					  	let MyResponse = response.blob();
+					  	MyResponse = response.blob();
 					  
 						if(callBackObj !== false && callBackMethod !== false){
 
