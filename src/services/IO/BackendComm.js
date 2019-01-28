@@ -66,7 +66,7 @@ export default class BackendComm {
 
 			}).catch(function(error){
 
-				console.log("in catch of fectch");
+				console.log("in catch of fectch"+error);
 
 			});
 
