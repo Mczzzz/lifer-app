@@ -39,9 +39,17 @@ export default class BackendComm {
 					//informé l'envoyeur que sa requete n'a pas été faite (donc retentative à prevoir)
 					//return false;
 
+				}else{
+
+						
+					if(callBackObj !== false && callBackMethod !== false){
+
+						callBackObj[callBackMethod](datas);
+
+					} 
+
+
 				}
-
-
 
 				let contentType = response.headers.get("content-type");
 
@@ -54,16 +62,6 @@ export default class BackendComm {
 					return response.blob();
 				  
 				}
-
-
-
-				if(callBackObj !== false && callBackMethod !== false){
-
-					callBackObj[callBackMethod](datas);
-
-				} 
-
-
 
 
 			}).catch(function(reject){
