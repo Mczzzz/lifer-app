@@ -41,7 +41,7 @@ export default class BackendComm {
 
 				}else{
 
-						
+
 					if(callBackObj !== false && callBackMethod !== false){
 
 						callBackObj[callBackMethod](datas);
@@ -64,7 +64,7 @@ export default class BackendComm {
 				}
 
 
-			}).catch(function(reject){
+			}).catch(function(error){
 
 				console.log("in catch of fectch");
 
