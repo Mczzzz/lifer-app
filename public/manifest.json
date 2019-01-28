@@ -16,6 +16,7 @@
 "orientation": "portrait-primary",
 "display": "standalone",
 "theme_color": "#65008a",
+"background_color": "#ffcfdf",
 "permissions": [
           "storage"
         ],
