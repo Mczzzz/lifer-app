@@ -52,32 +52,37 @@ function precache() {
 
 function fromNetwork(request, timeout) {
 
-//  console.log('fromNetworkFirst');
+  console.log('fromNetworkFirst');
     return new Promise(function (fulfill, reject) {
-/*   console.log('fromNetwork');
+   console.log('fromNetwork');
     console.log(request);
-    console.log(timeout);*/
+    console.log(timeout);
     let timeoutId = setTimeout(reject, timeout);
     
     fetch(request).then(function (response) {
-  //    console.log('in fetch');
+      console.log('in fetch');
         clearTimeout(timeoutId);
 
         if(request.method == "GET" && response.status != 404){
 
           let responseToCache = response.clone();
-
+          console.log("on cache le reponse")
           caches.open('v1')
             .then(function(cache) {
                cache.put(request, responseToCache);
             });
 
 
-        }
+        }else{
+          console.log("on cache pas le réponses")
 
+        }
+        console.log("je retourne un truc");
         return fulfill(response);
  
     }).catch(function (e) {
+
+      console.log("je retourne l'event d'erreur");
   //     console.log('in fecth catch');
       return reject(e);
     })
