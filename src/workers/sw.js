@@ -13,6 +13,7 @@ self.addEventListener('fetch', event => {
 
       fromNetwork(event.request,800)
         .then(function(response){
+          console.log(response);
           return response;
         })
         .catch(function(reject){
