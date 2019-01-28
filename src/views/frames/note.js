@@ -123,15 +123,12 @@ export default class Note extends superViews{
 
 		this.Title = title;
 		
+		this.Header.HeaderButton.showTitle(title);
 		//set header
 		if(store){
 			this.store();
-			this.Header.HeaderButton.showTitle(title);
-		}/*else{
-			this.Header.HeaderButton.showTitle(title);
-		}*/
-		
 
+		}
 	}
 
 
