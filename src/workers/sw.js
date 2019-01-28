@@ -11,7 +11,7 @@ self.addEventListener('fetch', event => {
     .catch(function () {
        console.log('nothing in cache to to network');
 
-      fromNetwork(event.request,800)
+      return fromNetwork(event.request,800)
         .then(function(response){
           console.log(response);
           return response;
