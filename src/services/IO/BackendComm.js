@@ -27,7 +27,7 @@ export default class BackendComm {
 			  	//MyResponse = response.clone(); 
 				console.log('in my fetch app :');
 			//	console.log(response.pro)
-			console.log(a);
+			//console.log(a);
 				if(response.status === 401) {
 					console.log(response.status);
 				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
