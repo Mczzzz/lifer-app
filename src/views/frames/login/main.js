@@ -193,6 +193,9 @@ export default class Main extends superViews{
 			DatasSynchronizing.fillQueue(true);
 			DatasSynchronizing.startService();
 
+			let NoteCollection = new LoaderCollection("Notes");
+			NoteCollection.syncFromServer();
+
 
 		}
 		
