@@ -161,9 +161,11 @@ export default class Image extends superViews{
 
 		if(this.ExtcallBack && sendCallBack){
 		
-			this.response.path = name;
+			this.response.path = this.name;
 			this.response.text = this.getTextElement().getText();
 
+			console.log(this.ExtcallBack.path);
+			console.log(this.ExtcallBack.method);
 			let objectToCallBack = this.getObjectThisfromPath(this.ExtcallBack.path);
            	objectToCallBack[this.ExtcallBack.method]("",this.response);
 
