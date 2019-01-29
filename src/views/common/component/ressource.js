@@ -100,7 +100,10 @@ export default class Ressource extends superViews{
 
      }
 
-
+/* this.Ressource.addItem(datas.rows[i].item_type,
+                        datas.rows[i].item_id,
+                        datas.rows[i].item_text,
+                        datas.rows[i].item_path , 0);*/
 
      addItem(type,itemId = false, data = false, pict=false, margin = false){
 
@@ -119,7 +122,7 @@ export default class Ressource extends superViews{
       let elt = this.Main.addItem(type,itemId,anew);
 
      
-      if(type == 'image' && pict) elt.addThumb(pict);
+      if(type == 'image' && pict) elt.showImage(pict,itemId);
 
       if(data) elt.setData(data);
 

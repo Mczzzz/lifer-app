@@ -125,9 +125,10 @@ export default class Image extends superViews{
 	}
 
 
-	showImage(name, res = false){
+	showImage(name, item_id){
 
-		this.addThumb(res,name);
+		this.container.id = item_id;
+		this.addThumb(name);
 
 	}
 
