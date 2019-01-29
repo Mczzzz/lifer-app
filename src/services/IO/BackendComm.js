@@ -42,7 +42,7 @@ export default class BackendComm {
 					//return false;
 
 				}else{
-					////console.logresponse);
+					console.log(response);
 
 					let contentType = response.headers.get("content-type");
 
