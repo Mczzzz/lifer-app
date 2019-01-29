@@ -64,11 +64,11 @@ function precache() {
 function fromNetwork(request, timeout) {
   return new Promise(function (fulfill, reject) {
 
-    var timeoutId = setTimeout(reject, timeout);
+   // var timeoutId = setTimeout(reject, timeout);
 
  
     fetch(request).then(function (response) {
-      clearTimeout(timeoutId);
+   //   clearTimeout(timeoutId);
 
 
        if(request.method == "GET" && response.status != 404){
