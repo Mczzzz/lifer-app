@@ -287,7 +287,8 @@ export default class NotesCollection {
 																	   note_tmpId TEXT DEFAULT "",
 																	   note_title TEXT DEFAULT "",
 																	   state TEXT DEFAULT "WAITING",																   
-						    										   UNIQUE (note_tmpId, note_id) ON CONFLICT REPLACE
+						    										   UNIQUE (note_tmpId) ON CONFLICT REPLACE,
+						    										   UNIQUE (note_id) ON CONFLICT REPLACE
 																	   );
 																	   `;
 
@@ -307,7 +308,8 @@ export default class NotesCollection {
 																	   ressource_tmpId TEXT DEFAULT "",
 																	   ressource_title TEXT DEFAULT "",
 																	   state TEXT DEFAULT "WAITING",																   
-						    										   UNIQUE (ressource_tmpId, ressource_id) ON CONFLICT REPLACE
+						    										   UNIQUE (ressource_tmpId) ON CONFLICT REPLACE,
+						    										   UNIQUE (ressource_id) ON CONFLICT REPLACE
 																	   );
 																	   `;
 
@@ -331,12 +333,8 @@ export default class NotesCollection {
 																	   item_path TEXT DEFAULT "",
 																	   item_unit INTEGER DEFAULT 0,
 																	   state TEXT DEFAULT "WAITING",
-						    UNIQUE ( item_id,
-						             item_tmpId,
-                   			         item_type
-                   			       )
-                   			ON CONFLICT REPLACE
-
+						    										   UNIQUE (item_id) ON CONFLICT REPLACE,
+						    										   UNIQUE (item_tmpId) ON CONFLICT REPLACE
 																	   );
 																	   `;
 

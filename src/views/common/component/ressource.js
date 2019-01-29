@@ -76,16 +76,6 @@ export default class Ressource extends superViews{
 
 
 
-/*     setTarget(path){
-
-      //console.log"in set Target");
-      this.target = this.getObjectThisfromPath(path);
-
-     }*/
-
-
-
-
      setTitle(title,store = false){
 
       this.Title = title;
