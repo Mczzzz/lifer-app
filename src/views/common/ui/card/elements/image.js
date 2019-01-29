@@ -24,6 +24,9 @@ export default class Image extends superViews{
           this.setStyle("border" , "none");
           this.setStyle("outline" , "none");
           this.setStyle("background" , "transparent");
+          this.img = document.createElement("img");
+          this.img.style.maxWidth = "100%";
+          this.container.append(this.img);
 
 
      }
@@ -31,22 +34,27 @@ export default class Image extends superViews{
 
      setData(data){
 
-          //console.log"IN SET DATA IMAGE.js");
-          let img = document.createElement("img");
-          this.container.append(img);
+           let img =  this.img;
  
-          
           if(!data.capture){
 
-               img.src = data.data.pict +  "/" + this.parent.offsetWidth;
+//TODO: A REFAIRE O PROPRE QUAND MEME
+               if(data.data){
+                    img.src = data.data.pict +  "/" + this.parent.offsetWidth;
+               }else{
+
+                     img.src = data;
+
+               }
+               
 
           }else{
 
                let RatioPhoto = data.data.ObjImg.naturalWidth / data.data.ObjImg.naturalHeight;
 
                img.src = data.data.pict;
-               img.style.width  = "100%";
-               //img.height = img.offsetWidth  / RatioPhoto;
+               img.style.height  = "50px";
+               img.height = img.offsetWidth  / RatioPhoto;
 
 
                if(data.data.orientation.rotate == 90){
@@ -63,7 +71,7 @@ export default class Image extends superViews{
                     img.width = ImgWidth;
                     img.height = ImgHeight;
 
-                    img.style.transform = 'rotate(' + data.data.orientation.rotate + 'deg)'+' translate('+decalY+'px, 0px)';
+                    img.style.transform = 'rotate(' + data.data.orientation.rotate + 'deg)';//+' translate('+decalY+'px, 0px)';
 
                     this.container.style.minHeight = ImgWidth+"px";
 
