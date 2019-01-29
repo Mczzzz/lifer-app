@@ -362,7 +362,8 @@ export default class Story extends superViews{
 
 			case 'image':
 
-				//console.log'IN IMAGE');
+				console.log('IN IMAGE');
+				console.log(datas);
 				this.RessourceList[RessourcePathId].Items[ItemPathId].type = datas.item_type;
 
 				//j'ajoute mon thumb vide
