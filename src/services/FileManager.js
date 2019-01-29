@@ -208,6 +208,8 @@ export default class FileManager {
 
 	_getFromServer(){
 
+		console.log("IN _getFromServer");
+
 		let uriName = false;
 
 		if(this.prefixe){
