@@ -33,8 +33,9 @@ export default class Main extends superViews{
 
 	initChilds(){
 
-		this.UniversButton = new UniversButton("UniversButton",this.path);
+		
 		this.NoteList = new NoteList("NoteList",this.path);
+		this.UniversButton = new UniversButton("UniversButton",this.path);
 
 	}
 	
