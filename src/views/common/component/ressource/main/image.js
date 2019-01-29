@@ -116,8 +116,10 @@ export default class Image extends superViews{
 		this.ImageElt.setStyle("marginRight" , "10px");
 		this.ImageElt.setStyle("display" , "flex");
 		this.ImageElt.setStyle("alignItems" , "center");
+		this.ImageElt.setStyle("width" , "50px");
 
-
+		this.ImageElt.img.setStyle("borderRadius" , "7px");
+		this.ImageElt.img.setStyle("border" , "1px solid #ffffff7d");
 	
 	}
 
