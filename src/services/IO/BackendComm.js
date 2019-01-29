@@ -55,12 +55,12 @@ export default class BackendComm {
 							console.log(callBackMethod);
 							console.log(typeof callBackObj);
 							console.log(callBackMethod.length);
-/*							if(typeof callBackObj == "object" && callBackMethod.length > 0 ){
+							if(typeof callBackObj === "object" && callBackMethod.length > 0 ){
 								console.log(callBackObj);
 								console.log(callBackMethod);
 								callBackObj[callBackMethod](jsonResp);
 
-							} */
+							} 
 							console.log('before return json');
 							return jsonResp;
 						});
@@ -70,11 +70,11 @@ export default class BackendComm {
 					  
 						response.blob().then(function(blobResp){
 							console.log('in responpose blob');
-							if(callBackObj !== false && callBackMethod !== false){
+/*							if(callBackObj !== false && callBackMethod !== false){
 
 								callBackObj[callBackMethod](blobResp);
 
-							} 
+							} */
 							console.log('before return blob');
 							return blobResp;
 					  
