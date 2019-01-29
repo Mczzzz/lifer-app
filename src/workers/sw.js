@@ -69,6 +69,27 @@ function fromNetwork(request, timeout) {
  
     fetch(request).then(function (response) {
       clearTimeout(timeoutId);
+
+
+       if(request.method == "GET" && response.status != 404){
+
+          let responseToCache = response.clone();
+          console.log("on cache le reponse")
+          caches.open('v1')
+            .then(function(cache) {
+               cache.put(request, responseToCache);
+            });
+
+
+        }else{
+          console.log("on cache pas la réponse")
+
+        }
+
+
+
+
+
       fulfill(response);
 
  
