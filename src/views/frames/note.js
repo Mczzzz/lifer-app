@@ -123,7 +123,7 @@ export default class Note extends superViews{
 
 //this === document.activeElement // where 'this' is a dom object
 
-		if(!this.Title) this.Header.HeaderButton.setTitle(title);
+		this.Header.HeaderButton.setTitle(title);
 
 		this.Title = title;
 		
@@ -135,6 +135,17 @@ export default class Note extends superViews{
 		}
 	}
 
+
+	updateTitle(title,store=false){
+
+		this.Title = title;
+
+		if(store){
+			this.store();
+
+		}
+
+	}
 
 	store(data=false){
 

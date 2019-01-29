@@ -73,7 +73,7 @@ export default class Title extends superViews{
 
 	updateTitle(e,title){
 
-    	this.TheNote.setTitle(title.text,true);
+    	this.TheNote.updateTitle(title.text,true);
 	}
 
 
