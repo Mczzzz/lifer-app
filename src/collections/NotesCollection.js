@@ -1307,12 +1307,15 @@ export default class NotesCollection {
 					   AND note_id != "`+datas.data[i].note_id+`"
 					   `);
 
+					console.log("in tmpId ?");
+
 					//j'update les ressources qui y sont liées
 					this.webSQL.playQuery('cacheData',`UPDATE Ressources
 					   SET note_id = "`+datas.data[i].note_id+`"
 			           WHERE note_id = "`+datas.data[i].note_tmpId+`"
 			           `);	
 
+					console.log("before while");
 
 										//je met à jour mon IHM en recherchant si j'ai des id qui traines dans le DOM
 					while(document.getElementById(datas.data[i].note_tmpId)){
