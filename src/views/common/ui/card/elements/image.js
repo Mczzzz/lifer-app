@@ -1,5 +1,7 @@
 import superViews from "../../../superViews.js";
 
+import FileManager      from '../../../../../services/FileManager.js';
+
 export default class Image extends superViews{ 
      
 
@@ -78,7 +80,15 @@ export default class Image extends superViews{
      }
 
 
+     setDataByName(name,item_id){
+          //console.log"in SET DATA BY NAMMMEEEEEEE  !!!");
 
+          let Fm = new FileManager();
+          Fm.setElement(this);
+          Fm.showFile(name,item_id);
+
+
+     }
 
 
 }

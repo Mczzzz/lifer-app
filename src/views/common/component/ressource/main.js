@@ -490,7 +490,10 @@ if(type == "start"){
 //CLONE
 
 this.Cloned = childContainer.getContainer().cloneNode(true);
+console.log(this.Cloned);
 document.body.appendChild(this.Cloned);
+
+
 
 this.Cloned.style.position = "absolute";
 this.Cloned.style.width = "100%";

@@ -135,6 +135,8 @@ export default class Image extends superViews{
 
     addThumb(name, data = false){
 
+
+    	this.name = name;
     	//console.log'in addthumb');
 
     	
