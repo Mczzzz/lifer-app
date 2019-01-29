@@ -1220,6 +1220,7 @@ export default class NotesCollection {
 
 	_updateAfterRequest(datas){
 
+		console.log("in update AFTER REQUEST !!!!");
 
 		let len = datas.data.length, i;
 
