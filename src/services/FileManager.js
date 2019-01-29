@@ -229,8 +229,8 @@ export default class FileManager {
 
 	_returnResult(datas){
 
-		console.log("_returnResult");
-		console.log(datas);
+/*		console.log("_returnResult");
+		console.log(datas);*/
 		//'data:image/bmp;base64,'+Base64.encode(blob)
 
 		//console.log"_returnResult");
