@@ -90,10 +90,10 @@ export default class Image extends superViews{
 
 	launchCam(){
 
-		//console.log'in launch cam');
+		console.log('in launch cam');
 
 		let Fm = new FileManager();
-		Fm.setCallBack(this,"showImage");
+		Fm.setCallBack(this,"injectImage");
 		Fm.uploader("camera",this.container.id);
 
 
@@ -132,6 +132,12 @@ export default class Image extends superViews{
 
 	}
 
+	injectImage(datas, name){
+
+		this.container.id = item_id;
+		this.addThumb(name,datas);
+
+	}
 
 
     addThumb(name, data = false){
