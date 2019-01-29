@@ -103,7 +103,7 @@ export default class Thumb extends superViews{
 
           let Fm = new FileManager();
           Fm.setElement(this);
-          Fm.showFile(name);
+          Fm.showFile(name,item_id);
 
 
      }

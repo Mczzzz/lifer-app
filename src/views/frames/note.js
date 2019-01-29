@@ -121,6 +121,8 @@ export default class Note extends superViews{
 
 	setTitle(title,store=false){
 
+//this === document.activeElement // where 'this' is a dom object
+
 		if(!this.Title) this.Header.HeaderButton.setTitle(title);
 
 		this.Title = title;

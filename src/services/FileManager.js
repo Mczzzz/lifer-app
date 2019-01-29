@@ -34,14 +34,15 @@ export default class FileManager {
 		this.callBack = false;
 		this.element = false;
 		this.name = false;
+		this.prefixe = false;
 
 	}
 
 
-	showFile(name){
+	showFile(name,prefixe){
 
 		this.name = name;
-
+		this.prefixe = prefixe;
 		//console.log'FILEMANAGER SHOWFILE');
 
 		//this._getInTemporary();
@@ -207,7 +208,14 @@ export default class FileManager {
 
 	_getFromServer(){
 
-		this.NotesCollection.getPictureFromServer(this.name,this,'_returnResult');
+		let uriName = false;
+		if(this.prefixe){
+			uriName = this.prefixe + "_" + this.name;
+		}else{
+			uriName = this.name;
+		}
+
+		this.NotesCollection.getPictureFromServer(uriName,this,'_returnResult');
 
 	}
 
