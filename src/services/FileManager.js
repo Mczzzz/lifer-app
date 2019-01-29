@@ -209,10 +209,15 @@ export default class FileManager {
 	_getFromServer(){
 
 		let uriName = false;
+
 		if(this.prefixe){
+		
 			uriName = this.prefixe + "_" + this.name;
+		
 		}else{
+		
 			uriName = this.name;
+		
 		}
 
 		this.NotesCollection.getPictureFromServer(uriName,this,'_returnResult');
@@ -235,7 +240,7 @@ export default class FileManager {
 
 		}
 
-
+		console.log("here");
 		if(this.element) this.element.setData(datas);
 		
 		if(this.callBack) this.callBack.object[this.callBack.method](datas,this.name);
