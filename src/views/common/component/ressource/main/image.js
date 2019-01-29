@@ -46,7 +46,7 @@ export default class Image extends superViews{
 		this.card.setStyle("margin", "0px");
 		this.card.setStyle("padding", "10px");
 		this.card.setStyle("boxShadow", "rgb(212, 212, 212) 2px 2px 2px");
-		this.card.setStyle("background", "linear-gradient(45deg, rgb(252, 79, 160) 0%, rgb(244, 149, 76) 100%)");
+		this.card.setStyle("background", "linear-gradient(45deg, rgb(222, 222, 222) 0%, rgb(255, 255, 255) 100%)");
 		this.card.setStyle("margin", "5px");
 		this.card.setStyle("display", "flex");
 		this.card.setCallBack("keyup",this.path, "encapResponse");

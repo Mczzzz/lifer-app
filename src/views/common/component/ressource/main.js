@@ -37,7 +37,7 @@ export default class MainRessource extends superViews{
 		this.setStyle("borderRadius", "0px");
 		this.setStyle("margin", "0px");
 		this.setStyle("padding", "0px");
-		this.setStyle("background", "linear-gradient(45deg, rgb(250, 250, 250) 0%, rgb(248, 248, 248) 100%)");
+		this.setStyle("background", "linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)");
 		this.setStyle("overflowY" , "scroll");
 		this.setStyle("maxHeight" , this.Lifer.getScreenSize().height - 123 +"px");
 		////console.log'in init');
