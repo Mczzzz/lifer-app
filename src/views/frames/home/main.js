@@ -21,6 +21,7 @@ export default class Main extends superViews{
 		this.setStyle("background" , "white");
 		this.setStyle("flex" , 1);
 		this.setStyle("display", "flex");
+		this.setStyle("flexDirection", "column");
 
 		this.initChilds();
 
