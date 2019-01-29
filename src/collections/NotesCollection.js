@@ -1226,7 +1226,7 @@ export default class NotesCollection {
 
 		for (i = 0; i < len; i++) {
 
-
+			console.log("in for 1");
 			//je regarde quel type d'enregistrement c'est
 
 
@@ -1241,7 +1241,7 @@ export default class NotesCollection {
 
 
 
-
+				console.log("in for 2");
 
 			//j'insere dans la nouvelle table les infos et après je verais ce que j'en fais
 
@@ -1298,6 +1298,8 @@ export default class NotesCollection {
 			//on set deja tous les id définitf qu'on rencontre dans les requetes
 				if(datas.data[i].note_tmpId){
 
+					console.log("in tmpId");
+
 							//deja je set on id si c'est vide
 					this.webSQL.playQuery('cacheData',`UPDATE Notes
 					   SET note_id = "`+datas.data[i].note_id+`"
@@ -1322,7 +1324,7 @@ export default class NotesCollection {
 
 				}
 
-
+					console.log("1327");
 
 				if(datas.data[i].ressource_tmpId){
 
@@ -1354,7 +1356,7 @@ export default class NotesCollection {
 				}
 
 
-
+				console.log("1359");
 
 				if(datas.data[i].item_tmpId){
 
@@ -1379,7 +1381,7 @@ export default class NotesCollection {
 
 				}
 
-
+				console.log("1384");
 
 
 			//je reprends ma ligne et je met a jour cache Data
@@ -1402,7 +1404,7 @@ export default class NotesCollection {
 
 			}
 
-
+			console.log("1407");
 
 			if(datas.data[i].scope == "ressource"){
 
@@ -1430,6 +1432,7 @@ export default class NotesCollection {
 
 			}
 
+			console.log("1435");
 
 
 			if(datas.data[i].scope == "item"){
@@ -1495,19 +1498,19 @@ export default class NotesCollection {
 			                 `);
 
 
-
+						console.log("1501");
 
 
 				}
 
 
 
-
+				console.log("1508");
 
 			}
 
 
-
+			console.log("1513");
 
 		}
 
