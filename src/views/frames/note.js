@@ -34,7 +34,7 @@ export default class Note extends superViews{
 		 }	
 
 
-		this.Title = "";
+		this.Title = false;
 		
 		this.init();
 
@@ -120,6 +120,8 @@ export default class Note extends superViews{
 
 
 	setTitle(title,store=false){
+
+		if(!this.Title) this.Header.HeaderButton.setTitle(title);
 
 		this.Title = title;
 		
