@@ -70,11 +70,11 @@ export default class BackendComm {
 					  
 						response.blob().then(function(blobResp){
 							//console.log'in responpose blob');
-/*							if(callBackObj !== false && callBackMethod !== false){
+							if(typeof callBackObj === "object" && callBackMethod.length > 0 ){
 
 								callBackObj[callBackMethod](blobResp);
 
-							} */
+							} 
 							//console.log'before return blob');
 							return blobResp;
 					  
