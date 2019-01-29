@@ -124,7 +124,7 @@ export default class Ressource extends superViews{
      
       if(type == 'image' && pict) elt.showImage(pict,itemId);
 
-      if(data) elt.setData(data);
+      //if(data) elt.setData(data);
 
 
       if(margin){
