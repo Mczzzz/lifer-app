@@ -186,11 +186,11 @@ export default class FileManager {
 
 	_loadInPersist(datas){
 
-		//console.log"_loadInPersist");
-		//console.logdatas);
-		//console.logdatas.name);
-		//console.logdatas.code);
-		//console.logdatas.message);
+		console.log"_loadInPersist");
+		console.logdatas);
+		console.logdatas.name);
+		console.logdatas.code);
+		console.logdatas.message);
 
 
 		if(datas.name == "TypeMismatchError" || datas.code == 8){
