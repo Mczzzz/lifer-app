@@ -1318,10 +1318,10 @@ export default class NotesCollection {
 					console.log("before while");
 
 										//je met à jour mon IHM en recherchant si j'ai des id qui traines dans le DOM
-					while(document.getElementById(datas.data[i].note_tmpId)){
+/*					while(document.getElementById(datas.data[i].note_tmpId)){
 						console.log("in while");
 						document.getElementById(datas.data[i].note_tmpId).id = datas.data[i].note_id;
-					}
+					}*/
 /*					let elementToUpdate = document.getElementById(datas.data[i].note_tmpId);
 					elementToUpdate.id = datas.data[i].note_id;*/
 
