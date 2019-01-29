@@ -134,7 +134,6 @@ export default class Image extends superViews{
 
 	injectImage(datas, name){
 
-		this.container.id = item_id;
 		this.addThumb(name,datas);
 
 	}
