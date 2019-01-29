@@ -174,7 +174,7 @@ export default class Image extends superViews{
 
 
 //TODO A FACTORISE AVEC SON COPAIN DANS RESOURCE
-	ImageViewer(data){
+	ImageViewer(){
 		
 		//console.log"ImageViewer");
 		//console.logdata);
@@ -189,7 +189,8 @@ export default class Image extends superViews{
 		viewCard.setStyle("zIndex", "1000");
 
 		let PictElt = viewCard.setElement("PictElt");
-		viewCard.push("Image", PictElt, "MyPict", data);
+		let MyImage = viewCard.push("Image", PictElt, "MyPict");
+		MyImage.setDataByName(this.name, this.container.id)
 
 		viewCard.getContainer().addEventListener("click",()=>viewCard.destroyMe());
 
