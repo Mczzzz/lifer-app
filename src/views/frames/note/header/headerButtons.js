@@ -109,7 +109,7 @@ export default class HeaderButtons extends superViews{
 
 	updateTitle(e,title){
 
-    	this.parentThis.parentThis.setTitle(title.text, true);
+    	this.parentThis.parentThis.updateTitle(title.text, true);
 	}
 
 
