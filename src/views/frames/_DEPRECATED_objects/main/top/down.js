@@ -44,8 +44,8 @@ export default class down extends superViews{
 	//CALLBACK
 	on_JsTreeObjects_select_node(data){
 
-		console.log('on select leaf');
-		console.log(data);
+		//console.log'on select leaf');
+		//console.logdata);
 
 		this.Lifer.addData("Objects",[{"LeafNode" : data.data.node}]);
 

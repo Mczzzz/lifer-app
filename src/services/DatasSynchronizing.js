@@ -73,8 +73,8 @@ class DatasSynchronizing {
 
 	fillQueue(isConnect){
 
-		/*console.log('in fill queue');
-		console.log(isConnect);*/
+		/*//console.log'in fill queue');
+		//console.logisConnect);*/
 
 		if(isConnect){
 
@@ -112,12 +112,12 @@ class DatasSynchronizing {
 
 
 	/*sendCommand(purchases){
-//		console.log('in send command');
+//		//console.log'in send command');
 
 		for(let cmd of Array.from(purchases.rows)){
 
-			console.log(cmd);
-			console.log(JSON.parse(cmd.collection));
+			//console.logcmd);
+			//console.logJSON.parse(cmd.collection));
 
 			this.add(JSON.parse(cmd.dispatch_to),JSON.parse(cmd.collection),false,cmd.id,false);
 
@@ -143,9 +143,9 @@ class DatasSynchronizing {
 
 	webSQLsucess(tx,results,callback = false){*/
 
-/*		console.log("webSQLsuccess");
-		console.log(tx);
-		console.log(results);
+/*		//console.log"webSQLsuccess");
+		//console.logtx);
+		//console.logresults);
 		if(callback){
 			this[callback](results);
 		}
@@ -155,9 +155,9 @@ class DatasSynchronizing {
 
 	webSQLerror(tx,errors){
 
-		console.log("webSQLerror");
-		console.log(tx);
-		console.log(errors);
+		//console.log"webSQLerror");
+		//console.logtx);
+		//console.logerrors);
 
 	}*/
 
@@ -179,7 +179,7 @@ class DatasSynchronizing {
 
 /*	add(dispatchResponseTo,to,datas,purchaseOrder,needTmpId=false){
 
-	//	console.log(to);
+	//	//console.logto);
 		let MaCommande = {};
 		MaCommande.to = to;
 		MaCommande.dispatchResponseTo  = dispatchResponseTo ;

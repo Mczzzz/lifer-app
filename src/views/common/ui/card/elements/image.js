@@ -29,7 +29,7 @@ export default class Image extends superViews{
 
      setData(data){
 
-          console.log("IN SET DATA IMAGE.js");
+          //console.log"IN SET DATA IMAGE.js");
           let img = document.createElement("img");
           this.container.append(img);
  
@@ -53,8 +53,8 @@ export default class Image extends superViews{
                     let ImgWidth = img.offsetWidth * RatioPhoto;
 
                     let decalY = ((ImgWidth - img.offsetWidth) / 2);
-//                    console.log(ImgWidth);
-//                    console.log(img.offsetWidth);
+//                    //console.logImgWidth);
+//                    //console.logimg.offsetWidth);
                     let decalX = 0;
 
                     img.style.width = "";

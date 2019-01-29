@@ -42,7 +42,7 @@ export default class FileManager {
 
 		this.name = name;
 
-		console.log('FILEMANAGER SHOWFILE');
+		//console.log'FILEMANAGER SHOWFILE');
 
 		//this._getInTemporary();
 		this._getInPersistent();
@@ -54,7 +54,7 @@ export default class FileManager {
 
 		this.name = name;
 
-		console.log('FILEMANAGER GETFILE');
+		//console.log'FILEMANAGER GETFILE');
 
 		//this._getInTemporary();
 		this._getInPersistent();
@@ -123,8 +123,8 @@ export default class FileManager {
 
 
 	_loadPict(pict){
-		console.log("_loadPict!!!!!!!!!!!!!!!!!!!!");
-		console.log(this.name);
+		//console.log"_loadPict!!!!!!!!!!!!!!!!!!!!");
+		//console.logthis.name);
         this.PersistentLocalStore.push(this.name,pict);
 
 		//this.TemporaryLocalStore.push(this.name,pict);
@@ -144,7 +144,7 @@ export default class FileManager {
 
 	_getInTemporary(){
 
-		console.log('IN TEMPORARY GET');
+		//console.log'IN TEMPORARY GET');
 
 		this.TemporaryLocalStore.get(this.name,this,'_loadInTmp');
 
@@ -153,11 +153,11 @@ export default class FileManager {
 
 	_loadInTmp(datas){
 
-		console.log("_loadInTmp");
-		console.log(datas);
-		console.log(datas.name);
-		console.log(datas.code);
-		console.log(datas.message);
+		//console.log"_loadInTmp");
+		//console.logdatas);
+		//console.logdatas.name);
+		//console.logdatas.code);
+		//console.logdatas.message);
 
 
 		if(datas.code == 8){
@@ -177,7 +177,7 @@ export default class FileManager {
 
 	_getInPersistent(){
 
-		console.log('IN PERSISTENT GET');
+		//console.log'IN PERSISTENT GET');
 		this.PersistentLocalStore.get(this.name,this,'_loadInPersist');
 
 	}
@@ -185,11 +185,11 @@ export default class FileManager {
 
 	_loadInPersist(datas){
 
-		console.log("_loadInPersist");
-		console.log(datas);
-		console.log(datas.name);
-		console.log(datas.code);
-		console.log(datas.message);
+		//console.log"_loadInPersist");
+		//console.logdatas);
+		//console.logdatas.name);
+		//console.logdatas.code);
+		//console.logdatas.message);
 
 
 		if(datas.name == "TypeMismatchError" || datas.code == 8){
@@ -217,9 +217,9 @@ export default class FileManager {
 
 		//'data:image/bmp;base64,'+Base64.encode(blob)
 
-		console.log("_returnResult");
-		console.log(datas);
-		console.log(typeof datas);
+		//console.log"_returnResult");
+		//console.logdatas);
+		//console.logtypeof datas);
 		if(typeof datas == "object"){
 
 			datas = window.URL.createObjectURL(datas);

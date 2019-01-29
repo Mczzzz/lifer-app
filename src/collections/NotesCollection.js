@@ -66,7 +66,7 @@ export default class NotesCollection {
 
 	getPictureFromServer(completeName,callBackObject,callBackMethod){
 
-		console.log("in getPictureFromServer");
+		//console.log"in getPictureFromServer");
 		this.SvcBackEndComm.ajaxSend('GET',"/api_v1/pict/" + completeName,callBackObject,callBackMethod);
 
 	}
@@ -87,13 +87,13 @@ export default class NotesCollection {
 
 
 	store(data){
-		console.log('in store collection');
-		console.log(data);
+		//console.log'in store collection');
+		//console.logdata);
 
 
 		if(data.NoteId.indexOf("tmp-") == 0 ){
 
-			console.log('note insert');
+			//console.log'note insert');
 
 			this.webSQL.playQuery('cacheData',
 			                  `insert into Notes ( timestamp,
@@ -115,7 +115,7 @@ export default class NotesCollection {
 
 		}else{
 
-			console.log('note UPDATE');
+			//console.log'note UPDATE');
 
 			this.webSQL.playQuery('cacheData',
 				                  `UPDATE Notes 
@@ -141,7 +141,7 @@ export default class NotesCollection {
 			if(data.RessourceId.indexOf("tmp-") == 0 ){
 
 
-			console.log("in store data ressources INSERT");
+			//console.log"in store data ressources INSERT");
 
 				this.webSQL.playQuery('cacheData',
 			                  `insert into Ressources ( timestamp,
@@ -165,7 +165,7 @@ export default class NotesCollection {
 
 			}else{
 
-			console.log("in store data ressources UPDATE");
+			//console.log"in store data ressources UPDATE");
 
 				this.webSQL.playQuery('cacheData',
 			                  `UPDATE Ressources 
@@ -190,7 +190,7 @@ export default class NotesCollection {
 
 		if(data.id){
 
-			console.log("in if data Id");
+			//console.log"in if data Id");
 
 			data.value = (data.value)? data.value : 0;
 			data.path = (data.path)? data.path : "";
@@ -198,7 +198,7 @@ export default class NotesCollection {
 
 			if(data.id.indexOf("tmp-") == 0 ){
 
-				console.log("item INSERT");
+				//console.log"item INSERT");
 
 				this.webSQL.playQuery('cacheData',
 			                  `insert into Items ( timestamp,
@@ -230,7 +230,7 @@ export default class NotesCollection {
 
 			}else{
 
-				console.log("item UPDATE");
+				//console.log"item UPDATE");
 
 				this.webSQL.playQuery('cacheData',
 			                  `UPDATE Items 
@@ -523,7 +523,7 @@ export default class NotesCollection {
 
 	_updateSynchroRequest(datas){
 
-		console.log(datas);
+		//console.logdatas);
 		// je me tape le blog sur la réponse 401 en text html c'est moche ??
 		if(!datas.data) return false;
 		let len = datas.data.length, i;
@@ -699,7 +699,7 @@ export default class NotesCollection {
 
 		}else{
 
-			console.log("Upload déja en cours on attends");
+			//console.log"Upload déja en cours on attends");
 
 		}
 
@@ -711,8 +711,8 @@ export default class NotesCollection {
 
 	_pushInSyncUp(results){
 
-		console.log("_pushInSyncUp");
-		console.log(results.rows);
+		//console.log"_pushInSyncUp");
+		//console.logresults.rows);
 
 		let note_id = "";
 		let ressource_id = "";
@@ -953,8 +953,8 @@ export default class NotesCollection {
 		let note_id = "";
 		let ressource_id = "";
 
-		console.log("_synchroRessources");
-		console.log(results);
+		//console.log"_synchroRessources");
+		//console.logresults);
 
 		let len = results.rows.length, i;
 		  for (i = 0; i < len; i++) {
@@ -1040,7 +1040,7 @@ export default class NotesCollection {
 
 	_createRequestToServer(results){
 
-		//console.log('IN _createRequestToServer !!!')
+		////console.log'IN _createRequestToServer !!!')
 
 		let arrayToSend = [];
 		let prepareData = {};
@@ -1133,9 +1133,9 @@ export default class NotesCollection {
 	sendDatasToServer(datas){
 
 /*
-		console.log('in sendDatasToServer');
-		console.log(datas);
-		console.log(this.DatasToSend);*/
+		//console.log'in sendDatasToServer');
+		//console.logdatas);
+		//console.logthis.DatasToSend);*/
 		this.DatasToSend.datas = datas;
 //TODO : A ne pas mettre en dur		
 		this.DatasToSend.item_type = "image";
@@ -1153,8 +1153,8 @@ export default class NotesCollection {
 
 	_updateAfterRequestData(datas){
 
-		console.log('_updateAfterRequestData');
-		console.log(datas);
+		//console.log'_updateAfterRequestData');
+		//console.logdatas);
 
 	//je supprime la ligne de sync up
 			let qry2 = `UPDATE ItemsDatas 
@@ -1220,13 +1220,13 @@ export default class NotesCollection {
 
 	_updateAfterRequest(datas){
 
-		console.log("in update AFTER REQUEST !!!!");
+		//console.log"in update AFTER REQUEST !!!!");
 
 		let len = datas.data.length, i;
 
 		for (i = 0; i < len; i++) {
 
-			console.log("in for 1");
+			//console.log"in for 1");
 			//je regarde quel type d'enregistrement c'est
 
 
@@ -1241,7 +1241,7 @@ export default class NotesCollection {
 
 
 
-				console.log("in for 2");
+				//console.log"in for 2");
 
 			//j'insere dans la nouvelle table les infos et après je verais ce que j'en fais
 
@@ -1298,7 +1298,7 @@ export default class NotesCollection {
 			//on set deja tous les id définitf qu'on rencontre dans les requetes
 				if(datas.data[i].note_tmpId){
 
-					console.log("in tmpId");
+					//console.log"in tmpId");
 
 							//deja je set on id si c'est vide
 					this.webSQL.playQuery('cacheData',`UPDATE Notes
@@ -1307,7 +1307,7 @@ export default class NotesCollection {
 					   AND note_id != "`+datas.data[i].note_id+`"
 					   `);
 
-					console.log("in tmpId ?");
+					//console.log"in tmpId ?");
 
 					//j'update les ressources qui y sont liées
 					this.webSQL.playQuery('cacheData',`UPDATE Ressources
@@ -1315,11 +1315,11 @@ export default class NotesCollection {
 			           WHERE note_id = "`+datas.data[i].note_tmpId+`"
 			           `);	
 
-					console.log("before while");
+					//console.log"before while");
 
 										//je met à jour mon IHM en recherchant si j'ai des id qui traines dans le DOM
 /*					while(document.getElementById(datas.data[i].note_tmpId)){
-						console.log("in while");
+						//console.log"in while");
 						document.getElementById(datas.data[i].note_tmpId).id = datas.data[i].note_id;
 					}*/
 /*					let elementToUpdate = document.getElementById(datas.data[i].note_tmpId);
@@ -1327,7 +1327,7 @@ export default class NotesCollection {
 
 				}
 
-					console.log("1327");
+					//console.log"1327");
 
 				if(datas.data[i].ressource_tmpId){
 
@@ -1359,7 +1359,7 @@ export default class NotesCollection {
 				}
 
 
-				console.log("1359");
+				//console.log"1359");
 
 				if(datas.data[i].item_tmpId){
 
@@ -1384,7 +1384,7 @@ export default class NotesCollection {
 
 				}
 
-				console.log("1384");
+				//console.log"1384");
 
 
 			//je reprends ma ligne et je met a jour cache Data
@@ -1407,7 +1407,7 @@ export default class NotesCollection {
 
 			}
 
-			console.log("1407");
+			//console.log"1407");
 
 			if(datas.data[i].scope == "ressource"){
 
@@ -1435,7 +1435,7 @@ export default class NotesCollection {
 
 			}
 
-			console.log("1435");
+			//console.log"1435");
 
 
 			if(datas.data[i].scope == "item"){
@@ -1473,8 +1473,8 @@ export default class NotesCollection {
 		           `);
 
 
-				console.log("before if for alimetatiopn image");
-				console.log(datas.data[i]);
+				//console.log"before if for alimetatiopn image");
+				//console.logdatas.data[i]);
 
 				//si il y a une image à remonter
 				if(datas.data[i].type == 'image' && datas.data[i].item_path){
@@ -1501,19 +1501,19 @@ export default class NotesCollection {
 			                 `);
 
 
-						console.log("1501");
+						//console.log"1501");
 
 
 				}
 
 
 
-				console.log("1508");
+				//console.log"1508");
 
 			}
 
 
-			console.log("1513");
+			//console.log"1513");
 
 		}
 
@@ -1527,8 +1527,8 @@ export default class NotesCollection {
 
 //todo: jE PENSE QU4IL MANQUE UN foR 
 /*
-		console.log("_updateAfterRequest");
-		console.log(datas);*/
+		//console.log"_updateAfterRequest");
+		//console.logdatas);*/
 					//on regarde si on a du temporaire pour les id
 /*
 		let NoteId = "";

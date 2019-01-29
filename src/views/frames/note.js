@@ -19,8 +19,8 @@ export default class Note extends superViews{
 
 		super( MyClass , path);
 
-		console.log('in note.js');
-		console.log(id);
+		//console.log'in note.js');
+		//console.logid);
 
 		 if(id){
 

@@ -66,8 +66,8 @@ export default class Image extends superViews{
 //il faut refaire un pont ici pour récuprer les datas
 	encapResponse(data){
 
-		console.log('encapResponse');
-		console.log(data);
+		//console.log'encapResponse');
+		//console.logdata);
 
 
 		if(this.ExtcallBack){
@@ -90,7 +90,7 @@ export default class Image extends superViews{
 
 	launchCam(){
 
-		console.log('in launch cam');
+		//console.log'in launch cam');
 
 		let Fm = new FileManager();
 		Fm.setCallBack(this,"showImage");
@@ -132,7 +132,7 @@ export default class Image extends superViews{
 
     addThumb(name, data = false){
 
-    	console.log('in addthumb');
+    	//console.log'in addthumb');
 
     	
     	//pour savoir si je remonte l'infos ou pas de l'image
@@ -171,8 +171,8 @@ export default class Image extends superViews{
 //TODO A FACTORISE AVEC SON COPAIN DANS RESOURCE
 	ImageViewer(data){
 		
-		console.log("ImageViewer");
-		console.log(data);
+		//console.log"ImageViewer");
+		//console.logdata);
 		let viewCard = new Card('Viewer_', this.path);
 		viewCard.setStyle("position", "absolute");
 		//viewCard.setStyle("position", "absolute");

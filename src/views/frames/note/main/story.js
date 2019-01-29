@@ -75,8 +75,8 @@ export default class Story extends superViews{
 
 	populate(datas){
 
-		console.log('in populate ressource');
-		console.log(datas);
+		//console.log'in populate ressource');
+		//console.logdatas);
 
 		let len = datas.rows.length, i;
 		
@@ -91,8 +91,8 @@ export default class Story extends superViews{
 
 	populateItems(datas){
 
-		console.log('in populate ressourceItems');
-		console.log(datas);
+		//console.log'in populate ressourceItems');
+		//console.logdatas);
 
 		let len = datas.rows.length, i;
 		let last = false;
@@ -124,7 +124,7 @@ export default class Story extends superViews{
 /*	addRessource(){
 
 		let ressourceTmpId = "TmpResourceId-"+uuid().replace(/-/gi, '.');
-//		console.log(ressourceTmpId);
+//		//console.logressourceTmpId);
 		this.createRessource(ressourceTmpId);
 		this.setStyle("flex" , "");
 		return ressourceTmpId;
@@ -242,14 +242,14 @@ export default class Story extends superViews{
 
 	updateImagePict(datas){
 
-		console.log('updateImagePict');
-		console.log(datas)
+		//console.log'updateImagePict');
+		//console.logdatas)
 
 /*		let newPict = elt.pict.data.pict;
-		console.log("elt");
-		console.log(elt);
+		//console.log"elt");
+		//console.logelt);
 		this.RessourceList[ressourceTmpId].Items[itemTmpId].pict = newPict;
-	    //console.log("Image Update")
+	    ////console.log"Image Update")
 		MyPict.setData(newPict);
 
 		//MyPict.setStyle("marginLeft", elt.bloc.getContainer().style.marginLeft);
@@ -286,8 +286,8 @@ export default class Story extends superViews{
 
 		for (let item of List.reverse()){
 
-			console.log("in for reorder :");
-			console.log(this.RessourceList[ressourceTmpId].Card["Item_"+item.firstChild.id]);
+			//console.log"in for reorder :");
+			//console.logthis.RessourceList[ressourceTmpId].Card["Item_"+item.firstChild.id]);
 			this.RessourceList[ressourceTmpId].Card.getContainer().prepend(this.RessourceList[ressourceTmpId].Card["Item_"+item.firstChild.id].getContainer());
 		}
 
@@ -297,11 +297,11 @@ export default class Story extends superViews{
 			newItemList[it.firstChild.id]= this.RessourceList[ressourceTmpId].Items[it.firstChild.id];
 		}
 
-		console.log("newItemList");
-		console.log(newItemList);
-		console.log(this.RessourceList[ressourceTmpId].Item);
+		//console.log"newItemList");
+		//console.lognewItemList);
+		//console.logthis.RessourceList[ressourceTmpId].Item);
 		this.RessourceList[ressourceTmpId].Items = newItemList;
-		console.log(this.RessourceList[ressourceTmpId].Item);
+		//console.logthis.RessourceList[ressourceTmpId].Item);
 		this.RessourceList[ressourceTmpId].Card.getContainer().prepend(this.RessourceList[ressourceTmpId].Card["header_"+ressourceTmpId].getContainer());
 
 	}
@@ -312,8 +312,8 @@ export default class Story extends superViews{
 
 	addItem(datas, last){
 
-		console.log("IN STORY ADD ITEM");
-		console.log(datas);
+		//console.log"IN STORY ADD ITEM");
+		//console.logdatas);
 
 		//ressourceTmpId,type,itemTmpId, 
 		//elt
@@ -336,7 +336,7 @@ export default class Story extends superViews{
 			case 'text':
 
 
-				console.log('IN TEXT');
+				//console.log'IN TEXT');
 				this.RessourceList[RessourcePathId].Items[ItemPathId].type = datas.item_type;
 				let MyText = this.RessourceList[RessourcePathId].Card.push("Text",ItemElement,"text",datas.item_text);
 				MyText.setStyle("color","black");
@@ -362,7 +362,7 @@ export default class Story extends superViews{
 
 			case 'image':
 
-				console.log('IN IMAGE');
+				//console.log'IN IMAGE');
 				this.RessourceList[RessourcePathId].Items[ItemPathId].type = datas.item_type;
 
 				//j'ajoute mon thumb vide
@@ -374,8 +374,8 @@ export default class Story extends superViews{
 				if(last)  MyThumb.setStyle("borderRadius","0px 0px 0px 5px");
 				MyThumb.setStyle("display" , "flex");
 				MyThumb.setStyle("alignItems" , "center");
-				console.log("datas.item_path");
-				console.log(datas.item_path);
+				//console.log"datas.item_path");
+				//console.logdatas.item_path);
 				MyThumb.setDataByName(datas.item_path,datas.item_id);
 
 				//this.updateImagePict(MyThumb,elt,ressourceTmpId,itemTmpId)
@@ -409,8 +409,8 @@ export default class Story extends superViews{
 
 
 			break;
-			console.log("this.RessourceList");
-			console.log(this.RessourceList);
+			//console.log"this.RessourceList");
+			//console.logthis.RessourceList);
 
 
 		}
@@ -418,7 +418,7 @@ export default class Story extends superViews{
 
 		//this.RessourceList[ressourceTmpId].ItemsList.push(ItemElement);
 		//this.ItemList.push({"RessourceId"})
-//		console.log(this.RessourceList);
+//		//console.logthis.RessourceList);
 
 	}
 
@@ -463,7 +463,7 @@ export default class Story extends superViews{
 
 	loadRessource(ressourceTmpId){
 
-//		console.log("loadRessource");
+//		//console.log"loadRessource");
 		let TheRessource = this.Lifer.getData(this.parentThis.Empty.path,"This");
 		TheRessource.addRessource(ressourceTmpId);
 
@@ -475,8 +475,8 @@ export default class Story extends superViews{
 
 
 //	update(data){
-/*			console.log("IIIIIIIIIIINNN UPDATE");
-			console.log(data);*/
+/*			//console.log"IIIIIIIIIIINNN UPDATE");
+			//console.logdata);*/
 	/*		//on set le texte
 			this.RessourceList[data.RessourceId].Items[data.id].data = data.data.container.innerHTML;
 

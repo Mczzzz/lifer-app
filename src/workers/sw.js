@@ -6,23 +6,23 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', event => {
-  console.log('in fetch listener');
+  //console.log'in fetch listener');
    event.respondWith(fromCache(event.request)
     .catch(reject => {
-       console.log('nothing in cache to to network');
+       //console.log'nothing in cache to to network');
 
       return fromNetwork(event.request,800)
         .catch(reject => {
-  //      console.log('aiiiiieeeee');
+  //      //console.log'aiiiiieeeee');
         throw Error('ca a merdé ');
       });
    /*     .then( response => {
-          console.log(response);
+          //console.logresponse);
           return response;
 
         })
         .catch(reject => {
-  //      console.log('aiiiiieeeee');
+  //      //console.log'aiiiiieeeee');
         throw Error('ca a merdé ');
       });*/
     }));
@@ -32,7 +32,7 @@ self.addEventListener('fetch', event => {
 
 
 function fromCache(request) {
-  console.log(request.method);
+  //console.logrequest.method);
  
   if(request.method == "GET"){
 
@@ -42,7 +42,7 @@ function fromCache(request) {
       });
     });
   }else{
-    console.log("in else rejet no get from cache");
+    //console.log"in else rejet no get from cache");
     return Promise.reject('no-match');
   }
  
@@ -74,7 +74,7 @@ function fromNetwork(request, timeout) {
        if(request.method == "GET" && response.status != 404){
 
           let responseToCache = response.clone();
-          console.log("on cache le reponse")
+          //console.log"on cache le reponse")
           caches.open('v1')
             .then(function(cache) {
                cache.put(request, responseToCache);
@@ -82,7 +82,7 @@ function fromNetwork(request, timeout) {
 
 
         }else{
-          console.log("on cache pas la réponse")
+          //console.log"on cache pas la réponse")
 
         }
 
@@ -101,7 +101,7 @@ function fromNetwork(request, timeout) {
 /*   if(request.method == "GET" && response.status != 404){
 
           let responseToCache = response.clone();
-          console.log("on cache le reponse")
+          //console.log"on cache le reponse")
           caches.open('v1')
             .then(function(cache) {
                cache.put(request, responseToCache);
@@ -109,6 +109,6 @@ function fromNetwork(request, timeout) {
 
 
         }else{
-          console.log("on cache pas la réponse")
+          //console.log"on cache pas la réponse")
 
         }*/

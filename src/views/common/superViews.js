@@ -51,8 +51,8 @@ Moment.locale('fr');
 
 
 			if(document.getElementsByClassName(this.path)[0] !== undefined && this.unique){
-/*				console.log(document.getElementsByClassName(this.path)[0]);
-				console.log(this.path);*/
+/*				//console.logdocument.getElementsByClassName(this.path)[0]);
+				//console.logthis.path);*/
 				document.getElementsByClassName(this.path)[0].remove();
 			
 			}
@@ -83,7 +83,7 @@ Moment.locale('fr');
 		}
 		else {
 			this.ClassId = arrayId[1];
-//			console.log(this.ClassId);
+//			//console.logthis.ClassId);
 		}*/
 
 
@@ -181,7 +181,7 @@ Moment.locale('fr');
     destroyMe(){
 
     	this.Lifer.destroy(this.path);
-    	console.log(this.container);
+    	//console.logthis.container);
     	this.container.remove();
     	
 
@@ -198,10 +198,10 @@ Moment.locale('fr');
 
     callBack(data){
 
-	//	console.log(data);
+	//	//console.logdata);
 
 		let methode = "on_"+data.detail.element+"_"+data.detail.Event.type;
-		//console.log(methode);
+		////console.logmethode);
 		this[methode](data.detail);
 
 	}
@@ -216,7 +216,7 @@ Moment.locale('fr');
 
 
 	setId(id){
-	//	console.log(id);
+	//	//console.logid);
           this.container.id = id;
 
      }

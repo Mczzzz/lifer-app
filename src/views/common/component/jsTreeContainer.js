@@ -52,8 +52,8 @@ export default class jsTreeContainer {
 			    "items": function($node) {
 
 			      //  var tree = this.JsTreeContainer.jstree(true);
-			      	console.log('jstree context menu before return');
-			      	console.log($node);
+			      	//console.log'jstree context menu before return');
+			      	//console.log$node);
 
 			      	let create = {
 					                "separator_before": false,
@@ -185,7 +185,7 @@ export default class jsTreeContainer {
 
 //SEARCH
 /*    getSearchElements(){
-		console.log('in getSearchElements');
+		//console.log'in getSearchElements');
 		let res = {};
 		res.element = $('.'+this.MyClass).jstree(true);
 		res.methode = 'search';

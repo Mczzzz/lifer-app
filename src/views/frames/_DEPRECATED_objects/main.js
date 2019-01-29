@@ -44,7 +44,7 @@ export default class main extends superViews{
 
 		this.breadcrumb.populate(data.breadcrumb);
 		this.breadcrumb.show();
-		console.log('openManage');
+		//console.log'openManage');
 		this.bottom.openManage();
 		this.bottom.openNoteTools();
 
@@ -52,7 +52,7 @@ export default class main extends superViews{
 
 	on_breadcrumb_select(data){
 
-		console.log(data)
+		//console.logdata)
 		//action on top
 		this.top.focusUp(data);
 		this.breadcrumb.hide();

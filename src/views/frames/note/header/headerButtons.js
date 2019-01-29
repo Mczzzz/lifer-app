@@ -42,7 +42,7 @@ export default class HeaderButtons extends superViews{
 					HeaderBackButton.getContainer().addEventListener("click",()=>this.CloseMe());
 
 
-					//		console.log('in show title');
+					//		//console.log'in show title');
 
 					this.TheTitle = this.card.push("Text", this.HeaderElement,"Title", "");
 
@@ -94,8 +94,8 @@ export default class HeaderButtons extends superViews{
 
 	showTitle(text = ""){
 
-		console.log("in show title !!!!");
-		console.log(text);
+		//console.log"in show title !!!!");
+		//console.logtext);
 		this.TheTitle.setStyle("display", "");
 		this.TheTitle.getContainer().innerHTML = text;
 

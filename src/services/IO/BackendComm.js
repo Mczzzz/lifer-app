@@ -8,7 +8,7 @@ export default class BackendComm {
 
 //	ajaxSend(VERB,url,dispatchResponseTo=false,dataCallback = false,dataSend = false){
 	ajaxSend(VERB,url,callBackObj=false,callBackMethod = false,dataSend = false){
-//		console.log("on passe bien dans ajaxSend");		
+//		//console.log"on passe bien dans ajaxSend");		
 			let MyResponse = false;
 
 			// let timeoutId = setTimeout(function(){ return false;}, 800);
@@ -19,17 +19,17 @@ export default class BackendComm {
 
 			let webSQLCon = new webSQL();
 
-//			console.log('JUST BEFORE SEND FETCH');
+//			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
 			fetch(host+url, params)
 			  .then(function(response) {
 
 			  	//MyResponse = response.clone(); 
-				console.log('in my fetch app :');
-			//	console.log(response.pro)
-			//console.log(a);
+				//console.log'in my fetch app :');
+			//	//console.logresponse.pro)
+			////console.loga);
 				if(response.status === 401) {
-					console.log(response.status);
+					//console.logresponse.status);
 				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
 				webSQLCon.playQuery('cacheData',qry);
 //TODO : il faut flagger por dire que la seule requete qui passera sera celle de login
@@ -42,26 +42,26 @@ export default class BackendComm {
 					//return false;
 
 				}else{
-					//console.log(response);
+					////console.logresponse);
 
 					let contentType = response.headers.get("content-type");
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
 
 						response.json().then(function(jsonResp){
-							console.log('in responpose json');
-							console.log(jsonResp);
-							console.log(callBackObj);
-							console.log(callBackMethod);
-							console.log(typeof callBackObj);
-							console.log(callBackMethod.length);
+							//console.log'in responpose json');
+							//console.logjsonResp);
+							//console.logcallBackObj);
+							//console.logcallBackMethod);
+							//console.logtypeof callBackObj);
+							//console.logcallBackMethod.length);
 							if(typeof callBackObj === "object" && callBackMethod.length > 0 ){
-								console.log(callBackObj);
-								console.log(callBackMethod);
+								//console.logcallBackObj);
+								//console.logcallBackMethod);
 								callBackObj[callBackMethod](jsonResp);
 
 							} 
-							console.log('before return json');
+							//console.log'before return json');
 							return jsonResp;
 						});
 					  
@@ -69,13 +69,13 @@ export default class BackendComm {
 
 					  
 						response.blob().then(function(blobResp){
-							console.log('in responpose blob');
+							//console.log'in responpose blob');
 /*							if(callBackObj !== false && callBackMethod !== false){
 
 								callBackObj[callBackMethod](blobResp);
 
 							} */
-							console.log('before return blob');
+							//console.log'before return blob');
 							return blobResp;
 					  
 						});
@@ -91,7 +91,7 @@ export default class BackendComm {
 
 			}).catch(function(error){
 
-				console.log("in catch of fectch "+error);
+				//console.log"in catch of fectch "+error);
 
 			});
 
@@ -110,7 +110,7 @@ export default class BackendComm {
 			//params.mode = 'cors';
 
 			if(VERB != "GET"){
-	//			console.log(dataSend);
+	//			//console.logdataSend);
 				params.body = JSON.stringify(dataSend);
 
 				params.headers = {};

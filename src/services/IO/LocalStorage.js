@@ -73,18 +73,18 @@ export default class LocalStorage {
 	getAction(grantedBytes,name){
 
 
-		console.log(this.type);
+		//console.logthis.type);
 
 		let that = this;
 
-		console.log(that.type);
+		//console.logthat.type);
 
 		function onInitFs(fs) {
 
 
 			function errorHandler(e){
 
-				console.log(e);
+				//console.loge);
 				that.toCallBack(e);
 			}
 
@@ -111,8 +111,8 @@ export default class LocalStorage {
 
 		}
 
-		console.log(this.type);
-		console.log(that.type);
+		//console.logthis.type);
+		//console.logthat.type);
 		
 
 		 window.webkitRequestFileSystem(this.type, grantedBytes, onInitFs, this.errorHandler);
@@ -132,12 +132,12 @@ export default class LocalStorage {
 
 			function errorHandler(e){
 
-				console.log(e);
+				//console.loge);
 			}
 
 			function file(){
 
-				console.log("File Removed from persistent");
+				//console.log"File Removed from persistent");
 
 			}
 
@@ -164,9 +164,9 @@ export default class LocalStorage {
 
 	toCallBack(MyFile){
 		
-		console.log("IN CALLBACK LOCALSTORAGE");
-		console.log(this.type);
-		console.log(MyFile);
+		//console.log"IN CALLBACK LOCALSTORAGE");
+		//console.logthis.type);
+		//console.logMyFile);
 
 		if(this.callback){
 
@@ -193,7 +193,7 @@ export default class LocalStorage {
 
 			function errorHandler(e){
 
-				console.log(e);
+				//console.loge);
 			}
 
 			function fileEntry(fileEntry){
@@ -207,11 +207,11 @@ export default class LocalStorage {
 
 
 			      fileWriter.onwriteend = function(e) {
-			        console.log('Write completed.');
+			        //console.log'Write completed.');
 			      };
 
 			      fileWriter.onerror = function(e) {
-			        console.log('Write failed: ' + e.toString());
+			        //console.log'Write failed: ' + e.toString());
 			      };
 
 
@@ -242,18 +242,18 @@ export default class LocalStorage {
 
        errorHandler(e){
 
-			console.log(e);
+			//console.loge);
 		}
 
 
 
 	consoleSize(usedBytes, grantedBytes){
-		console.log('we are using ', usedBytes, ' of ', grantedBytes, 'bytes');
+		//console.log'we are using ', usedBytes, ' of ', grantedBytes, 'bytes');
 	}
 
 
 	consoleSizeError(e){
-		console.log('Error', e);
+		//console.log'Error', e);
 	}
 
 

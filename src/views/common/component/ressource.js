@@ -61,8 +61,8 @@ export default class Ressource extends superViews{
 
      callBackDataTo(path,data=false){
 
-      console.log("callBackDataTo - Ressources");
-      console.log(data);
+      //console.log"callBackDataTo - Ressources");
+      //console.logdata);
 
       if(!data) data = {};
 
@@ -78,7 +78,7 @@ export default class Ressource extends superViews{
 
 /*     setTarget(path){
 
-      console.log("in set Target");
+      //console.log"in set Target");
       this.target = this.getObjectThisfromPath(path);
 
      }*/
