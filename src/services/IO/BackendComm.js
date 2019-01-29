@@ -53,6 +53,8 @@ export default class BackendComm {
 							console.log(jsonResp);
 							console.log(callBackObj);
 							console.log(callBackMethod);
+							console.log(typeof callBackObj);
+							console.log(callBackMethod.length);
 							if(typeof callBackObj == "object" && callBackMethod.length > 0 ){
 								console.log(callBackObj);
 								console.log(callBackMethod);
