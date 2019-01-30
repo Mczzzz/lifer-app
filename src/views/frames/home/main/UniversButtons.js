@@ -34,8 +34,8 @@ export default class UniversButtons extends superViews{
 
 	showButtons(){
 
-		let object = this.card.push("Button",this.Elt,"objectButton", 📦 );
-		let users = this.card.push("Button",this.Elt,"userButton", 👪);
+		let object = this.card.push("Button",this.Elt,"objectButton", String.fromCodePoint(0x1F4E6));
+		let users = this.card.push("Button",this.Elt,"userButton", String.fromCodePoint(0x1F46A));
 
 	}
 
