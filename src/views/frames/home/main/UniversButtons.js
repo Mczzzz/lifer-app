@@ -29,6 +29,7 @@ export default class UniversButtons extends superViews{
 		this.Elt   = this.card.setElement("Element");
 		this.Elt.setStyle("justifyContent","space-between");
 
+		this.showButtons();
 	}
 
 
