@@ -37,8 +37,12 @@ export default class Router {
 
 
 	Login(){
+		//oncheck pour voir si on est déja dessus
+		let path = "Frame-Login"
+
+		if(document.getElementsByClassName(path)[0] !== undefined) return true;
 		//console.log'IN LOGIN');
-		let login = new Login("Frame-Login",false);
+		let login = new Login(path,false);
 
 	}
 
