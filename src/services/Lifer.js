@@ -20,7 +20,7 @@ class Brain {
 
 	dumpMe(){
 
-		console.log(this.dataCenter);
+		//console.logthis.dataCenter);
 
 	}
 
@@ -104,7 +104,7 @@ addMe(path){
 
 
 			if(!(dataRepresentation[myPath] instanceof Object)){
-				console.log('aie '+myPath+' not exist');
+				//console.log'aie '+myPath+' not exist');
 				return false;
 			}
 
@@ -119,10 +119,10 @@ addMe(path){
 
 		}			
 
-	//	console.log(dataArray);
+	//	//console.logdataArray);
 		
 		for(let myData of dataArray ){
-//			console.log(myData);
+//			//console.logmyData);
 			
 				dataRepresentation._datas[Object.keys(myData)[0]] = myData[Object.keys(myData)[0]];
 
@@ -144,7 +144,7 @@ addMe(path){
 
 	getData(path,Key, level = 0){
 
-	//	console.log(path);
+	//	//console.logpath);
 		if(path.length == 0) return false;
 
 		let arrayPath = path.split("-");
@@ -162,9 +162,9 @@ addMe(path){
 
 
 /*			let realName = myPath.split("-");
-			console.log("realName");
-			console.log(realName);
-			console.log(realName.length);
+			//console.log"realName");
+			//console.logrealName);
+			//console.logrealName.length);
 
 			if(realName.length > 1){
 				myPath = realName[realName.length - 1];
@@ -172,7 +172,7 @@ addMe(path){
 
 
 			if(!(dataRepresentation[myPath] instanceof Object)){
-				console.log('aie '+myPath+' not exist');
+				//console.log'aie '+myPath+' not exist');
 				return false;
 			}
 
@@ -183,14 +183,14 @@ addMe(path){
 
 		if(!(dataRepresentation._datas instanceof Object)){
 
-			console.log('Pas de datas setter')
+			//console.log'Pas de datas setter')
 			return false;
 
 		}			
 
 		if(!(dataRepresentation._datas[Key] instanceof Object)){
 
-			console.log("Cette clef de data n'existe pas");
+			//console.log"Cette clef de data n'existe pas");
 			return false;
 
 		}	

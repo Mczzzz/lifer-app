@@ -36,7 +36,7 @@ export default class HomeController {
 
 		let home = new Home("Frame-Home");
 
-		console.log('in HOME INIT VIEW');
+		//console.log'in HOME INIT VIEW');
 		//launch Login si pas connecté
 		this.UserCollection.isAuth(this,'_launchLogin');
 
@@ -50,8 +50,8 @@ export default class HomeController {
 
 	_launchLogin(isConnect){
 
-		console.log('in _launchConnect');
-		console.log(isConnect);
+		//console.log'in _launchConnect');
+		//console.logisConnect);
 		if(!isConnect){
 
 			let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});

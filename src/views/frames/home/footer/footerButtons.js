@@ -20,7 +20,7 @@ export default class FooterButtons extends superViews{
 		  e.preventDefault();
 		  // Stash the event so it can be triggered later.
 		 //this.deferredPrompt = e;
-		 //console.log("IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
+		 ////console.log"IN DEFFFFFEREDD TO PROMPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
 		//  this.showAddToHomeScreen();
 
 		

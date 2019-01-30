@@ -120,7 +120,7 @@ export default class Empty extends superViews{
 
 	addItem(type, ItemId = false, data=false, pict=false,margin = false){
 
-		console.log("in add item empty");
+		//console.log"in add item empty");
 /*		if(this.initialSet){
 	   		 this.Ressource.setTarget(this.parentThis.parentThis.Main.Story.path);
  	   		this.initialSet = 0;

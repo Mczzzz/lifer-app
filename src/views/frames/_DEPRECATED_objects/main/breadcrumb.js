@@ -41,7 +41,7 @@ export default class breadcrumb extends superViews{
 	populate(datas){
 
 		this.container.innerHTML = null;
-		console.log(datas);
+		//console.logdatas);
 
 		this.card = new Card('BreadCrumbCard', this.path);
 	

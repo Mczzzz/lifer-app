@@ -37,10 +37,10 @@ export default class MainRessource extends superViews{
 		this.setStyle("borderRadius", "0px");
 		this.setStyle("margin", "0px");
 		this.setStyle("padding", "0px");
-		this.setStyle("background", "linear-gradient(45deg, rgb(250, 250, 250) 0%, rgb(248, 248, 248) 100%)");
+		this.setStyle("background", "linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)");
 		this.setStyle("overflowY" , "scroll");
 		this.setStyle("maxHeight" , this.Lifer.getScreenSize().height - 123 +"px");
-		//console.log('in init');
+		////console.log'in init');
 
 		window.addEventListener('resize', ()=>this.resize());
 
@@ -50,15 +50,15 @@ export default class MainRessource extends superViews{
 
 
 	resize(elt = false){
-     	//console.log('####### resize #######');
+     	////console.log'####### resize #######');
 
      	//prevention double resize ()je sais pas pourquoi exactement diff de 48 pixel 
      	if(this.skipResizeFirst == 0){
-     		console.log('####### resize SKIP #######');
+     		//console.log'####### resize SKIP #######');
      		this.skipResizeFirst = 1;
      		return true;
      	}else if(this.skipResizeFirst == 1){
-     		console.log('####### resize EXECUTE #######');
+     		//console.log'####### resize EXECUTE #######');
      		this.skipResizeFirst = 0;
      	}
      	
@@ -66,7 +66,7 @@ export default class MainRessource extends superViews{
 
      	let deviceHeight = this.Lifer.getScreenSize().height;
 
-     	console.log(deviceHeight);
+     	//console.logdeviceHeight);
 
      	let initialDevice = this.Lifer.getData("User-Device", "Screen");
 
@@ -74,12 +74,12 @@ export default class MainRessource extends superViews{
 
      	this.setStyle("maxHeight" , mainSize +"px");
      	
-     	console.log(this.resizeMoveTo);
+     	//console.logthis.resizeMoveTo);
 
 
      	if(initialDevice.height > deviceHeight){
 
-     		console.log('in with keyboard');
+     		//console.log'in with keyboard');
 
      		this.container.scrollTop = this.resizeMoveTo;
 
@@ -175,7 +175,7 @@ export default class MainRessource extends superViews{
 
 		let image = new Image("Image_"+this.ChildId, this.path,false,callBack,itemId);
 		
-		//console.log("anew"+anew);
+		////console.log"anew"+anew);
 		if(anew){
 			image.launchCam();
 		}
@@ -304,10 +304,10 @@ export default class MainRessource extends superViews{
 
 
 	moveChilds(node,childrenList){
-/*		console.log("in chid to move");
-		console.log(node);
-		console.log(childrenList);
-		console.log(node.nextElementSibling);*/
+/*		//console.log"in chid to move");
+		//console.lognode);
+		//console.logchildrenList);
+		//console.lognode.nextElementSibling);*/
 		let next = false;
 
 		if(node.nextElementSibling){
@@ -341,7 +341,7 @@ export default class MainRessource extends superViews{
 
 	collapserSetter(){
 
-	//	console.log('in collapserSetter');
+	//	//console.log'in collapserSetter');
 
 	if (this.getContainer().hasChildNodes()) {
 
@@ -437,7 +437,7 @@ moveLikePromise(direction){
 
 moveScrollTop(direction,speed){
 
-	console.log(direction);
+	//console.logdirection);
 	if(direction == "up"){
 
 		this.container.scrollTop = this.container.scrollTop - this.speed;
@@ -476,8 +476,8 @@ stopScroll(){
 onChildMove(childContainer, e, type){
 
 	this.eChildMove = e;
-//		console.log("on passe dans OnChildMove");
-//		console.log(type);
+//		//console.log"on passe dans OnChildMove");
+//		//console.logtype);
 
 if(type == "start"){
 
@@ -490,7 +490,10 @@ if(type == "start"){
 //CLONE
 
 this.Cloned = childContainer.getContainer().cloneNode(true);
+console.log(this.Cloned);
 document.body.appendChild(this.Cloned);
+
+
 
 this.Cloned.style.position = "absolute";
 this.Cloned.style.width = "100%";
@@ -575,7 +578,7 @@ childContainer.getContainer().parentElement.insertBefore(this.Ghost,childContain
 
 	        	if(this.inMovement == false) {
 	        		this.moveLikePromise("up");
-	        		//console.log('this.moveLikePromise(e,childContainer);');
+	        		////console.log'this.moveLikePromise(e,childContainer);');
 	        	}
 
 
@@ -584,7 +587,7 @@ childContainer.getContainer().parentElement.insertBefore(this.Ghost,childContain
 
 	        	if(this.inMovement == false) {
 	        		this.moveLikePromise("down");
-	        		//console.log('this.moveLikePromise(e,childContainer);');
+	        		////console.log'this.moveLikePromise(e,childContainer);');
 	        	}
 
 
@@ -634,12 +637,12 @@ childContainer.getContainer().parentElement.insertBefore(this.Ghost,childContain
 
 
 if(childContainer.getContainer().previousElementSibling.previousElementSibling){
-//console.log("childContainer.getContainer().previousElementSibling.previousElementSibling");
-//console.log(childContainer.getContainer().previousElementSibling.previousElementSibling);
+////console.log"childContainer.getContainer().previousElementSibling.previousElementSibling");
+////console.logchildContainer.getContainer().previousElementSibling.previousElementSibling);
 	        	//on regarde si mon parent à deja des enfants
 	        	let isParent = this.getChilds(childContainer.getContainer().previousElementSibling.previousElementSibling).length;
-	        	//console.log("IS Parent: "+isParent);
-	        	//console.log(isParent);
+	        	////console.log"IS Parent: "+isParent);
+	        	////console.logisParent);
 
 
 	        	if(isParent){
@@ -649,7 +652,7 @@ if(childContainer.getContainer().previousElementSibling.previousElementSibling){
 
 
 	        	if(e.changedTouches[0].clientY < (this.Ghost.previousElementSibling.getBoundingClientRect().y + (this.Ghost.previousElementSibling.getBoundingClientRect().height / 2))){
-	         	//console.log('in previous move node');
+	         	////console.log'in previous move node');
 	         	childContainer.getContainer().parentElement.insertBefore(childContainer.getContainer(),childContainer.getContainer().previousElementSibling.previousElementSibling);
 	         	childContainer.getContainer().parentElement.insertBefore(this.Ghost,childContainer.getContainer());
 
@@ -663,10 +666,10 @@ if(childContainer.getContainer().previousElementSibling.previousElementSibling){
 
 	    if(childContainer.getContainer().nextElementSibling){
 
-	       	//console.log('in next');
+	       	////console.log'in next');
 
 	       	if((e.changedTouches[0].clientY ) > childContainer.getContainer().nextElementSibling.getBoundingClientRect().y){
-	          	//console.log('in next move node');
+	          	////console.log'in next move node');
 	          	
 	          	childContainer.getContainer().parentElement.insertBefore(childContainer.getContainer(),childContainer.getContainer().nextElementSibling.nextElementSibling);
 	          	childContainer.getContainer().parentElement.insertBefore(this.Ghost,childContainer.getContainer());
@@ -693,7 +696,7 @@ let GoodMargin = 0;
 	        //si previous + next
 	        if(this.Ghost.previousElementSibling && !childContainer.getContainer().nextElementSibling){
 
-	        	console.log("just previous");
+	        	//console.log"just previous");
 	        	let PreviousContainerX = this.Ghost.previousElementSibling.getBoundingClientRect().x;
 
 	        	let margin = Math.round(e.changedTouches[0].clientX / this.Pas ) * this.Pas;
@@ -712,13 +715,13 @@ let GoodMargin = 0;
 
 	        }else if(!this.Ghost.previousElementSibling && childContainer.getContainer().nextElementSibling){
 
-	        	console.log("just next");
+	        	//console.log"just next");
 	        	GoodMargin = 0;
 
 	        }else if(this.Ghost.previousElementSibling && childContainer.getContainer().nextElementSibling){
 
 
-	        	console.log("previous and next");
+	        	//console.log"previous and next");
 	        	let PreviousContainerX = this.Ghost.previousElementSibling.getBoundingClientRect().x;
 	        	let NextContainerX = childContainer.getContainer().nextElementSibling.getBoundingClientRect().x;
 
@@ -763,7 +766,7 @@ this.Ghost.style.marginLeft = GoodMargin + "px";
 
         	this.pNode = this.Ghost.previousElementSibling;
         	do{
-	        	//console.log('in do');
+	        	////console.log'in do');
 	        	if(this.pNode){
 
 	        		if(this.Ghost.getBoundingClientRect().x > this.pNode.getBoundingClientRect().x){

@@ -19,8 +19,8 @@ export default class Note extends superViews{
 
 		super( MyClass , path);
 
-		console.log('in note.js');
-		console.log(id);
+		//console.log'in note.js');
+		//console.logid);
 
 		 if(id){
 
@@ -34,7 +34,7 @@ export default class Note extends superViews{
 		 }	
 
 
-		this.Title = "";
+		this.Title = false;
 		
 		this.init();
 
@@ -121,6 +121,10 @@ export default class Note extends superViews{
 
 	setTitle(title,store=false){
 
+//this === document.activeElement // where 'this' is a dom object
+
+		this.Header.HeaderButton.setTitle(title);
+
 		this.Title = title;
 		
 		this.Header.HeaderButton.showTitle(title);
@@ -131,6 +135,17 @@ export default class Note extends superViews{
 		}
 	}
 
+
+	updateTitle(title,store=false){
+
+		this.Title = title;
+
+		if(store){
+			this.store();
+
+		}
+
+	}
 
 	store(data=false){
 

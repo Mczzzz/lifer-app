@@ -175,8 +175,8 @@ export default class Main extends superViews{
 
 	authOK(datas){
 
-		console.log('IN  AUTH OK');
-		console.log(datas);
+		//console.log'IN  AUTH OK');
+		//console.logdatas);
 
 		if(datas.error == "Invalid credentials."){
 

@@ -111,7 +111,7 @@ export default class Objects extends superViews{
 
 
   ObjectJsTreeParentSelect(data){
-    console.log('ParentSelect');
+    //console.log'ParentSelect');
       this.ParentId = data.detail.node.id;
       this.jsTreeChild.unlinkSearch();
       this.jsTreeChild.loadData(data.detail.node);
@@ -144,9 +144,9 @@ export default class Objects extends superViews{
 
   ObjectJsTreeChildSelect(data){
 
-    console.log('ChildSelect');
-    console.log(data);
-    console.log(this.in);
+    //console.log'ChildSelect');
+    //console.logdata);
+    //console.logthis.in);
 
       if(this.in == "Container"){
 
@@ -228,8 +228,8 @@ export default class Objects extends superViews{
 
         if(MyFrag.filter("div").attr('id') == this.JsTreeContainer){
 
-          console.log('on passe bien la');
-          console.log(this.JstreeContainerObj);
+          //console.log'on passe bien la');
+          //console.logthis.JstreeContainerObj);
 
           TheJstree = this.JstreeContainerObj;
         

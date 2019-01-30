@@ -37,7 +37,7 @@ export default class Router {
 
 
 	Login(){
-		console.log('IN LOGIN');
+		//console.log'IN LOGIN');
 		let login = new Login("Frame-Login",false);
 
 	}
@@ -61,8 +61,8 @@ export default class Router {
 
 
 	Note(e){
-		console.log("router Note");
-		console.log(e);
+		//console.log"router Note");
+		//console.loge);
 		let guid = (e.detail.guid)? e.detail.guid : false;
 		//this.cleanBody();
 		this.NoteController.initView(guid);

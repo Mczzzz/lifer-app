@@ -63,7 +63,7 @@ export default class Text extends superViews{
 
      //PUBLICS
      setData(text){
-//          console.log('in set data');
+//          //console.log'in set data');
           this.container.innerHTML = text;
 
      }

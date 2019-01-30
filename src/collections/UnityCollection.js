@@ -15,13 +15,13 @@ export default class UnityCollection {
 
 
   GetTypes(dispatchResponseTo = false){
-//  	console.log("in unityCollection get");
+//  	//console.log"in unityCollection get");
     let result = this.SvcBackEndComm.ajaxSend('GET',this.apiPrefixe + 'get-all-types',dispatchResponseTo);
 
   }
 
   GetUnits(dispatchResponseTo = false){
- // 	console.log("in unityCollection get");
+ // 	//console.log"in unityCollection get");
     let result = this.SvcBackEndComm.ajaxSend('GET',this.apiPrefixe + 'get-all-unities',dispatchResponseTo);
 
   }

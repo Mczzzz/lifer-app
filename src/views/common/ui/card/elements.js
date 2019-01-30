@@ -89,8 +89,8 @@ export default class Elements extends superViews{
 
 
 /*     initTouch(component,path,callback){
-      //  console.log(component);
-      //  console.log(path);
+      //  //console.logcomponent);
+      //  //console.logpath);
         this[component].initTouch(path,callback);
 
      }*/

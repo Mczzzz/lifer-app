@@ -38,7 +38,7 @@ export default class Thumb extends superViews{
           //si elle exite déja on remplace l'image
 
           console.log("IN SET DATA DU THHHHHUMB !!!!");
-          console.log(data);
+          //console.logdata);
 
 
           let img =  this.img;
@@ -70,8 +70,8 @@ export default class Thumb extends superViews{
                     let ImgWidth = img.offsetWidth * RatioPhoto;
 
                     let decalY = ((ImgWidth - img.offsetWidth) / 2);
-//                    console.log(ImgWidth);
-//                    console.log(img.offsetWidth);
+//                    //console.logImgWidth);
+//                    //console.logimg.offsetWidth);
                     let decalX = 0;
 
                     img.style.width = "";
@@ -103,7 +103,7 @@ export default class Thumb extends superViews{
 
           let Fm = new FileManager();
           Fm.setElement(this);
-          Fm.showFile(name);
+          Fm.showFile(name,item_id);
 
 
      }

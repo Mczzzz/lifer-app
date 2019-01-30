@@ -40,7 +40,7 @@ export default class UserCollection {
 
     isAuth(callBackObj,callBackMethod){
 
-//      console.log('IN IS AUTH');
+//      //console.log'IN IS AUTH');
 
       this.callBackObj    = callBackObj;
       this.callBackMethod = callBackMethod;
@@ -54,7 +54,7 @@ export default class UserCollection {
     _dispatchAuthResponse(datas){
 
       let result = false;
-    //  console.log('_dispatchAuthResponse');
+    //  //console.log'_dispatchAuthResponse');
 
       if(datas.rows && datas.rows.length == 1 && datas.rows[0].name == 'is_auth' && datas.rows[0].value == 1){
 

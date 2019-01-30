@@ -35,13 +35,13 @@ export default class LoaderDatas {
 
 	loadIn(datas){
 
-		console.log('In Load IN');
-		console.log(datas.name);
-		console.log(typeof datas);
+		//console.log'In Load IN');
+		//console.logdatas.name);
+		//console.logtypeof datas);
 
 		if(datas.name == "TypeMismatchError"){
 
-			console.log('IN DOMExeptions !!!!!!!!!!!!!');
+			//console.log'IN DOMExeptions !!!!!!!!!!!!!');
 
 			//on va chercher l'image sur le serveur
 			this.NotesCollection.getPictureFromServer(this.itemId+"_"+this.name,this,'synchoApp');
@@ -62,15 +62,15 @@ export default class LoaderDatas {
 
 	synchoApp(datas){
 
-		console.log('IN SYNCHO APP FROM IMAGE SERVER');
+		//console.log'IN SYNCHO APP FROM IMAGE SERVER');
 
 		let objectURL = URL.createObjectURL(datas);
 
-		console.log('in synchro app');
-		console.log(this.elt);
+		//console.log'in synchro app');
+		//console.logthis.elt);
 
 		this.elt.setData(objectURL);
-		//console.log(datas);
+		////console.logdatas);
 
 
 	}

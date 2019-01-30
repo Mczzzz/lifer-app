@@ -38,8 +38,8 @@ export default class Text extends superViews{
 		this.card = new Card('Card', this.path);
 
 		this.card.setId(this.container.id);
-		console.log("this.callBack in text ressource");
-		console.log(this.ExtcallBack);
+		//console.log"this.callBack in text ressource");
+		//console.logthis.ExtcallBack);
 		this.card.setCallBack("keyup",this.ExtcallBack.path, this.ExtcallBack.method);
 
 		this.card.setStyle("borderWidth", "0px");
@@ -47,7 +47,7 @@ export default class Text extends superViews{
 		this.card.setStyle("margin", "0px");
 		this.card.setStyle("padding", "10px");
 		this.card.setStyle("boxShadow", "rgb(212, 212, 212) 2px 2px 2px");
-		this.card.setStyle("background", "linear-gradient(45deg, #FCE94F 0%, #F4F14C 100%)");
+		this.card.setStyle("background", "linear-gradient(45deg, rgb(222, 222, 222) 0%, rgb(255, 255, 255) 100%)");
 		this.card.setStyle("margin", "5px");
 		
 		
@@ -137,15 +137,15 @@ export default class Text extends superViews{
 
 
 	focus(first = false){
-/*		console.log('in focus');
-		console.log(this.TheTextElt);
-		console.log(this.TheTextElt.getContainer());*/
+/*		//console.log'in focus');
+		//console.logthis.TheTextElt);
+		//console.logthis.TheTextElt.getContainer());*/
 
 		this.TheTextElt.getContainer().focus();
 
 /*		if(first){
 			let elt = this.TheTextElt;
-			setTimeout(function(){  console.log('in function settimeout');elt.getContainer().focus(); }, 1000);	
+			setTimeout(function(){  //console.log'in function settimeout');elt.getContainer().focus(); }, 1000);	
 		}*/
 
 
@@ -220,7 +220,7 @@ export default class Text extends superViews{
 		}
 
 		
-		console.log(this.card.getContainer().style.boxShadow);
+		//console.logthis.card.getContainer().style.boxShadow);
 
 		//on transmet au parent notre position relative
 //TODO : A refaire plus propre car c'est du specifique dans du commun

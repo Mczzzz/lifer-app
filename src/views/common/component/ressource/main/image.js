@@ -46,7 +46,7 @@ export default class Image extends superViews{
 		this.card.setStyle("margin", "0px");
 		this.card.setStyle("padding", "10px");
 		this.card.setStyle("boxShadow", "rgb(212, 212, 212) 2px 2px 2px");
-		this.card.setStyle("background", "linear-gradient(45deg, rgb(252, 79, 160) 0%, rgb(244, 149, 76) 100%)");
+		this.card.setStyle("background", "linear-gradient(45deg, rgb(222, 222, 222) 0%, rgb(255, 255, 255) 100%)");
 		this.card.setStyle("margin", "5px");
 		this.card.setStyle("display", "flex");
 		this.card.setCallBack("keyup",this.path, "encapResponse");
@@ -66,8 +66,8 @@ export default class Image extends superViews{
 //il faut refaire un pont ici pour récuprer les datas
 	encapResponse(data){
 
-		console.log('encapResponse');
-		console.log(data);
+		//console.log'encapResponse');
+		//console.logdata);
 
 
 		if(this.ExtcallBack){
@@ -93,7 +93,7 @@ export default class Image extends superViews{
 		console.log('in launch cam');
 
 		let Fm = new FileManager();
-		Fm.setCallBack(this,"showImage");
+		Fm.setCallBack(this,"injectImage");
 		Fm.uploader("camera",this.container.id);
 
 
@@ -116,23 +116,34 @@ export default class Image extends superViews{
 		this.ImageElt.setStyle("marginRight" , "10px");
 		this.ImageElt.setStyle("display" , "flex");
 		this.ImageElt.setStyle("alignItems" , "center");
+		this.ImageElt.setStyle("width" , "50px");
+		//console.log(this.ImageElt);
 
-
+		this.ImageElt.img.style.borderRadius = "7px";
+		this.ImageElt.img.style.border = "1px solid #ffffff7d";
 	
 	}
 
 
-	showImage(name, res = false){
+	showImage(name, item_id){
 
-		this.addThumb(res,name);
+		this.container.id = item_id;
+		this.addThumb(name);
+
+	}
+
+	injectImage(datas, name){
+
+		this.addThumb(name,datas);
 
 	}
 
 
-
     addThumb(name, data = false){
 
-    	console.log('in addthumb');
+
+    	this.name = name;
+    	//console.log'in addthumb');
 
     	
     	//pour savoir si je remonte l'infos ou pas de l'image
@@ -155,9 +166,11 @@ export default class Image extends superViews{
 
 		if(this.ExtcallBack && sendCallBack){
 		
-			this.response.path = name;
+			this.response.path = this.name;
 			this.response.text = this.getTextElement().getText();
 
+/*			console.log(this.ExtcallBack.path);
+			console.log(this.ExtcallBack.method);*/
 			let objectToCallBack = this.getObjectThisfromPath(this.ExtcallBack.path);
            	objectToCallBack[this.ExtcallBack.method]("",this.response);
 
@@ -169,10 +182,10 @@ export default class Image extends superViews{
 
 
 //TODO A FACTORISE AVEC SON COPAIN DANS RESOURCE
-	ImageViewer(data){
+	ImageViewer(){
 		
-		console.log("ImageViewer");
-		console.log(data);
+		//console.log"ImageViewer");
+		//console.logdata);
 		let viewCard = new Card('Viewer_', this.path);
 		viewCard.setStyle("position", "absolute");
 		//viewCard.setStyle("position", "absolute");
@@ -184,7 +197,8 @@ export default class Image extends superViews{
 		viewCard.setStyle("zIndex", "1000");
 
 		let PictElt = viewCard.setElement("PictElt");
-		viewCard.push("Image", PictElt, "MyPict", data);
+		let MyImage = viewCard.push("Image", PictElt, "MyPict");
+		MyImage.setDataByName(this.name, this.container.id)
 
 		viewCard.getContainer().addEventListener("click",()=>viewCard.destroyMe());
 
