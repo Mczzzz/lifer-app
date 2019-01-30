@@ -26,10 +26,17 @@ export default class UniversButtons extends superViews{
 		this.card.setStyle("background", "transparent");
 
 
-			let Elt   = this.card.setElement("Element");
-			Elt.setStyle("justifyContent","space-between");
+		this.Elt   = this.card.setElement("Element");
+		this.Elt.setStyle("justifyContent","space-between");
 
 	}
 
+
+	showButtons(){
+
+		let object = this.card.push("Button",this.Elt,"objectButton", 📦 );
+		let users = this.card.push("Button",this.Elt,"userButton", 👪);
+
+	}
 
 }
