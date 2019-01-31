@@ -63,6 +63,7 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("alignItems","center");
 			this.MainElement.setStyle("height","90px");
 			this.MainElement.setStyle("justifyContent","center");
+			this.MainElement.setStyle("flex",1);
 
 
 
@@ -70,6 +71,17 @@ export default class Add extends superViews{
 				NomTimer.setAttribute("placeholder","Nom");
 				NomTimer.setStyle("color", "black");
 				NomTimer.setStyle("fontSize", "25px");
+
+
+
+			this.FooterElement   = this.card.setElement("Footer");
+			this.FooterElement.setStyle("justifyContent","space-between");
+			this.FooterElement.setStyle("alignItems","center");
+			this.FooterElement.setStyle("height","90px");
+			this.FooterElement.setStyle("justifyContent","center");
+
+			let ValidTimer = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
+
 
 
 	}
