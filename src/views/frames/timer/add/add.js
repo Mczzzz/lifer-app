@@ -19,15 +19,15 @@ export default class Add extends superViews{
 
 		console.log("addTimerInit");
 		this.setStyle("position" , "absolute");
-		this.setStyle("top" , "0px");
-		this.setStyle("left" , "0px");
-		this.setStyle("height" , "100%");
-		this.setStyle("width" , "100%");
+		this.setStyle("top" , "15%");
+		this.setStyle("left" , "15%");
+		this.setStyle("height" , "70%");
+		this.setStyle("width" , "70%");
 		this.setStyle("display" , "flex");
 		this.setStyle("flexDirection" , "column");
 		this.setStyle("background" , "red");
+		this.setStyle("borderRadius" , "30px");
 		//this.setStyle("zIndex" , 10000);
-
 
 
 
