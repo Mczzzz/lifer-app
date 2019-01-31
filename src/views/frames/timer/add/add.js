@@ -67,8 +67,8 @@ export default class Add extends superViews{
 
 
 				let NomTimer = this.card.push("Text", this.MainElement,"TimerName", ""); //274C
-
-
+				NomTimer.setAttribute("placeholder","Nom");
+				NomTimer.setStyle("color", "gray");
 
 
 	}
