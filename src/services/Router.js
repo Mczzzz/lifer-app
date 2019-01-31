@@ -56,6 +56,14 @@ export default class Router {
 	}
 
 
+	Timer(){
+		//this.cleanBody();
+		let  timer = new Timer();
+
+	}
+
+
+
 	Objects(){
 
 		this.cleanBody();
