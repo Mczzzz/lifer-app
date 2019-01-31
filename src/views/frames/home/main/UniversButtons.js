@@ -37,7 +37,7 @@ export default class UniversButtons extends superViews{
 
 
 		//1F4A1
-		let timer = this.card.push("Button",this.Elt,"ideaButton", String.fromCodePoint(0x23F2));
+		let timer = this.card.push("Button",this.Elt,"timerButton", String.fromCodePoint(0x23F2));
         timer.setStylePicto("fontSize","50px");
 		timer.setStylePicto("border", "5px solid black");
         timer.setStylePicto("padding","10px 10px 20px 10px");
