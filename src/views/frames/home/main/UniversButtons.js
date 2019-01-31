@@ -43,6 +43,7 @@ export default class UniversButtons extends superViews{
         timer.setStylePicto("padding","10px 10px 20px 10px");
         timer.setStylePicto("borderRadius" ,"10px");
 
+        timer.getContainer().addEventListener("click",()=>this.timerFrame());
 
 
 /*		//1F4A1
@@ -69,5 +70,18 @@ export default class UniversButtons extends superViews{
         users.setStylePicto("borderRadius" ,"10px");
 
 	}
+
+
+
+
+	timerFrame(){
+
+		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Timer'}});
+		window.dispatchEvent(LinkEvent);
+
+	}
+
+
+
 
 }
