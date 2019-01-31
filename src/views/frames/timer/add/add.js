@@ -25,9 +25,10 @@ export default class Add extends superViews{
 		this.setStyle("width" , "70%");
 		this.setStyle("display" , "flex");
 		this.setStyle("flexDirection" , "column");
-		this.setStyle("background" , "gray");
+		this.setStyle("background" , "#d0d0d0");
 		this.setStyle("borderRadius" , "30px");
-		//this.setStyle("zIndex" , 10000);
+		this.setStyle("border" , "5px solid #009688");
+
 
 
 
@@ -63,37 +64,14 @@ export default class Add extends superViews{
 
 	CloseMe(){
 
-	let DeviceWidth = this.Lifer.getData("User-Device","Screen").width;
-
-	let time = 300;
-
-
-		this.parentThis.parentThis.getContainer().animate([
-		  // keyframes
-		  { transform: 'translateX(0px)' }, 
-		  { transform: 'translateX('+DeviceWidth+'px)' }
-		], { 
-		  // timing options
-		  duration: time+100,
-		  easing : 'ease-in-out',
-		  iterations: 1
-		});
-
-		setTimeout(()=>this.changeRoute(), time);
-
+	
+		this.destroyMe();
 
 	}
 
 
 
-	changeRoute(){
-
-		this.parentThis.parentThis.destroyMe();
-
-		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Home'}});
-		window.dispatchEvent(LinkEvent);
-
-	}
+	
 
 
 
