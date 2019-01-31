@@ -2,6 +2,8 @@ import superViews from "../../../common/superViews.js";
 
 import Card from "../../../common/ui/card.js";
 
+import Add from "../add/add.js";
+
 export default class FooterButtons extends superViews{
 	
 
@@ -50,6 +52,8 @@ export default class FooterButtons extends superViews{
 
 
 	addTimer(){
+
+		let adder = new Add('TimeAdder', this.path);
 
 
 	}
