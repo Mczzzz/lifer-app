@@ -58,6 +58,15 @@ export default class Add extends superViews{
 					HeaderBackButton.getContainer().addEventListener("click",()=>this.CloseMe());
 
 
+			this.MainElement   = this.card.setElement("Main");
+			this.MainElement.setStyle("justifyContent","space-between");
+			this.MainElement.setStyle("alignItems","center");
+
+				let NomTimer = this.card.push("Text", this.MainElement,"TimerName", ""); //274C
+
+
+
+
 	}
 
 
