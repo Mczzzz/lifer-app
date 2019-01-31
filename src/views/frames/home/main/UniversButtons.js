@@ -38,14 +38,14 @@ export default class UniversButtons extends superViews{
 		//1F4A1
 		let idea = this.card.push("Button",this.Elt,"ideaButton", String.fromCodePoint(0x1F4A1));
         idea.setStylePicto("fontSize","50px");
-		idea.setStylePicto("border", "1px solid black");
+		idea.setStylePicto("border", "5px solid black");
         idea.setStylePicto("padding","10px 10px 20px 10px");
         idea.setStylePicto("borderRadius" ,"10px");
 
 
 		let object = this.card.push("Button",this.Elt,"objectButton", String.fromCodePoint(0x1F4E6));
         object.setStylePicto("fontSize","50px");
-		object.setStylePicto("border", "1px solid black");
+		object.setStylePicto("border", "5px solid black");
         object.setStylePicto("padding","10px 10px 20px 10px");
         object.setStylePicto("borderRadius" ,"10px");
 
@@ -54,7 +54,7 @@ export default class UniversButtons extends superViews{
 
 		let users = this.card.push("Button",this.Elt,"userButton", String.fromCodePoint(0x1F46A));
 		users.setStylePicto("fontSize","50px");
-		users.setStylePicto("border", "1px solid black");
+		users.setStylePicto("border", "5px solid black");
         users.setStylePicto("padding","10px 10px 20px 10px");
         users.setStylePicto("borderRadius" ,"10px");
 
