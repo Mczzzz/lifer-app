@@ -3,6 +3,7 @@ import Home from '../controller/HomeController.js';
 //import Objects from '../views/frames/objects.js';
 import Note from '../controller/NoteController.js';
 import Login from '../views/frames/login.js';
+import Timer from '../views/frames/timer.js';
 
 export default class Router {
 
