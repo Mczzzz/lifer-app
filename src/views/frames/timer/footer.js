@@ -31,7 +31,7 @@ export default class Footer extends superViews{
 
 	initChilds(){
 
-	//	this.FooterButton = new FooterButton("Action",this.path);
+		this.FooterButton = new FooterButton("Action",this.path);
 
 	}
 

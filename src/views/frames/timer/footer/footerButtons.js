@@ -35,59 +35,24 @@ export default class FooterButtons extends superViews{
 
 
 
-				let StartNote = this.card.push("Button", Elt,"AddNote", "note_add");
+				let newTimer = this.card.push("Button", Elt,"AddNote", String.fromCodePoint(0x2795)); 
 
-					StartNote.setStylePicto("fontSize","25px");
-					StartNote.setStylePicto("marginRight","0px");
-					StartNote.setStylePicto("color","green");
-					StartNote.setStylePicto("alignItems","center");
+					newTimer.setStylePicto("fontSize","25px");
+					newTimer.setStylePicto("marginRight","0px");
+					newTimer.setStylePicto("color","green");
+					newTimer.setStylePicto("alignItems","center");
 
-					StartNote.getContainer().addEventListener("click",()=>this.StartNote());
+					newTimer.getContainer().addEventListener("click",()=>this.addTimer());
 
-
-
-					///////////////
-					let sep1 = this.card.push("Button", Elt,"sep1", "more_vert");
-
-					sep1.setStylePicto("fontSize","25px");
-					sep1.setStylePicto("margin","5px");
-					sep1.setStylePicto("color","#cfcfcf");
-					sep1.setStylePicto("alignItems","center");
-					//////////////
-
-
-
-
-
-				let FooterObjectButton = this.card.push("Button", Elt,"toObjects", "widgets");
-
-					FooterObjectButton.setStylePicto("fontSize","25px");
-					FooterObjectButton.setStylePicto("color","green");
-					FooterObjectButton.setStylePicto("alignItems","center");
-
-					FooterObjectButton.getContainer().addEventListener("click",()=>this.addToHomeScreen());
 
 
 	}
 
 
-	StartNote(){
+	addTimer(){
 
-		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Note'}});
-		window.dispatchEvent(LinkEvent);
 
 	}
-
-
-	goToObject(){
-
-		let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Objects'}});
-		window.dispatchEvent(LinkEvent);
-
-	}
-
-
-
 
 
 
