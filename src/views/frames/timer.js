@@ -29,7 +29,7 @@ export default class Timer extends superViews{
 		this.setStyle("display" , "flex");
 		this.setStyle("flexDirection" , "column");
 		this.setStyle("background" , "transparent");
-		this.setStyle("zIndex" , 10000);
+
 
 		//this.container.style.background = 'linear-gradient(45deg, #8e24aa 0%, #ff6e40 100%)';
 /*		this.setStyle("display" , "flex");

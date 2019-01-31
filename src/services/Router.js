@@ -59,7 +59,7 @@ export default class Router {
 
 	Timer(){
 		//this.cleanBody();
-		let  timer = new Timer();
+		let timer = new Timer('Frame-Timer',null);
 
 	}
 
