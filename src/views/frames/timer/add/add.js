@@ -40,6 +40,7 @@ export default class Add extends superViews{
 		this.card.setStyle("margin", "0px");
 		this.card.setStyle("padding", "10px");
 		this.card.setStyle("background", "transparent");
+		this.card.setStyle("height", "100%");
 
 //Peut etre a revoir car c'est la card qui me renvoi ça pour le moment
 		this.card.setCallBack("keyup",this.path, 'updateTitle');
