@@ -61,6 +61,10 @@ export default class Add extends superViews{
 			this.MainElement   = this.card.setElement("Main");
 			this.MainElement.setStyle("justifyContent","space-between");
 			this.MainElement.setStyle("alignItems","center");
+			this.MainElement.setStyle("height","90px");
+			this.MainElement.setStyle("justifyContent","center");
+
+
 
 				let NomTimer = this.card.push("Text", this.MainElement,"TimerName", ""); //274C
 
