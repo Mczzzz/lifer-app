@@ -25,7 +25,7 @@ export default class Add extends superViews{
 		this.setStyle("width" , "70%");
 		this.setStyle("display" , "flex");
 		this.setStyle("flexDirection" , "column");
-		this.setStyle("background" , "red");
+		this.setStyle("background" , "gray");
 		this.setStyle("borderRadius" , "30px");
 		//this.setStyle("zIndex" , 10000);
 
@@ -48,7 +48,7 @@ export default class Add extends superViews{
 			this.HeaderElement.setStyle("alignItems","center");
 
 
-					let HeaderBackButton = this.card.push("Button", this.HeaderElement,"Back", "keyboard_backspace");
+					let HeaderBackButton = this.card.push("Button", this.HeaderElement,"Back", String.fromCodePoint(0x274C)); //274C
 
 					HeaderBackButton.setStylePicto("fontSize","25px");
 					HeaderBackButton.setStylePicto("color","green");
