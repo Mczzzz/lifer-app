@@ -59,7 +59,7 @@ export default class FooterButtons extends superViews{
 
 
 
-				let StartNote = this.card.push("Button", Elt,"AddNote", "note_add");
+				let StartNote = this.card.push("Button", Elt,"AddNote", String.fromCodePoint(0x1F4C4)); //1F4C4
 
 					StartNote.setStylePicto("fontSize","25px");
 					StartNote.setStylePicto("marginRight","0px");
