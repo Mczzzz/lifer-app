@@ -52,7 +52,7 @@ export default class FooterButtons extends superViews{
 
 
 	addTimer(){
-
+		console.log('in AddTimer');
 		let adder = new Add('TimeAdder', this.path);
 
 

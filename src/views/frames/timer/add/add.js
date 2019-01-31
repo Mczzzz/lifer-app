@@ -17,6 +17,7 @@ export default class Add extends superViews{
 
 	init(){
 
+		console.log("addTimerInit");
 		this.setStyle("position" , "absolute");
 		this.setStyle("top" , "0px");
 		this.setStyle("left" , "0px");
