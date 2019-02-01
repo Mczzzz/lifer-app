@@ -80,6 +80,8 @@ export default class Add extends superViews{
 				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
 				this.LogoTap.setStyle("color", "black");
 				this.LogoTap.setStyle("fontSize", "100px");
+				this.LogoTap.setAttribute("size", 1);
+
 
 
 				this.NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
