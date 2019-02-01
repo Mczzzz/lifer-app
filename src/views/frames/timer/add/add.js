@@ -24,7 +24,7 @@ export default class Add extends superViews{
 		this.setStyle("position" , "absolute");
 		this.setStyle("top" , "15%");
 		this.setStyle("left" , "15%");
-		this.setStyle("height" , "70%");
+		//this.setStyle("height" , "70%");
 		this.setStyle("width" , "70%");
 		this.setStyle("display" , "flex");
 		this.setStyle("flexDirection" , "column");
@@ -79,7 +79,7 @@ export default class Add extends superViews{
 				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", String.fromCodePoint(0x2753)); //274C
 				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
 				this.LogoTap.setStyle("color", "black");
-				this.LogoTap.setStyle("fontSize", "25px");
+				this.LogoTap.setStyle("fontSize", "100px");
 
 
 				this.NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
