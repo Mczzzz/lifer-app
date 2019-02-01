@@ -131,7 +131,7 @@ export default class Add extends superViews{
 		//le récupère mon nom
 		//je crée une entre en base (ce qui me donne un id) (toujours a voir pour les synchros les ids)
 		//j'ajoute dans une table a part les events
-
+		this.CloseMe();
 	}
 
 
