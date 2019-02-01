@@ -72,16 +72,16 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
-				let LogoTap = this.card.push("Text", this.MainElement,"TapLogo", String.fromCodePoint(0x2753)); //274C
-				LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
-				LogoTap.setStyle("color", "black");
-				LogoTap.setStyle("fontSize", "25px");
+				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", String.fromCodePoint(0x2753)); //274C
+				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
+				this.LogoTap.setStyle("color", "black");
+				this.LogoTap.setStyle("fontSize", "25px");
 
 
-				let NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
-				NomTap.setAttribute("placeholder","Nom");
-				NomTap.setStyle("color", "black");
-				NomTap.setStyle("fontSize", "25px");
+				this.NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
+				this.NomTap.setAttribute("placeholder","Nom");
+				this.NomTap.setStyle("color", "black");
+				this.NomTap.setStyle("fontSize", "25px");
 
 
 
@@ -111,7 +111,11 @@ export default class Add extends superViews{
 
 		console.log("in store Tap");
 
+		console.log(this.LogoTap.getText());
+		console.log(this.NomTap.getText());
 		//je récupere mon logo
+
+
 		//le récupère mon nom
 		//je crée une entre en base (ce qui me donne un id) (toujours a voir pour les synchros les ids)
 		//j'ajoute dans une table a part les events
