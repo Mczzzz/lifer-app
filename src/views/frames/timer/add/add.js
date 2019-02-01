@@ -71,6 +71,11 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
+				let LogoTimer = this.card.push("Text", this.MainElement,"TimerLogo", String.fromCodePoint(0x2753)); //274C
+				LogoTimer.setAttribute("placeholder",String.fromCodePoint(0x2753));
+				LogoTimer.setStyle("color", "black");
+				LogoTimer.setStyle("fontSize", "25px");
+
 
 				let NomTimer = this.card.push("Text", this.MainElement,"TimerName", ""); //274C
 				NomTimer.setAttribute("placeholder","Nom");
