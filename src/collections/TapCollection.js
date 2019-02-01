@@ -15,6 +15,7 @@ export default class TapCollection {
 
     	this.SvcBackEndComm = new SvcBackEndComm();
 
+    	this.init();
 
 	}
 
