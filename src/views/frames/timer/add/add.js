@@ -17,7 +17,6 @@ export default class Add extends superViews{
 
 	init(){
 
-		console.log("addTimerInit");
 		this.setStyle("position" , "absolute");
 		this.setStyle("top" , "15%");
 		this.setStyle("left" , "15%");
@@ -28,8 +27,6 @@ export default class Add extends superViews{
 		this.setStyle("background" , "#d0d0d0");
 		this.setStyle("borderRadius" , "30px");
 		this.setStyle("border" , "5px solid #009688");
-
-
 
 
 		this.card = new Card('Card', this.path);
@@ -71,31 +68,31 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("flexDirection", "column");
 			this.MainElement.setStyle("alignItems","center");
 
-			
+
 			this.MainElement.setStyle("flex",1);
 
 
-				let LogoTimer = this.card.push("Text", this.MainElement,"TimerLogo", String.fromCodePoint(0x2753)); //274C
-				LogoTimer.setAttribute("placeholder",String.fromCodePoint(0x2753));
-				LogoTimer.setStyle("color", "black");
-				LogoTimer.setStyle("fontSize", "25px");
+				let LogoTap = this.card.push("Text", this.MainElement,"TapLogo", String.fromCodePoint(0x2753)); //274C
+				LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
+				LogoTap.setStyle("color", "black");
+				LogoTap.setStyle("fontSize", "25px");
 
 
-				let NomTimer = this.card.push("Text", this.MainElement,"TimerName", ""); //274C
-				NomTimer.setAttribute("placeholder","Nom");
-				NomTimer.setStyle("color", "black");
-				NomTimer.setStyle("fontSize", "25px");
+				let NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
+				NomTap.setAttribute("placeholder","Nom");
+				NomTap.setStyle("color", "black");
+				NomTap.setStyle("fontSize", "25px");
 
 
 
 			this.FooterElement   = this.card.setElement("Footer");
 			this.FooterElement.setStyle("justifyContent","space-between");
 			this.FooterElement.setStyle("alignItems","center");
-			//this.FooterElement.setStyle("height","90px");
+			this.FooterElement.setStyle("height","90px");
 			this.FooterElement.setStyle("justifyContent","center");
 
-			let ValidTimer = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
-
+			let ValidTap = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
+			ValidTap.getContainer().addEventListener("click",() => this.storeTap());
 
 
 	}
@@ -110,8 +107,16 @@ export default class Add extends superViews{
 	}
 
 
+	storeTap(){
 
-	
+		console.log("in store Tap");
+
+		//je récupere mon logo
+		//le récupère mon nom
+		//je crée une entre en base (ce qui me donne un id) (toujours a voir pour les synchros les ids)
+		//j'ajoute dans une table a part les events
+
+	}
 
 
 
