@@ -76,7 +76,7 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
-				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", String.fromCodePoint(0x2753)); //274C
+				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", ""); //274C
 				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
 				this.LogoTap.setStyle("color", "black");
 				this.LogoTap.setStyle("fontSize", "100px");
