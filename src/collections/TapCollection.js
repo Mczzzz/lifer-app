@@ -94,10 +94,10 @@ export default class TapCollection {
 		this.webSQL.playQuery(TblParams.db,TblParams.create);
 
 
-		let TblParams = {};
-		TblParams.name = "TapsEvents";
-		TblParams.db = "cacheData";
-		TblParams.create = `CREATE TABLE IF NOT EXISTS `+TblParams.name+` (id,
+		let TblParams2 = {};
+		TblParams2.name = "TapsEvents";
+		TblParams2.db = "cacheData";
+		TblParams2.create = `CREATE TABLE IF NOT EXISTS `+TblParams.name+` (id,
 																		   tmpId,
 																		   tapId
 																	       value,
@@ -106,7 +106,7 @@ export default class TapCollection {
 																	   `;
 
 
-		this.webSQL.playQuery(TblParams.db,TblParams.create);
+		this.webSQL.playQuery(TblParams2.db,TblParams2.create);
 
 
 
