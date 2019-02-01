@@ -76,14 +76,14 @@ export default class Add extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
-				this.LogoTap = this.card.push("Input", this.MainElement,"TapLogo", false); //274C
-				this.LogoTap.setAttributeInput("placeholder",String.fromCodePoint(0x2753));
-				this.LogoTap.setStyleInput("color", "black");
-				this.LogoTap.setStyleInput("fontSize", "100px");
-				this.LogoTap.setAttributeInput("maxlength", 1);
-				this.LogoTap.setAttributeInput("size", 1);
-				this.LogoTap.setStyleInput("background", "transparent");
-				this.LogoTap.setStyleInput("textAlign", "center");
+				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", false); //274C
+				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
+				this.LogoTap.setStyle("color", "black");
+				this.LogoTap.setStyle("fontSize", "100px");
+/*				this.LogoTap.setAttribute("maxlength", 1);
+				this.LogoTap.setAttribute("size", 1);*/
+				//this.LogoTap.setStyle("background", "transparent");
+				this.LogoTap.setStyle("textAlign", "center");
 
 
 
