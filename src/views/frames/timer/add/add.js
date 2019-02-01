@@ -1,5 +1,7 @@
 import superViews from "../../../common/superViews.js";
 
+import LoaderCollection from '../../../../services/Loader/LoaderCollection.js';
+
 import Card from "../../../common/ui/card.js";
 
 export default class Add extends superViews{
@@ -11,6 +13,8 @@ export default class Add extends superViews{
 
 
 		this.init();
+
+		this.TapCollection = new LoaderCollection('Tap');
 		
 	}
 
@@ -114,8 +118,11 @@ export default class Add extends superViews{
 		console.log(this.LogoTap.getText());
 		console.log(this.NomTap.getText());
 		//je récupere mon logo
+		let data = {};
+		data.name = this.LogoTap.getText();
+		data.logo = this.NomTap.getText();
 
-
+		this.TapCollection.create(data);
 		//le récupère mon nom
 		//je crée une entre en base (ce qui me donne un id) (toujours a voir pour les synchros les ids)
 		//j'ajoute dans une table a part les events
