@@ -43,7 +43,7 @@ export default class TapCollection {
 
 	create(data){
 		//console.log'in store collection');
-		//console.logdata);
+		console.log(data);
 
 
 			//console.log'note insert');
