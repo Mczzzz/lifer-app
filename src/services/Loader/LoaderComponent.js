@@ -21,11 +21,6 @@ const classes = {
 class LoaderComponent  {
     constructor (className,MyClass,path,prepend = false,callback=false) {
 
-        console.log(className);
-        console.log(MyClass);
-        console.log(path);
-        console.log(prepend);
-        console.log(callback);
         return new classes[className](MyClass,path,prepend,callback);
     }
 }

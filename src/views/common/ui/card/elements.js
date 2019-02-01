@@ -74,11 +74,10 @@ export default class Elements extends superViews{
 
     add(type, classSuffixe, data = false,prepend = false,callback = false){
 
-        console.log("in add");
 
     	this[classSuffixe] = new loaderComponent(type, type +"-"+ classSuffixe, this.path,prepend,callback);
         
-        console.log(" in add after loaderCompoent");
+
         if(data){
             this[classSuffixe].setData(data);
         }
