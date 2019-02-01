@@ -82,7 +82,7 @@ export default class Add extends superViews{
 				this.LogoTap.setStyleInput("fontSize", "100px");
 				this.LogoTap.setAttributeInput("maxlength", 1);
 				this.LogoTap.setAttributeInput("size", 1);
-				this.LogoTap.setStyleInput("background", "tranparent");
+				this.LogoTap.setStyleInput("background", "transparent");
 				this.LogoTap.setStyleInput("textAlign", "center");
 
 
