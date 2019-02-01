@@ -190,8 +190,8 @@ export default class Main extends superViews{
 			this.webSQL.playQuery('cacheData',qry);
 
 			//je redemarre la synchro
-			DatasSynchronizing.fillQueue(true);
-			DatasSynchronizing.startService();
+//			DatasSynchronizing.fillQueue(true);
+//			DatasSynchronizing.startService();
 
 			let NoteCollection = new LoaderCollection("Notes");
 			NoteCollection.syncFromServer();

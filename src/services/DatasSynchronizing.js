@@ -37,7 +37,7 @@ class DatasSynchronizing {
 
 
 
-		this.UserCollection.isAuth(this,'startService');
+//		this.UserCollection.isAuth(this,'startService');
 
 
 
