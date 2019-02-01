@@ -76,7 +76,7 @@ export default class TapCollection {
 	_initLocalStorage(){
 
 	//localStorage
-
+	console.log("tap _initLocalStorage");
 //BASE DE CACHE USUEL
 
 		let TblParams = {};
