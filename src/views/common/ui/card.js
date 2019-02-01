@@ -61,7 +61,7 @@ export default class card extends superViews{
 
      push(type,element,classSuffixe,data,prepend = false){
 
-
+      console.log("in push");
           let callback = {};
           callback.path = this.path;
           callback.method = "CallBackFromItems";
