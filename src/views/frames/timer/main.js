@@ -90,8 +90,8 @@ export default class Main extends superViews{
 
 
 
-			let 	item = card.push("TextButton", Elt3,"view_Note"+id,datas.logo);
-			item.setStyle("padding", "2px 0px 10px 10px");
+			let 	logo = card.push("TextButton", Elt3,"view_Note"+id,datas.logo);
+			logo.setStyle("padding", "2px 0px 10px 10px");
 
 
 
@@ -100,8 +100,8 @@ export default class Main extends superViews{
 
 
 
-			let 	item = card.push("TextButton", Elt,"view_Note"+id,datas.name);
-			item.setStyle("padding", "2px 0px 10px 10px");
+			let 	name = card.push("TextButton", Elt,"view_Note"+id,datas.name);
+			name.setStyle("padding", "2px 0px 10px 10px");
 
 
 
