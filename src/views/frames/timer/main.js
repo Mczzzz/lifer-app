@@ -92,22 +92,22 @@ export default class Main extends superViews{
 
 
 			let Elt3 = card.setElement("Main"+id);
-			Elt3.setStyle("justifyContent","flex-start");
+			Elt3.setStyle("justifyContent","center");
 
 
 
 			let 	logo = card.push("TextButton", Elt3,"view_Note"+id,datas.logo);
-			logo.setStyle("padding", "2px 0px 10px 10px");
+			logo.setStyle("fontSize", "50px");
 
 
 
 			let Elt = card.setElement("Footer"+id);
-			Elt.setStyle("justifyContent","flex-start");
+			Elt.setStyle("justifyContent","center");
 
 
 
 			let 	name = card.push("TextButton", Elt,"view_Note"+id,datas.name);
-			name.setStyle("padding", "2px 0px 10px 10px");
+			//name.setStyle("padding", "2px 0px 10px 10px");
 
 
 
