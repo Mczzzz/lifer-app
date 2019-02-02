@@ -85,7 +85,7 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","flex-end");
 
 
-			this.num = card.push("TextButton", Elt2,"numIt"+id,0);
+			this.num = card.push("TextButton", Elt2,"numIt"+id,"0");
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
