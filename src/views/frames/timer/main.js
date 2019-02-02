@@ -37,7 +37,7 @@ export default class Main extends superViews{
 		this.setStyle("display" , "flex");
 
 
-		this.TapCollection.getTapers(this, addTapers);
+		this.TapCollection.getTapers(this, "addTapers");
 		
 	}
 
