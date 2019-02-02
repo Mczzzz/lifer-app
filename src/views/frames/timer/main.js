@@ -131,7 +131,11 @@ export default class Main extends superViews{
 
 	incrementIt(elt, compteur){
 
+		console.log('in incrementIt');
+
 		compteur = compteur++;
+
+		console.log(compteur);
 
 		elt.setData(compteur);
 
