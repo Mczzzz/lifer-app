@@ -44,12 +44,12 @@ export default class Main extends superViews{
 
 	addTapers(datas){
 
+		console.log(datas);
+
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
 
-
 				this.createCard(datas.rows[i]);
-
 
 			}
 
@@ -57,6 +57,8 @@ export default class Main extends superViews{
 
 
 	createCard(datas){
+
+		console.log('in create card');
 
 		let id = datas.id;
 
