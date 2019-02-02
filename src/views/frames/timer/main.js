@@ -82,7 +82,6 @@ export default class Main extends superViews{
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
 
-		    card.getContainer().addEventListener("click",()=>this.incrementIt(this.num[this.i]));
 
 
 			let Elt2 = card.setElement("header"+id);
@@ -101,6 +100,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
+			card.getContainer().addEventListener("click",()=>this.incrementIt(itemDate,this.num[this.i]));
 
 
 
@@ -129,9 +129,11 @@ export default class Main extends superViews{
 
 
 
-	incrementIt(elt){
+	incrementIt(elt, compteur){
 
-		elt++
+		compteur = compteur++;
+
+		elt.setData(compteur);
 
 
 }
