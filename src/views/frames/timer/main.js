@@ -100,7 +100,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
-			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,this.num[this.i]));
+			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,i));
 
 
 
@@ -133,11 +133,11 @@ export default class Main extends superViews{
 
 		console.log('in incrementIt');
 
-		compteur = compteur + 1 ;
+		this.num[compteur] = this.num[compteur]++;
 
-		console.log(compteur);
+		console.log(this.num[compteur]);
 
-		elt.setData(compteur);
+		elt.setData(this.num[compteur]);
 
 
 }
