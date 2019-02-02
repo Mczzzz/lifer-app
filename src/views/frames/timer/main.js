@@ -18,9 +18,11 @@ export default class Main extends superViews{
 
 		this.webSQL = new webSQL();
 
+		this.TapCollection = new LoaderCollection('Tap');
+
 		this.init();
 		
-		this.TapCollection = new LoaderCollection('Tap');
+		
 
 	}
 
