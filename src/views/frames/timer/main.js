@@ -76,7 +76,7 @@ export default class Main extends superViews{
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
 
-		    card.getContainer().addEventListener("click",()=>this.openNote(id));
+		    card.getContainer().addEventListener("click",()=>this.incrementIt());
 
 
 			let Elt2 = card.setElement("header"+id);
@@ -87,8 +87,14 @@ export default class Main extends superViews{
 		//	let date = this.Moment(datas.timestamp).fromNow();
 			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,"edit");
 			itemDate.setStyle('font-size', '10px');
-			itemDate.setStyle("padding", "3px");
+			itemDate.setStyle("padding", "5px");
 			itemDate.setStyle("alignItems", "baseline");
+			itemDate.setStyle("background", "red");
+			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
+
+
+			let 	num = card.push("TextButton", Elt2,"date_Note"+id,0);
+
 
 
 			let Elt3 = card.setElement("Main"+id);
@@ -111,13 +117,16 @@ export default class Main extends superViews{
 
 
 
-
-
-
-
 	}
 
 
+
+	incrementIt(){
+
+
+
+
+}
 
 
 
