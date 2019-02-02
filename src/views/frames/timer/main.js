@@ -128,7 +128,7 @@ export default class Main extends superViews{
 
 
 	incrementIt(elt, compteur){
-
+		console.log(this.num);
 		console.log('in incrementIt');
 
 		this.num[compteur] = this.num[compteur]++;
