@@ -82,14 +82,14 @@ export default class Main extends superViews{
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
 
-		    card.getContainer().addEventListener("click",()=>this.incrementIt(this.i));
+		    card.getContainer().addEventListener("click",()=>this.incrementIt(this.num[this.i]));
 
 
 			let Elt2 = card.setElement("header"+id);
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			this.num = card.push("TextButton", Elt2,"numIt"+id,String(this.num[this.i]));
+			this.num = card.push("Text", Elt2,"numIt"+id,String(this.num[this.i]));
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
@@ -129,9 +129,9 @@ export default class Main extends superViews{
 
 
 
-	incrementIt(){
+	incrementIt(elt){
 
-
+		elt++
 
 
 }
