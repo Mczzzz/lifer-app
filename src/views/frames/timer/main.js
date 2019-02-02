@@ -49,7 +49,7 @@ export default class Main extends superViews{
 
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
-
+				this.i = i;
 				this.createCard(datas.rows[i]);
 
 			}
@@ -61,7 +61,7 @@ export default class Main extends superViews{
 
 		console.log('in create card');
 
-		let id = datas.id;
+		let id = this.i;
 
 			let card = new Card('Card'+id, this.path);
 
