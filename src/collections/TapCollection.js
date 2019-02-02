@@ -30,11 +30,11 @@ export default class TapCollection {
 
 
 
-	getAllNotes(callBackObj,callBackMethod){
+	getTapers(callBackObj,callBackMethod){
 
-		/*let qry = "SELECT * FROM Notes GROUP BY note_id, note_tmpId ORDER BY timestamp DESC";
+		let qry = "SELECT * FROM Taps";
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
-		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);*/
+		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);
 
 
 	}

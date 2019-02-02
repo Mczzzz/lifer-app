@@ -20,6 +20,8 @@ export default class Main extends superViews{
 
 		this.init();
 		
+		this.TapCollection = new LoaderCollection('Tap');
+
 	}
 
 
@@ -33,15 +35,18 @@ export default class Main extends superViews{
 		this.setStyle("display" , "flex");
 
 
-
+		this.TapCollection.getTapers(data);
 		
 	}
 
 
+	addTapers(datas){
 
+
+
+
+
+	}
 
 	
-
-
-
 }
