@@ -53,20 +53,18 @@ export default class Main extends superViews{
 
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
-				this.i = i;
-				this.createCard(datas.rows[i]);
-
+				this.createCard(datas.rows[i], i);
 			}
 
 	}
 
 
-	createCard(datas){
+	createCard(datas, i){
 
 		console.log('in create card');
 
-		let id = this.i;
-		this.num[this.i] = 0;
+		let id = i;
+		this.num[i] = 0;
 
 
 			let card = new Card('Card'+id, this.path);
@@ -88,7 +86,7 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[this.i]));
+			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[i]));
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
@@ -100,7 +98,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
-			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,this.i));
+			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,i));
 
 
 
