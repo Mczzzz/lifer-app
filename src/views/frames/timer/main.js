@@ -100,7 +100,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
-			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,i));
+			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,this.i));
 
 
 
