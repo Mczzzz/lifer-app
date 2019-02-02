@@ -89,7 +89,7 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			this.num = card.push("TextButton", Elt2,"numIt"+id,this.num[this.i]);
+			this.num = card.push("TextButton", Elt2,"numIt"+id,String(this.num[this.i]));
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
