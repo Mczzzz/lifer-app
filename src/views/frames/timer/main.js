@@ -88,7 +88,7 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			this.num = card.push("TextButton", Elt2,"numIt"+id,String(this.num[this.i]));
+			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[this.i]));
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
@@ -100,7 +100,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
-			card.getContainer().addEventListener("click",()=>this.incrementIt(itemDate,this.num[this.i]));
+			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,this.num[this.i]));
 
 
 
