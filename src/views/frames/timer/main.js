@@ -33,10 +33,12 @@ export default class Main extends superViews{
 		//this.setStyle("background" , "linear-gradient(45deg, rgb(199, 28, 28) 0%, rgb(216, 216, 216) 100%)");
 		this.setStyle("background" , "transparent");
 		this.setStyle("flex" , 1);
-		this.setStyle("alignItems" , "flex-end");
+		this.setStyle("alignItems" , "flex-start");
 		this.setStyle("overflowY" , "scroll");
 		this.setStyle("display" , "flex");
-
+		this.setStyle("flexWrap" , "wrap-reverse");
+		this.setStyle("justifyContent" , "space-evenly");
+		this.setStyle("alignContent" , "flex-start");
 
 		this.TapCollection.getTapers(this, "addTapers");
 
