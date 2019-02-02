@@ -33,7 +33,7 @@ export default class Main extends superViews{
 		//this.setStyle("background" , "linear-gradient(45deg, rgb(199, 28, 28) 0%, rgb(216, 216, 216) 100%)");
 		this.setStyle("background" , "transparent");
 		this.setStyle("flex" , 1);
-		this.setStyle("alignItems" , "stretch");
+		this.setStyle("alignItems" , "flex-end");
 		this.setStyle("overflowY" , "scroll");
 		this.setStyle("display" , "flex");
 
@@ -66,9 +66,10 @@ export default class Main extends superViews{
 			let card = new Card('Card'+id, this.path);
 
 		    card.setStyle("borderWidth", "1px");
-		    card.setStyle("borderRadius", "3px");
+		    card.setStyle("borderRadius", "10px");
 		    card.setStyle("margin", "5px");
-
+				card.setStyle("witdh", "100px");
+				card.setStyle("height", "100px");
 
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
