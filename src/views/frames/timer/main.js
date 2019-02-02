@@ -133,7 +133,7 @@ export default class Main extends superViews{
 
 		console.log('in incrementIt');
 
-		compteur = compteur++;
+		compteur = compteur + 1 ;
 
 		console.log(compteur);
 
