@@ -5,7 +5,7 @@ import LoaderCollection from '../../../../services/Loader/LoaderCollection.js';
 import Card from "../../../common/ui/card.js";
 
 export default class Add extends superViews{
-	
+
 
 	constructor( MyClass , path){
 
@@ -15,7 +15,7 @@ export default class Add extends superViews{
 		this.init();
 
 		this.TapCollection = new LoaderCollection('Tap');
-		
+
 	}
 
 
@@ -34,7 +34,7 @@ export default class Add extends superViews{
 
 
 		this.card = new Card('Card', this.path);
-	
+
 
 		this.card.setStyle("borderWidth", "0px");
 		this.card.setStyle("borderRadius", "0px");
@@ -110,7 +110,7 @@ export default class Add extends superViews{
 
 	CloseMe(){
 
-	
+
 		this.destroyMe();
 
 	}
@@ -124,8 +124,8 @@ export default class Add extends superViews{
 		console.log(this.NomTap.getText());
 		//je récupere mon logo
 		let data = {};
-		data.name = this.LogoTap.getText();
-		data.logo = this.NomTap.getText();
+		data.name = this.NomTap.getText();
+		data.logo = this.LogoTap.getText();
 
 		this.TapCollection.create(data);
 		//le récupère mon nom
