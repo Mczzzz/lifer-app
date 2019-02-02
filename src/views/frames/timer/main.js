@@ -66,7 +66,7 @@ export default class Main extends superViews{
 		console.log('in create card');
 
 		let id = this.i;
-		this.num[i] = 0;
+		this.num[this.i] = 0;
 
 
 			let card = new Card('Card'+id, this.path);
@@ -82,14 +82,14 @@ export default class Main extends superViews{
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
 
-		    card.getContainer().addEventListener("click",()=>this.incrementIt(i));
+		    card.getContainer().addEventListener("click",()=>this.incrementIt(this.i));
 
 
 			let Elt2 = card.setElement("header"+id);
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			this.num = card.push("TextButton", Elt2,"numIt"+id,this.num[i]);
+			this.num = card.push("TextButton", Elt2,"numIt"+id,this.num[this.i]);
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
