@@ -72,6 +72,8 @@ export default class Main extends superViews{
 		    card.setStyle("margin", "5px");
 				card.setStyle("width", "100px");
 				card.setStyle("height", "100px");
+				card.setStyle("border", "3px solid black");
+
 
 		    let bkgColor = (datas.status == "SYNC")? "lightsteelblue" : "navajowhite";
 		    card.setStyle("background", bkgColor);
@@ -83,6 +85,8 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","flex-end");
 
 
+			this.num = card.push("TextButton", Elt2,"date_Note"+id,0);
+
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
 			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,"edit");
@@ -93,7 +97,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
 
-			let 	num = card.push("TextButton", Elt2,"date_Note"+id,0);
+
 
 
 
