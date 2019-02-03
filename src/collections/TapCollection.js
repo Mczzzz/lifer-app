@@ -71,12 +71,16 @@ export default class TapCollection {
 
 	addEvent(data){
 
+		console.log("in add event");
+		console.log(data);
+
 		this.webSQL.playQuery('cacheData',
 											`insert into Taps ( id,
 																	tmpId,
 																	tapId,
-																	name,
-																	logo
+																	value,
+																	increment,
+																	timestamp
 																					)
 											 values ( "`+Lifer.newTmpId()+`",
 															"`+Lifer.newTmpId()+`",
