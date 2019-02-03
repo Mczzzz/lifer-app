@@ -149,7 +149,7 @@ export default class Main extends superViews{
 		datas.id = compteur;
 		datas.value = this.num[compteur];
 		datas.increment = 1;
-		this.TapCollection.addEvent(compteur);
+		this.TapCollection.addEvent(datas);
 
 
 }
