@@ -87,6 +87,7 @@ export default class Main extends superViews{
 
 
 			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[i]));
+			MyNum.setStyle("paddingLeft", "5px");
 
 			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(this.num[i]));
 
