@@ -112,7 +112,7 @@ export default class Edit extends superViews{
 			this.FooterElement.getContainer().append(Mycanvas);
 			var ctx = Mycanvas.getContext('2d');
 			var myChart = new Chart(ctx, {
-			    type: 'bar',
+			    type: 'line',
 			    data: {
 			        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
 			        datasets: [{
