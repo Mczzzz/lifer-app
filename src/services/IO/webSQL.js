@@ -50,7 +50,7 @@ export default class webSQL{
 
 	webSQLerror(tx,errors,query){
 
-		console.log()"webSQLerror");
+		console.log("webSQLerror");
 		console.log(tx);
 		console.log(errors);
 		console.log(query);
