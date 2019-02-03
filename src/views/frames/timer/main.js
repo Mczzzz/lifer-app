@@ -66,8 +66,12 @@ export default class Main extends superViews{
 		console.log('in create card');
 
 		let id = datas.id;
-		this.num[datas.id] = 0;
-
+		this.num[datas.id] = {};
+		this.num[datas.id].value = 0;
+		this.num[datas.id].moyenne = 0; //secondes
+		this.num[datas.id].arraySize = 0;
+		this.num[datas.id].numThis = {};
+		this.num[datas.id].moyThis = {};
 
 			let card = new Card('Card'+id, this.path);
 
@@ -88,11 +92,13 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[datas.id]));
+			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(0));
 			MyNum.setStyle("paddingLeft", "5px");
+			this.num[datas.id].numThis = MyNum;
 
-			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(this.num[datas.id]));
 
+			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(0));
+			this.num[datas.id].moyThis = MyMoy;
 
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
@@ -138,6 +144,12 @@ export default class Main extends superViews{
 		console.log("in majTappers");
 		console.log(datas);
 
+		let len = datas.rows.length, i;
+			for (i = 0; i < len; i++) {
+				this.num[datas.tapId].numThis.setData(datas.value);
+			}
+
+
 	}
 
 
@@ -146,16 +158,16 @@ export default class Main extends superViews{
 
 		console.log('in incrementIt');
 
-		this.num[compteur]++;
+		this.num[datas.id].value++;
 
-		console.log(this.num[compteur]);
+		console.log(this.num[datas.id].value);
 
-		elt.setData(this.num[compteur]);
+		elt.setData(this.num[datas.id].value);
 
 		//store events
 		let datas = {};
 		datas.id = compteur;
-		datas.value = this.num[compteur];
+		datas.value = this.num[datas.id].value;
 		datas.increment = 1;
 		this.TapCollection.addEvent(datas);
 
