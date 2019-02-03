@@ -88,6 +88,9 @@ export default class Main extends superViews{
 
 			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[i]));
 
+			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(this.num[i]));
+
+
 
 		//	let date = this.Moment(datas.timestamp).fromNow();
 			let 	itemDate = card.push("TextButton", Elt2,"date_Note"+id,"edit");
