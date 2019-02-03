@@ -122,7 +122,7 @@ export default class TapCollection {
 		TblParams2.db = "cacheData";
 		TblParams2.create = `CREATE TABLE IF NOT EXISTS `+TblParams2.name+` (id,
 																		   tmpId,
-																		   tapId
+																		   tapId,
 																	       value,
 																				 increment,
 																	       timestamp
