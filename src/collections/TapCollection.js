@@ -42,7 +42,14 @@ export default class TapCollection {
 	}
 
 
+	getEventsTapers(id){
 
+		let qry = "SELECT * FROM TapsEvents WHERE tapId = "+id;
+		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
+		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);
+
+
+	}
 
 	create(data){
 		//console.log'in store collection');
@@ -95,6 +102,11 @@ export default class TapCollection {
 
 
 	}
+
+
+
+
+
 
 	_initLocalStorage(){
 

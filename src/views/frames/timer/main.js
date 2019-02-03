@@ -128,7 +128,15 @@ export default class Main extends superViews{
 			let 	name = card.push("TextButton", Elt,"view_Note"+id,datas.name);
 			//name.setStyle("padding", "2px 0px 10px 10px");
 
+			//je charge en base les infos itiles comme la liste
+		  this.TapCollection.getEventsTapers(id, this, "majTapers");
 
+	}
+
+	majTapers(datas){
+
+		console.log("in majTappers");
+		console.log(datas);
 
 	}
 
