@@ -75,7 +75,7 @@ export default class TapCollection {
 		console.log(data);
 
 		this.webSQL.playQuery('cacheData',
-											`insert into Taps ( id,
+											`insert into TapsEvents ( id,
 																	tmpId,
 																	tapId,
 																	value,
