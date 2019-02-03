@@ -147,6 +147,7 @@ export default class Main extends superViews{
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
 				this.num[datas.rows[i].tapId].numThis.setData(datas.rows[i].value);
+				this.num[datas.id].value = datas.rows[i].value; 
 			}
 
 
