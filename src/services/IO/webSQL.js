@@ -1,7 +1,7 @@
 import DBLocalCollection from '../../collections/DBLocalCollection.js';
 
 export default class webSQL{
-	
+
 
 	constructor(){
 
@@ -50,10 +50,10 @@ export default class webSQL{
 
 	webSQLerror(tx,errors,query){
 
-		//console.log"webSQLerror");
-		//console.logtx);
-		//console.logerrors);
-		//console.logquery);
+		console.log"webSQLerror");
+		console.logtx);
+		console.logerrors);
+		console.logquery);
 
 	}
 
