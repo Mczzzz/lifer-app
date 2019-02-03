@@ -4,7 +4,9 @@ import Card from "../../common/ui/card.js";
 
 import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 
-import { DatasSynchronizing } from '../../../services/DatasSynchronizing.js';
+import Edit from "./edit/edit.js";
+
+//import { DatasSynchronizing } from '../../../services/DatasSynchronizing.js';
 
 import webSQL from '../../../services/IO/webSQL.js';
 
@@ -150,6 +152,6 @@ export default class Main extends superViews{
 	edit(elt, compteur,e){
 		e.stopPropagation();
 		console.log('in edit');
-
+	let editor = new Edit('TimerEditr', this.path);
 	}
 }
