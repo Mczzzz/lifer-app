@@ -86,7 +86,7 @@ export default class TapCollection {
 		TblParams.create = `CREATE TABLE IF NOT EXISTS `+TblParams.name+` (id,
 																		   tmpId,
 																		   name,
-																		   logo,															   
+																		   logo,
 						    										   UNIQUE (name) ON CONFLICT IGNORE
 																	   );
 																	   `;
@@ -98,7 +98,7 @@ export default class TapCollection {
 		let TblParams2 = {};
 		TblParams2.name = "TapsEvents";
 		TblParams2.db = "cacheData";
-		TblParams2.create = `CREATE TABLE IF NOT EXISTS `+TblParams.name+` (id,
+		TblParams2.create = `CREATE TABLE IF NOT EXISTS `+TblParams2.name+` (id,
 																		   tmpId,
 																		   tapId
 																	       value,
