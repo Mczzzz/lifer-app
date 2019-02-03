@@ -158,16 +158,16 @@ export default class Main extends superViews{
 
 		console.log('in incrementIt');
 
-		this.num[datas.id].value++;
+		this.num[compteur].value++;
 
-		console.log(this.num[datas.id].value);
+		console.log(this.num[compteur].value);
 
-		elt.setData(this.num[datas.id].value);
+		elt.setData(this.num[compteur].value);
 
 		//store events
 		let datas = {};
 		datas.id = compteur;
-		datas.value = this.num[datas.id].value;
+		datas.value = this.num[compteur].value;
 		datas.increment = 1;
 		this.TapCollection.addEvent(datas);
 
