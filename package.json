@@ -8,6 +8,7 @@
     "worker-loader": "^2.0.0"
   },
   "dependencies": {
+    "chart.js": "^2.7.3",
     "exif-orientation": "^1.0.0",
     "exifreader": "^2.5.0",
     "fs": "0.0.1-security",
