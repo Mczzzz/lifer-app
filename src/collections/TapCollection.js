@@ -44,7 +44,7 @@ export default class TapCollection {
 
 	getEventsTapers(id,callBackObj,callBackMethod){
 
-		let qry = "SELECT * FROM TapsEvents WHERE tapId = "+id;
+		let qry = "SELECT * FROM TapsEvents WHERE tapId = ''"+id+"''";
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
 		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);
 
