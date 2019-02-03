@@ -101,7 +101,7 @@ export default class Main extends superViews{
 			itemDate.setStyle("background", "red");
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
-			itemDate.getContainer().addEventListener("click",()=>this.edit(MyNum,i));
+			itemDate.getContainer().addEventListener("click",(e)=>this.edit(MyNum,i,e));
 
 			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,i));
 
@@ -147,8 +147,8 @@ export default class Main extends superViews{
 
 
 
-	edit(elt, compteur){
-
+	edit(elt, compteur,e){
+		e.stopPropagation();
 		console.log('in edit');
 
 	}
