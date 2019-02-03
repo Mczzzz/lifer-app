@@ -1,3 +1,5 @@
+import { Lifer } from '../services/Lifer.js'
+
 import SvcBackEndComm from '../services/IO/BackendComm.js';
 
 import webSQL from '../services/IO/webSQL.js';
@@ -55,8 +57,8 @@ export default class TapCollection {
 			                  					  name,
 			                  					  logo
 			                                      )
-			                   values ("",
-			                          "",
+			                   values ( "`+Lifer.newTmpId()+`",
+			                          "`+Lifer.newTmpId()+`",
 			                          "`+data.name+`",
 			                          "`+data.logo+`"
 			                          )
