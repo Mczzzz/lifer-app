@@ -69,8 +69,24 @@ export default class TapCollection {
 	}
 
 
-	iteration(data){
+	addEvent(data){
 
+		this.webSQL.playQuery('cacheData',
+											`insert into Taps ( id,
+																	tmpId,
+																	tapId,
+																	name,
+																	logo
+																					)
+											 values ( "`+Lifer.newTmpId()+`",
+															"`+Lifer.newTmpId()+`",
+															"`+data.id+`",
+															"`+data.value+`",
+															"`+data.increment+`",
+															strftime('%Y-%m-%d %H:%M:%f', 'now')
+															)
+
+										 `);
 
 
 
@@ -104,6 +120,7 @@ export default class TapCollection {
 																		   tmpId,
 																		   tapId
 																	       value,
+																				 increment,
 																	       timestamp
 																	   );
 																	   `;

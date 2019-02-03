@@ -21,7 +21,6 @@ export default class Main extends superViews{
 		this.webSQL = new webSQL();
 
 		this.TapCollection = new LoaderCollection('Tap');
-		this.TapEventCollection = new LoaderCollection('Tap');
 
 		this.num = {};
 
@@ -66,8 +65,8 @@ export default class Main extends superViews{
 
 		console.log('in create card');
 
-		let id = i;
-		this.num[i] = 0;
+		let id = data.id;
+		this.num[data.id] = 0;
 
 
 			let card = new Card('Card'+id, this.path);
@@ -89,10 +88,10 @@ export default class Main extends superViews{
 			Elt2.setStyle("justifyContent","space-between");
 
 
-			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[i]));
+			let MyNum = card.push("TextButton", Elt2,"numIt"+id,String(this.num[data.id]));
 			MyNum.setStyle("paddingLeft", "5px");
 
-			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(this.num[i]));
+			let MyMoy = card.push("TextButton", Elt2,"moyIt"+id,String(this.num[data.id]));
 
 
 
@@ -104,9 +103,9 @@ export default class Main extends superViews{
 			itemDate.setStyle("background", "red");
 			itemDate.setStyle("borderRadius", "0px 5px 0px 5px");
 
-			itemDate.getContainer().addEventListener("click",(e)=>this.edit(MyNum,i,e));
+			itemDate.getContainer().addEventListener("click",(e)=>this.edit(MyNum,data.id,e));
 
-			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,i));
+			card.getContainer().addEventListener("click",()=>this.incrementIt(MyNum,data.id));
 
 
 
@@ -144,6 +143,13 @@ export default class Main extends superViews{
 		console.log(this.num[compteur]);
 
 		elt.setData(this.num[compteur]);
+
+		//store events
+		let datas = {};
+		datas.id = compteur;
+		datas.value = this.num[compteur];
+		datas.increment = 1;
+		this.TapCollection.addEvent(compteur);
 
 
 }
