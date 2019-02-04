@@ -97,7 +97,7 @@ export default class Edit extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
-			
+
 
 
 
@@ -132,12 +132,12 @@ export default class Edit extends superViews{
 
 		console.log(datas);
 
-		let labeled = ['00', '01', '02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23'];
+		let labeled = ['', '01', '','03','','05','','07','','09','','11','','13','','15','','17','','19','','21','','23'];
 		let dataset = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
-				
+
 				dataset[parseInt(datas.rows[i].valHour)] = datas.rows[i].incr;
 			}
 
