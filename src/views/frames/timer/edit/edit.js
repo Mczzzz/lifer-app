@@ -157,7 +157,7 @@ export default class Edit extends superViews{
 						data: {
 								labels: labeled,
 								datasets: [{
-										label: "qté / heure",
+									//	label: "qté / heure",
 										data: dataset,
 										backgroundColor: [
 												'rgba(255, 99, 132, 0.2)',
