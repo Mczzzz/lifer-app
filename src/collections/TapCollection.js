@@ -57,6 +57,8 @@ export default class TapCollection {
 		//let qry = "SELECT * FROM TapsEvents WHERE tapId = '"+id+"'  AND timestamp > strftime('%Y-%m-%d', 'now') ORDER BY timestamp ASC";
 		let qry = "SELECT *,strftime('%H', timestamp) as valHour, SUM(increment) AS incr FROM TapsEvents WHERE tapId = '"+id+"' AND timestamp > strftime('%Y-%m-%d', 'now') GROUP BY valHour"; 
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
+		
+		console.log(qry);
 		this.webSQL.playQuery('cacheData',qry,callBackObj,callBackMethod);
 
 
