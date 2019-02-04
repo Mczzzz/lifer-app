@@ -14,10 +14,10 @@ export default class Edit extends superViews{
 
 		super( MyClass , path);
 
+		this.TapCollection = new LoaderCollection('Tap');
 
 		this.init();
 
-		this.TapCollection = new LoaderCollection('Tap');
 
 	}
 
