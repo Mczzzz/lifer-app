@@ -115,7 +115,7 @@ export default class Edit extends superViews{
 			this.FooterElement   = this.card.setElement("Footer");
 			this.FooterElement.setStyle("justifyContent","space-between");
 			this.FooterElement.setStyle("alignItems","center");
-			this.FooterElement.setStyle("height","90px");
+		//	this.FooterElement.setStyle("height","90px");
 			this.FooterElement.setStyle("justifyContent","center");
 
 			// let ValidTap = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
