@@ -20,6 +20,8 @@ export default class Edit extends superViews{
 
 		this.setId(id);
 
+				console.log(id);
+		console.log(this.getId());
 
 	}
 
@@ -139,6 +141,7 @@ export default class Edit extends superViews{
 				labeled.push(datas.rows[i].valHour);
 				dataset.push(datas.rows[i].incr);
 			}
+
 
 
 				//var myChart = new Chart(ctx, {...});
