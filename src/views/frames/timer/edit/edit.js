@@ -149,9 +149,9 @@ export default class Edit extends superViews{
 				var myChart = new Chart(ctx, {
 						type: 'line',
 						data: {
-								labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+								labels: labeled,
 								datasets: [{
-										label: labeled,
+										label: label,
 										data: dataset,
 										backgroundColor: [
 												'rgba(255, 99, 132, 0.2)',
