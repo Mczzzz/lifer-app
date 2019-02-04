@@ -67,6 +67,21 @@ export default class Edit extends superViews{
 					HeaderBackButton.getContainer().addEventListener("click",()=>this.CloseMe());
 
 
+
+				this.LogoTap = this.card.push("Text", this.HeaderElement,"TapLogo", false); //274C
+				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
+				this.LogoTap.setStyle("color", "black");
+				this.LogoTap.setStyle("fontSize", "25px");
+/*				this.LogoTap.setAttribute("maxlength", 1);
+				this.LogoTap.setAttribute("size", 1);*/
+				//this.LogoTap.setStyle("background", "transparent");
+			//	this.LogoTap.setStyle("textAlign", "center");
+
+
+
+
+
+
 			this.MainElement   = this.card.setElement("Main");
 			this.MainElement.setStyle("justifyContent","space-between");
 			//this.MainElement.setStyle("alignItems","center");
@@ -79,14 +94,7 @@ export default class Edit extends superViews{
 			this.MainElement.setStyle("flex",1);
 
 
-				this.LogoTap = this.card.push("Text", this.MainElement,"TapLogo", false); //274C
-				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
-				this.LogoTap.setStyle("color", "black");
-				this.LogoTap.setStyle("fontSize", "100px");
-/*				this.LogoTap.setAttribute("maxlength", 1);
-				this.LogoTap.setAttribute("size", 1);*/
-				//this.LogoTap.setStyle("background", "transparent");
-				this.LogoTap.setStyle("textAlign", "center");
+			
 
 
 
