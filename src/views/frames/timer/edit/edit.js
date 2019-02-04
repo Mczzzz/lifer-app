@@ -142,7 +142,7 @@ export default class Edit extends superViews{
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
 
-				dataset[parseInt(datas.rows[i].valHour)] = datas.rows[i].incr;
+				dataset[parseInt(datas.rows[i].valHour) +1] = datas.rows[i].incr;
 			}
 
 
