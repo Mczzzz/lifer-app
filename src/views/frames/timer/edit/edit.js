@@ -118,7 +118,7 @@ export default class Edit extends superViews{
 
 
 			//je charge en base les infos itiles comme la liste
-			this.TapCollection.getEventsTapers(this.getId(), this, "drawGraph");
+			this.TapCollection.getEventsTapersTodayByHour(this.getId(), this, "drawGraph");
 
 
 
@@ -130,6 +130,17 @@ export default class Edit extends superViews{
 	drawGraph(datas){
 
 		console.log(datas);
+
+		let labeled = [];
+		let dataset = [];
+
+		let len = datas.rows.length, i;
+			for (i = 0; i < len; i++) {
+				labeled.push(datas.rows[i].valHour);
+				dataset.push(datas.rows[i].incr);
+			}
+
+
 				//var myChart = new Chart(ctx, {...});
 				//create canvas
 				let Mycanvas = document.createElement("canvas");
@@ -140,8 +151,8 @@ export default class Edit extends superViews{
 						data: {
 								labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
 								datasets: [{
-										label: '# of Votes',
-										data: [12, 19, 3, 5, 2, 3],
+										label: labeled,
+										data: dataset,
 										backgroundColor: [
 												'rgba(255, 99, 132, 0.2)',
 												'rgba(54, 162, 235, 0.2)',
