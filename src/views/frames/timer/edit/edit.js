@@ -70,6 +70,13 @@ export default class Edit extends superViews{
 					HeaderBackButton.getContainer().addEventListener("click",()=>this.CloseMe());
 
 
+					this.NomTap = this.card.push("Text", this.HeaderElement,"TapName", ""); //274C
+					this.NomTap.setAttribute("placeholder","Nom");
+					this.NomTap.setStyle("color", "black");
+					this.NomTap.setStyle("fontSize", "25px");
+
+
+
 
 				this.LogoTap = this.card.push("Text", this.HeaderElement,"TapLogo", false); //274C
 				this.LogoTap.setAttribute("placeholder",String.fromCodePoint(0x2753));
@@ -101,10 +108,7 @@ export default class Edit extends superViews{
 
 
 
-				this.NomTap = this.card.push("Text", this.MainElement,"TapName", ""); //274C
-				this.NomTap.setAttribute("placeholder","Nom");
-				this.NomTap.setStyle("color", "black");
-				this.NomTap.setStyle("fontSize", "25px");
+
 
 
 
@@ -114,8 +118,8 @@ export default class Edit extends superViews{
 			this.FooterElement.setStyle("height","90px");
 			this.FooterElement.setStyle("justifyContent","center");
 
-			let ValidTap = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
-			ValidTap.getContainer().addEventListener("click",() => this.storeTap());
+			// let ValidTap = this.card.push("Button", this.FooterElement,"ValidName",  String.fromCodePoint(0x2705)); //2705
+			// ValidTap.getContainer().addEventListener("click",() => this.storeTap());
 
 
 			//je charge en base les infos itiles comme la liste
