@@ -180,6 +180,7 @@ export default class Main extends superViews{
 	edit(elt, compteur,e){
 		e.stopPropagation();
 		console.log('in edit');
-	let editor = new Edit('TimerEdit', this.path);
+	let editor = new Edit('TimerEdit', this.path, compteur);
+
 	}
 }

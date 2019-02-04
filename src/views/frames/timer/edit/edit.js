@@ -10,13 +10,15 @@ import Card from "../../../common/ui/card.js";
 export default class Edit extends superViews{
 
 
-	constructor( MyClass , path){
+	constructor( MyClass , path, id){
 
 		super( MyClass , path);
 
 		this.TapCollection = new LoaderCollection('Tap');
 
 		this.init();
+
+		this.setId(id);
 
 
 	}
@@ -116,7 +118,7 @@ export default class Edit extends superViews{
 
 
 			//je charge en base les infos itiles comme la liste
-			this.TapCollection.getEventsTapers(id, this, "drawGraph");
+			this.TapCollection.getEventsTapers(this.getId(), this, "drawGraph");
 
 
 
@@ -127,7 +129,7 @@ export default class Edit extends superViews{
 
 	drawGraph(datas){
 
-
+		console.log(datas);
 				//var myChart = new Chart(ctx, {...});
 				//create canvas
 				let Mycanvas = document.createElement("canvas");
