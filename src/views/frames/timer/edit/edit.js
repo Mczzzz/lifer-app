@@ -132,6 +132,9 @@ export default class Edit extends superViews{
 	}
 
 
+
+
+
 	drawGraph(datas){
 
 		console.log(datas);
