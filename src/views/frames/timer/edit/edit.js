@@ -16,12 +16,11 @@ export default class Edit extends superViews{
 
 		this.TapCollection = new LoaderCollection('Tap');
 
-		this.init();
 
 		this.setId(id);
 
-				console.log(id);
-		console.log(this.getId());
+		this.init();
+
 
 	}
 
