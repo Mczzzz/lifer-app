@@ -100,8 +100,8 @@ export default class Edit extends superViews{
 			this.MainElement.setStyle("flexDirection", "column");
 			this.MainElement.setStyle("alignItems","center");
 
-
 			this.MainElement.setStyle("flex",1);
+
 
 
 
@@ -157,7 +157,7 @@ export default class Edit extends superViews{
 						data: {
 								labels: labeled,
 								datasets: [{
-									//	label: "qté / heure",
+										label: "qté / heure",
 										data: dataset,
 										backgroundColor: [
 												'rgba(255, 99, 132, 0.2)',
@@ -179,6 +179,9 @@ export default class Edit extends superViews{
 								}]
 						},
 						options: {
+								legend:{
+									display: false
+								},
 								scales: {
 										yAxes: [{
 												ticks: {
