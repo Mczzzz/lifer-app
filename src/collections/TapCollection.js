@@ -67,10 +67,10 @@ export default class TapCollection {
 	}
 
 
-	async getFetchTest(id = false){
+	getFetchTest(id = false){
 
 		console.log("in async getFetchTest");
-		return await Fetcher.ajaxSend("GET", "/login" , false);
+		return Fetcher.ajaxSend("GET", "/login" , false);
 
 
 	}
