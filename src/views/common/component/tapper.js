@@ -15,20 +15,21 @@ export default class Tapper{
     }
 
 
-    async init(){
+    init(){
 
 
-      let infoFromBase = await this.TapCollection.getTap(this.id);
-      console.log(infoFromBase);
+      this.TapCollection.getTap(this.id).then();
+
 
     }
 
 
 
 
-    LoadTapper(id){
+    LoadTapper(datas){
 
-
+      console.log("in load tappers")
+      console.log(datas);
      // return await  Promise.resolve(this.loadInBDD(id));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});

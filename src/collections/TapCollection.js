@@ -44,20 +44,11 @@ export default class TapCollection {
 	}
 
 
-	getTap(id){
+	async getTap(id){
 
 		let qry = "SELECT * FROM Taps WHERE id = '"+id+"'";
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
-		this.webSQL.executeTransaction('cacheData',qry).then(
-
-		response => { return response
-
-
-		}
-
-		);
-
-
+		return await this.webSQL.executeTransaction('cacheData',qry);
 
 	}
 
