@@ -22,7 +22,7 @@ async ajaxSend(VERB,url, dataSend = false){
 //TODO on verifie qu'on est considéré comme loggé
 			let resp = await fetch(host+url, params);
 
-			return response(resp);
+			return resp;
 			
 
 
