@@ -6,7 +6,7 @@ export default class Fetcher {
 
 
 
-async ajaxSend(VERB,url, dataSend = false){
+ajaxSend(VERB,url, dataSend = false){
 //		//console.log"on passe bien dans ajaxSend");		
 			let MyResponse = false;
 
@@ -20,7 +20,7 @@ async ajaxSend(VERB,url, dataSend = false){
 
 //			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			let resp = await fetch(host+url, params);
+			let resp = fetch(host+url, params);
 
 			return resp;
 			
