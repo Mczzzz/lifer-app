@@ -7,7 +7,7 @@ export default class Fetcher {
 
 
 //	ajaxSend(VERB,url,dispatchResponseTo=false,dataCallback = false,dataSend = false){
-	ajaxSend(VERB,url,dataSend = false){
+	async ajaxSend(VERB,url,dataSend = false){
 //		//console.log"on passe bien dans ajaxSend");		
 			let MyResponse = false;
 
@@ -21,7 +21,7 @@ export default class Fetcher {
 
 //			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			fetch(host+url, params)
+			return await fetch(host+url, params)
 			  .then(function(response) {
 
 			  	//MyResponse = response.clone(); 
