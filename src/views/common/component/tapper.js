@@ -7,7 +7,7 @@ export default class Tapper{
 
     async LoadTapper(id){
 
-      return await  new Promise(id => this.loadInBDD(id)));
+      return await  toto = new Promise(id => this.loadInBDD(id)));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
 
