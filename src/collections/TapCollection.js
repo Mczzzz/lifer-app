@@ -50,7 +50,10 @@ export default class TapCollection {
 		// je copie dans ma base de remonté syncUP les LOCAL de plus d'une seconde
 		this.webSQL.executeTransaction('cacheData',qry).then(
 
-		response => {console.log(response)}
+		response => { return response
+
+
+		}
 
 		);
 
