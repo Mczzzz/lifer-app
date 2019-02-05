@@ -18,10 +18,10 @@ export default class Tapper{
     }
 
 
-    init(){
+    async init(){
 
 
-      this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
+      await this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
 
 
     }
