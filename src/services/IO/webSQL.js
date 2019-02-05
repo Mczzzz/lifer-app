@@ -14,7 +14,7 @@ export default class webSQL{
 	executeTransaction(base, query) {
 	    console.log("Transaction Query : " + query);
 	    let Bdd = this.DBLocalCollection.getDBConnection(base);
-	    let nullHandler = errorHandler = "";
+	   // let nullHandler = errorHandler = "";
 	    return new Promise(function (resolve, reject) {
 	        Bdd.transaction(function (transaction) {
 	            transaction.executeSql(query, [], function (transaction, result) {
