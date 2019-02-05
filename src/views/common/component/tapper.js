@@ -1,3 +1,5 @@
+import LoaderCollection from '../../services/Loader/LoaderCollection.js';
+
 export default class Tapper{
 
 
@@ -6,10 +8,10 @@ export default class Tapper{
 
     }
 
-    async LoadTapper(id){
+    LoadTapper(id){
 
 
-      return await  Promise.resolve(this.loadInBDD(id));
+     // return await  Promise.resolve(this.loadInBDD(id));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
 
