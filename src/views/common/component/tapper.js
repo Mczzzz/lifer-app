@@ -1,5 +1,6 @@
 export default class Tapper{
 
+    const
 
      constructor(){
 
@@ -7,7 +8,8 @@ export default class Tapper{
 
     async LoadTapper(id){
 
-      return await  toto = new Promise(id => this.loadInBDD(id)));
+
+      return await  Promise.resolve(this.loadInBDD(id));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
 
