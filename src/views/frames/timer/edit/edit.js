@@ -129,7 +129,7 @@ export default class Edit extends superViews{
 			this.TapCollection.getEventsTapersTodayByHour(this.getId(), this, "drawGraph");
 
 			this.Tapper = new Tapper;
-			this.Tapper.init(this.gettId()).then(response => {
+			this.Tapper.init(this.getId()).then(response => {
 				this.NomTap = this.Tapper.getName();
 				this.LogoTap = this.Tapper.getLogo();
 			});
