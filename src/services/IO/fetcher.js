@@ -20,57 +20,10 @@ async ajaxSend(VERB,url, dataSend = false){
 
 //			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			fetch(host+url, params)
-			  .then(function(response) {
+			let resp = await fetch(host+url, params);
 
-			  	//MyResponse = response.clone(); 
-				//console.log'in my fetch app :');
-			//	//console.logresponse.pro)
-			////console.loga);
-				if(response.status === 401) {
-					//console.logresponse.status);
-				let qry = "INSERT INTO Params (name, value) VALUES ('is_auth', false)";
-				webSQLCon.playQuery('cacheData',qry);
-//TODO : il faut flagger por dire que la seule requete qui passera sera celle de login
-
-					//il faut te logger monsieur
-					let LinkEvent = new CustomEvent('changeRoute', {'detail' : {'frame' : 'Login'}});
-					window.dispatchEvent(LinkEvent);
-
-					//informé l'envoyeur que sa requete n'a pas été faite (donc retentative à prevoir)
-					//return false;
-
-				}else{
-					console.log(response);
-
-					let contentType = response.headers.get("content-type");
-
-					if(contentType && contentType.indexOf("application/json") !== -1) {
-
-					
-							
-						return response.json()
-				
-					  
-					}else{
-
-					  
-					return response.blob();
-
-
-					
-
-
-					}
-
-				}
-
-
-			}).catch(function(error){
-
-				//console.log"in catch of fectch "+error);
-
-			});
+			return response(resp);
+			
 
 
 
