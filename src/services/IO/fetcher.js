@@ -21,8 +21,8 @@ export default class Fetcher {
 
 //			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			return await fetch(host+url, params)
-			  .then(function(response) {
+			return await fetch(host+url, params);
+/*			  .then(function(response) {
 
 			  	//MyResponse = response.clone(); 
 				//console.log'in my fetch app :');
@@ -94,7 +94,7 @@ export default class Fetcher {
 				//console.log"in catch of fectch "+error);
 
 			});
-
+*/
 
 
 	}
