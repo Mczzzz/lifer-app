@@ -18,7 +18,7 @@ export default class Tapper{
     init(){
 
 
-      this.TapCollection.getTap(this.id).then();
+      this.TapCollection.getTap(this.id).then( response => {console.log(response)});
 
 
     }
