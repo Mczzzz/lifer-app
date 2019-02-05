@@ -127,8 +127,8 @@ export default class Edit extends superViews{
 
 
 
-			let result = this.TapCollection.getFetchTest();
-/*			.then(resolve => {
+			let result = this.TapCollection.getFetchTest()
+			.then(resolve => {
 				console.log("in then");
 				console.log(resolve);
 			})
@@ -136,7 +136,7 @@ export default class Edit extends superViews{
 
 				console.log("in catch");
 				console.log(reject);
-			});*/
+			});
 
 			console.log(result);
 
