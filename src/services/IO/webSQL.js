@@ -11,6 +11,24 @@ export default class webSQL{
 	}
 
 
+	executeTransaction(base, query) {
+	    console.log("Transaction Query : " + query);
+	    let Bdd = this.DBLocalCollection.getDBConnection(base);
+	    
+	    return new Promise(function (resolve, reject) {
+	        Bdd.transaction(function (transaction) {
+	            transaction.executeSql(query, [], function (transaction, result) {
+	                console.log("Test: " + JSON.stringify(result));
+	                resolve(result); // here the returned Promise is resolved
+	            }, nullHandler, errorHandler);
+	        });
+	    });
+	}
+
+
+
+
+
 
 	playQuery(base,query,callbackObj = false, callbackMethod = false){
 /*		//console.log'in play Query');

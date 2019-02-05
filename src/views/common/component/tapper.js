@@ -4,9 +4,27 @@ export default class Tapper{
 
 
 
-     constructor(){
+     constructor(id){
+
+       this.id = id;
+
+       this.TapCollection = new LoaderCollection('Tap');
+
+       this.init();
 
     }
+
+
+    async init(){
+
+
+      let infoFromBase = await this.TapCollection.getTap(this.id);
+      console.log(infoFromBase);
+
+    }
+
+
+
 
     LoadTapper(id){
 
