@@ -24,6 +24,7 @@ export default class Tapper{
     LoadTapper(datas){
 
       this.name = datas.rows[0].name;
+      this.logo = datas.rows[0].logo;
       console.log("in load tappers")
       console.log(datas);
      //console.log(data.rows[0].name;
@@ -39,6 +40,12 @@ export default class Tapper{
     getName(){
 
       return this.name;
+
+    }
+
+    getLogo(){
+
+      return this.logo;
 
     }
 
