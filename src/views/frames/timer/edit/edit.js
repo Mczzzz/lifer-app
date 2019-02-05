@@ -130,8 +130,8 @@ export default class Edit extends superViews{
 
 			this.Tapper = new Tapper;
 			this.Tapper.init(this.getId()).then(response => {
-				this.NomTap = this.Tapper.getName();
-				this.LogoTap = this.Tapper.getLogo();
+				this.NomTap.setData(this.Tapper.getName());
+				this.LogoTap.setData(this.Tapper.getLogo());
 			});
 
 /*			let result = this.TapCollection.getFetchTest()
