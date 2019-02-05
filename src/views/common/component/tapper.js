@@ -7,6 +7,9 @@ export default class Tapper{
      constructor(id){
 
        this.id = id;
+       this.tmpId = false;
+       this.name = false;
+       this.logo = false;
 
        this.TapCollection = new LoaderCollection('Tap');
 
@@ -28,6 +31,7 @@ export default class Tapper{
 
     LoadTapper(datas){
 
+      this.name = data.rows[0].name;
       console.log("in load tappers")
       console.log(datas);
      // return await  Promise.resolve(this.loadInBDD(id));
@@ -37,6 +41,14 @@ export default class Tapper{
 
 
     }
+
+
+    getName(){
+
+      return this.name;
+
+    }
+
 
     loadInBDD(id){
 
