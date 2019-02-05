@@ -1,6 +1,6 @@
 export default class Tapper{
 
-    const
+    
 
      constructor(){
 
