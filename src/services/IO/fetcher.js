@@ -20,7 +20,7 @@ async ajaxSend(VERB,url, dataSend = false){
 
 //			//console.log'JUST BEFORE SEND FETCH');
 //TODO on verifie qu'on est considéré comme loggé
-			return await fetch(host+url, params)
+			fetch(host+url, params)
 			  .then(function(response) {
 
 			  	//MyResponse = response.clone(); 
