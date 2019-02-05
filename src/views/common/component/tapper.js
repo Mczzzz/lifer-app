@@ -5,9 +5,9 @@ export default class Tapper{
 
     }
 
-    LoadTapper(id){
+    async LoadTapper(id){
 
-      this.myTapper =  new Promise((result,reject) => this.loadInBDD(id)));
+    //  this.myTapper =  new Promise((result,reject) => this.loadInBDD(id)));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
 
