@@ -49,13 +49,13 @@ async ajaxSend(VERB,url, dataSend = false){
 
 					
 							
-						//	return await response.json()
+						return response.json()
 				
 					  
 					}else{
 
 					  
-					//	return await  response.blob();
+					return response.blob();
 
 
 					
