@@ -1,6 +1,6 @@
 export default class Tapper{
 
-    
+
 
      constructor(){
 
@@ -19,7 +19,7 @@ export default class Tapper{
 
     loadInBDD(id){
 
-        return result(id);
+        return id;
 
     }
 
