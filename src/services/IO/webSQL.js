@@ -20,7 +20,7 @@ export default class webSQL{
 	            transaction.executeSql(query, [], function (transaction, result) {
 	                console.log("Test: " + JSON.stringify(result));
 	                resolve(result); // here the returned Promise is resolved
-	            }, nullHandler, errorHandler);
+	            }, (tx,errors)=>this.webSQLerror(tx,errors,query), (tx,errors)=>this.webSQLerror(tx,errors,query));
 	        });
 	    });
 	}
