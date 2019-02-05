@@ -1,6 +1,7 @@
 import { Lifer } from '../services/Lifer.js'
 
 import SvcBackEndComm from '../services/IO/BackendComm.js';
+import Fetcher from '../services/IO/Fetcher.js';
 
 import webSQL from '../services/IO/webSQL.js';
 import LocalStorage from '../services/IO/LocalStorage.js';
