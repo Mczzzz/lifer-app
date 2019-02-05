@@ -69,7 +69,9 @@ export default class TapCollection {
 
 	getFetchTest(id = false){
 
-		return this.Fetcher.ajaxSend("GET", "/login" , false);
+		let test =  this.Fetcher.ajaxSend("GET", "/login" , false);
+
+		console.log(test);
 
 	}
 
