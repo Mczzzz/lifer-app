@@ -31,9 +31,10 @@ export default class Tapper{
 
     LoadTapper(datas){
 
-      this.name = data.rows[0].name;
+      this.name = datas.rows[0].name;
       console.log("in load tappers")
       console.log(datas);
+     //console.log(data.rows[0].name;
      // return await  Promise.resolve(this.loadInBDD(id));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
