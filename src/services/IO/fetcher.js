@@ -47,19 +47,15 @@ async ajaxSend(VERB,url, dataSend = false){
 
 					if(contentType && contentType.indexOf("application/json") !== -1) {
 
-						response.json().then(function(jsonResp){
+					
 							
-							return await jsonResp;
-						});
+							return await response.json()
+				
 					  
 					}else{
 
 					  
-						response.blob().then(function(blobResp){
-							
-							return await blobResp;
-					  
-						});
+						return await  response.blob();
 
 
 					
