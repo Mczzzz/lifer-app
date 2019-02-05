@@ -1,6 +1,6 @@
 import { Lifer } from '../services/Lifer.js'
 
-import SvcBackEndComm from '../services/IO/BackendComm.js';
+//import SvcBackEndComm from '../services/IO/BackendComm.js';
 import Fetcher from '../services/IO/Fetcher.js';
 
 import webSQL from '../services/IO/webSQL.js';
@@ -16,7 +16,8 @@ export default class TapCollection {
 
 		this.webSQL = new webSQL();
 
-    	this.SvcBackEndComm = new SvcBackEndComm();
+    	//this.SvcBackEndComm = new SvcBackEndComm();
+    	this.Fetcher = new Fetcher();
 
     	this.init();
 
@@ -64,6 +65,16 @@ export default class TapCollection {
 
 
 	}
+
+
+	async getFetchTest(id = false){
+
+		console.log("in async getFetchTest");
+		return await Fetcher.ajaxSend("GET", "/login" , false);
+
+
+	}
+
 
 
 
