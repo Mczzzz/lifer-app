@@ -1,4 +1,4 @@
-import LoaderCollection from '../../services/Loader/LoaderCollection.js';
+import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 
 export default class Tapper{
 
