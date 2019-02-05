@@ -1,16 +1,25 @@
-import superViews from "../superViews.js";
-
-import Header from "./ressource/header.js";
-import Main from "./ressource/main.js";
-import Footer from "./ressource/footer.js";
-
-export default class Tapper extends superViews{
+export default class Tapper{
 
 
-     constructor(MyClass,path,ressourceId=false,prepend = false){
+     constructor(){
 
     }
 
+    LoadTapper(id){
+
+      this.myTapper =  new Promise((result,reject) => this.loadInBDD(id)));
+
+      this.myTapper.then((resultId){console.log("in then"+resultId)});
+
+      return resultId;
+
+    }
+
+    loadInBDD(id){
+
+        return result(id);
+
+    }
 
     setType(type){
 

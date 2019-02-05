@@ -6,6 +6,8 @@ import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 
 import Edit from "./edit/edit.js";
 
+import Tapper from '../../common/component/tapper.js';
+
 //import { DatasSynchronizing } from '../../../services/DatasSynchronizing.js';
 
 import webSQL from '../../../services/IO/webSQL.js';
@@ -137,6 +139,9 @@ export default class Main extends superViews{
 			//je charge en base les infos itiles comme la liste
 		  this.TapCollection.getEventsTapers(id, this, "majTapers");
 
+
+			let testPromise = new Tapper();
+			console.log(testPromise.LoadTapper(id));
 	}
 
 	majTapers(datas){
@@ -147,7 +152,7 @@ export default class Main extends superViews{
 		let len = datas.rows.length, i;
 			for (i = 0; i < len; i++) {
 				this.num[datas.rows[i].tapId].numThis.setData(datas.rows[i].value);
-				this.num[datas.rows[i].tapId].value = datas.rows[i].value; 
+				this.num[datas.rows[i].tapId].value = datas.rows[i].value;
 			}
 
 
