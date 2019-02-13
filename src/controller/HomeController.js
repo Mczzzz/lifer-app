@@ -46,7 +46,7 @@ export default class HomeController {
 
 
 		let debug = "xcmvùlxcvmùclvxcmùcvlxmùcvlcvcvmùl";
-		let blob = new Blob(debug, {type : 'text/html'});
+		let blob = new Blob([debug], {type : 'text/plain;charset=utf-8'});
 		
 		let init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
 		let response = new Response(myBlob,init);
