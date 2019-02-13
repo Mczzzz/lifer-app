@@ -49,7 +49,7 @@ export default class HomeController {
 		let blob = new Blob([debug], {type : 'text/plain;charset=utf-8'});
 		
 		let init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-		let response = new Response(myBlob,init);
+		let response = new Response(blob,init);
 
 		caches.open('v1')
             .then(function(cache) {
