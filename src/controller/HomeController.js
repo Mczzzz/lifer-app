@@ -42,7 +42,14 @@ export default class HomeController {
 
 
 		let request  = new Request('flowers.jpg');
-		var response = new Response();
+		
+
+
+		let debug = "xcmvùlxcvmùclvxcmùcvlxmùcvlcvcvmùl";
+		let blob = new Blob(debug, {type : 'text/html'});
+		
+		let init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
+		let response = new Response(myBlob,init);
 
 		caches.open('v1')
             .then(function(cache) {
