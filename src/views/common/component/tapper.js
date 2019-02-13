@@ -27,7 +27,7 @@ export default class Tapper{
 
       this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
 
-      let returnReady = await this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
+      let returnReady = this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
 
 
       return "ready to go";
