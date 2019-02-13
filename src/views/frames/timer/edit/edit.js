@@ -5,6 +5,8 @@ import superViews from "../../../common/superViews.js";
 
 import LoaderCollection from '../../../../services/Loader/LoaderCollection.js';
 
+import Tapper from '../../../common/component/tapper.js';
+
 import Card from "../../../common/ui/card.js";
 
 export default class Edit extends superViews{
@@ -20,6 +22,7 @@ export default class Edit extends superViews{
 		this.setId(id);
 
 		this.init();
+
 
 
 	}
@@ -125,7 +128,11 @@ export default class Edit extends superViews{
 			//je charge en base les infos itiles comme la liste
 			this.TapCollection.getEventsTapersTodayByHour(this.getId(), this, "drawGraph");
 
-
+			this.Tapper = new Tapper;
+			this.Tapper.init(this.getId()).then(response => {
+				this.NomTap.setData(this.Tapper.getName());
+				this.LogoTap.setData(this.Tapper.getLogo());
+			});
 
 /*			let result = this.TapCollection.getFetchTest()
 			.then(resolve => {

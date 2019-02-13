@@ -140,11 +140,13 @@ export default class Main extends superViews{
 		  this.TapCollection.getEventsTapers(id, this, "majTapers");
 
 
-			this.Tapper = new Tapper(id);
-			let result = this.Tapper.getName();
-			console.log(result);
-			/*console.log(this.testPromise.LoadTapper(id));
-			this.testPromise.LoadTapper(id).then((myId) => this.testToto(myId));*/
+			this.Tapper = new Tapper;
+			this.Tapper.init(id).then(response => {console.log(response);
+				console.log(this.Tapper.getName());
+
+			});
+
+
 	}
 
 	testToto(monId){

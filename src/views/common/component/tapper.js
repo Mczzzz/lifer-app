@@ -3,13 +3,15 @@ import LoaderCollection from '../../../services/Loader/LoaderCollection.js';
 export default class Tapper{
 
 
+    async init(id){
 
-     constructor(id){
+      this.id = id;
+      this.tmpId = false;
+      this.name = false;
+      this.logo = false;
 
-       this.id = id;
-       this.tmpId = false;
-       this.name = false;
-       this.logo = false;
+      this.TapCollection = new LoaderCollection('Tap');
+
 
        this.ready = false;
 
@@ -25,6 +27,10 @@ export default class Tapper{
 
       this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
 
+      let returnReady = await this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
+
+
+      return "ready to go";
 
     }
 
@@ -38,6 +44,7 @@ export default class Tapper{
     LoadTapper(datas){
 
       this.name = datas.rows[0].name;
+      this.logo = datas.rows[0].logo;
       console.log("in load tappers")
       console.log(datas);
      //console.log(data.rows[0].name;
@@ -53,6 +60,12 @@ export default class Tapper{
     getName(){
 
       return this.name;
+
+    }
+
+    getLogo(){
+
+      return this.logo;
 
     }
 
