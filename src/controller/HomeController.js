@@ -46,7 +46,7 @@ export default class HomeController {
 
 		caches.open('v1')
             .then(function(cache) {
-               cache.put(request, responseToCache);
+               cache.put(request, response);
             });
 
 
