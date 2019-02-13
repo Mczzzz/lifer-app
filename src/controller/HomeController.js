@@ -41,6 +41,13 @@ export default class HomeController {
 		this.UserCollection.isAuth(this,'_launchLogin');
 
 
+		let request  = new Request('flowers.jpg');
+		var response = new Response();
+
+		caches.open('v1')
+            .then(function(cache) {
+               cache.put(request, responseToCache);
+            });
 
 
 

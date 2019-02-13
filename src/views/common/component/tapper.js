@@ -11,6 +11,8 @@ export default class Tapper{
        this.name = false;
        this.logo = false;
 
+       this.ready = false;
+
        this.TapCollection = new LoaderCollection('Tap');
 
        this.init();
@@ -18,16 +20,20 @@ export default class Tapper{
     }
 
 
-    async init(){
+    init(){
 
 
-      await this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
+      this.TapCollection.getTap(this.id).then( response => this.LoadTapper(response));
 
 
     }
 
+    onReady(){
 
 
+
+
+    }
 
     LoadTapper(datas){
 
@@ -38,7 +44,7 @@ export default class Tapper{
      // return await  Promise.resolve(this.loadInBDD(id));
 
     //  this.myTapper.then((resultId){console.log("in then"+resultId)});
-
+      this.ready = true;
 
 
     }
